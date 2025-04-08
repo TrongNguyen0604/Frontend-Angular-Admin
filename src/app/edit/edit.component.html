@@ -1,0 +1,37 @@
+<div class="container ">
+    <h2 class="">Cập nhật sản phẩm</h2>
+    <form #create="ngForm" (ngSubmit)="onEdit(create.value)" class="needs-validation" novalidate>
+        <div class="mb-1">
+            <label class="form-label" for="name">Tên Sản phẩm</label>
+            <input class="form-control" type="text" id="name" name="name" [(ngModel)]="oldStudent.name" placeholder="Nhập tên sản phẩm" required>
+        </div>
+        <div class="mb-1">
+            <label class="form-label" for="description">Mô tả</label>
+            <input class="form-control" type="text" id="description" name="description" [(ngModel)]="oldStudent.description" placeholder="Nhập mô tả sản phẩm" required>
+        </div>
+        <div class="mb-1">
+            <label class="form-label" for="start_date">Ngày Bắt đầu</label>
+            <input class="form-control" type="date" id="start_date" name="start_date" [(ngModel)]="oldStudent.start_date" required>
+        </div>
+        <div class="mb-1">
+            <label class="form-label" for="end_date">Ngày Kết thúc</label>
+            <input class="form-control" type="date" id="end_date" name="end_date" [(ngModel)]="oldStudent.end_date" required>
+        </div>
+        <div class="mb-1">
+            <label class="form-label" for="image">Ảnh</label>
+            <input class="form-control" type="text" id="image" name="image" [(ngModel)]="oldStudent.image" placeholder="Nhập URL ảnh" required>
+        </div>
+        <div class="mb-1">
+            <label class="form-label" for="status">Trạng thái</label>
+            <select class="form-select" id="status" name="status" [(ngModel)]="oldStudent.status" required>
+                <option value="" disabled selected [(ngModel)]="oldStudent.status">Chọn trạng thái</option>
+                <option value="Đã kết thúc"[(ngModel)]="oldStudent.status">Đã kết thúc</option>
+                <option value="Đang triển khai" [(ngModel)]="oldStudent.status">Đang triển khai</option>
+                <option value="Chưa bắt đầu" [(ngModel)]="oldStudent.status">Chưa bắt đầu</option>
+            </select>
+        </div>
+        <div class="">
+            <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
+        </div>
+    </form>
+</div>

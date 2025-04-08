@@ -1,0 +1,75 @@
+<div class="container">
+    <h2>Thêm sản phẩm</h2>
+    <form #createForm="ngForm" (ngSubmit)="onCreate(createForm)" novalidate>
+      
+      <div class="mb-3">
+        <label class="form-label">Tên Sản phẩm</label>
+        <input 
+          class="form-control" 
+          type="text" 
+          name="name" 
+          ngModel 
+          #name="ngModel"
+          required 
+          minlength="3"
+          placeholder="Nhập tên sản phẩm">
+        <small class="text-danger" *ngIf="name.invalid && name.touched">
+          Tên sản phẩm phải có ít nhất 3 ký tự.
+        </small>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Mô tả</label>
+        <input 
+          class="form-control" 
+          type="text" 
+          name="description" 
+          ngModel 
+          #description="ngModel"
+          required 
+          minlength="10"
+          placeholder="Nhập mô tả">
+        <small class="text-danger" *ngIf="description.invalid && description.touched">
+          Mô tả phải có ít nhất 10 ký tự.
+        </small>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Ngày Bắt đầu</label>
+        <input class="form-control" type="date" name="start_date" ngModel required>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Ngày Kết thúc</label>
+        <input class="form-control" type="date" name="end_date" ngModel required>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Ảnh</label>
+        <input 
+          class="form-control" 
+          type="text" 
+          name="image" 
+          ngModel 
+          #image="ngModel"
+          required
+          placeholder="Nhập URL ảnh">
+        <small class="text-danger" *ngIf="image.invalid && image.touched">
+          URL ảnh không được để trống.
+        </small>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Trạng thái</label>
+        <select class="form-select" name="status" ngModel required>
+          <option value="" disabled selected>Chọn trạng thái</option>
+          <option value="Đã kết thúc">Đã kết thúc</option>
+          <option value="Đang triển khai">Đang triển khai</option>
+          <option value="Chưa bắt đầu">Chưa bắt đầu</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Thêm mới</button>
+    </form>
+  </div>
+  

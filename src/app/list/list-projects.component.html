@@ -1,0 +1,60 @@
+<div class="p-6 bg-gray-100 min-h-screen">
+
+  <!-- <button nz-button nzType="primary" (click)="showDrawer()"
+    class="mb-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+    Thêm sản phẩm
+  </button>
+
+  <nz-drawer [nzTitle]="'Thêm sản phẩm'" [nzVisible]="isVisible" (nzOnClose)="closeDrawer()">
+    <div class="p-4">
+  
+    </div>
+  </nz-drawer> -->
+
+
+
+  <h2>Danh sách sản phẩm</h2>
+  <nz-table #basicTable [nzData]="listProjects" class="w-full">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="p-3 text-left">STT</th>
+        <th class="p-3 text-left">Tên dự án</th>
+        <th class="p-3 text-left">Mô tả</th>
+        <th class="p-3 text-left">Ngày bắt đầu</th>
+        <th class="p-3 text-left">Ngày kết thúc</th>
+        <th class="p-3 text-left">hình ảnh </th>
+        <th class="p-3 text-left">Trạng thái</th>
+        <th class="p-3 text-left">Hành động</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(s of listProjects; track s.id) {
+      <tr class="border-b hover:bg-gray-100">
+        <td class="p-3">{{ s.id }}</td>
+        <td class="p-3">{{ s.name }}</td>
+        <td class="p-3">{{ s.description }}</td>
+        <td class="p-3">{{ s.start_date }}</td>
+        <td class="p-3">{{ s.end_date }}</td>
+        <td class="p-3">
+          <img [src]="s.image" alt="Hình ảnh" class="rounded img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;">
+        </td>
+        <td class="p-3">{{ s.status }}</td>
+        <td class="p-3 flex gap-2">
+
+          <button (click)="handleDelete(s.id)"
+          class="btn btn-danger">
+            Delete
+          </button>
+          
+          <button
+          class="btn btn-success mx-1"
+          [routerLink]="['/edit', s.id]">
+          Edit
+          </button>
+
+        </td>
+      </tr>
+      }
+    </tbody>
+  </nz-table>
+</div>
