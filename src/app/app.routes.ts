@@ -17,6 +17,9 @@ import { ListProjectsComponent } from './(admin)/list/list-projects.component';
 import { CreateComponent } from './(admin)/create/create.component';
 import { EditComponent } from './(admin)/edit/edit.component';
 
+// 🔐 Auth Guard
+import { AdminGuard } from './guards/admin.guard'; // 👈 Nhớ import guard
+
 export const routes: Routes = [
 
   // 👤 CLIENT
@@ -31,11 +34,11 @@ export const routes: Routes = [
     ]
   },
 
-  // 🔐 ADMIN
+  // 🔐 ADMIN (chỉ dành cho admin)
   {
     path: 'admin',
     component: AdminLayoutComponent,
-    // canActivate: [AuthGuard], // nếu có
+    canActivate: [AdminGuard], // 👈 Thêm guard ở đây
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'list', component: ListProjectsComponent },

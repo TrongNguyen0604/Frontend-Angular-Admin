@@ -1,32 +1,38 @@
+// auth.service.ts
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  // import HttpClient
-  constructor(private api:HttpClient) { }
+  private apiUrl = 'http://localhost:3000'; // hoặc URL API thật của bạn
 
+  constructor(private http: HttpClient) {}
 
-
-  apiUrl:string = 'http://localhost:3000'; //khai báo API url,
-
-
-  // khai báo hàm đăng ký 
-  register(data:any): Observable<object>{
-    return this.api.post(this.apiUrl+'/register',data)
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/login`, { email, password }).pipe(
+      map((res: any) => {
+        // 👉 Lưu token + user info
+        localStorage.setItem('token', res.accessToken);
+        localStorage.setItem('user', JSON.stringify(res.user));
+        return res;
+      })
+    );
   }
 
-
-
-  // khai báo hàm đăng nhập
-  login(data:any): Observable<object>{
-    return this.api.post<any>(this.apiUrl+'/login',data)
+  logout() {
+    localStorage.clear();
   }
 
+  getUserRole(): string | null {
+    const userStr = localStorage.getItem('user');
+    return userStr ? JSON.parse(userStr).role : null;
+  }
 
-  
+  isAdmin(): boolean {
+    return this.getUserRole() === 'admin';
+  }
 }
