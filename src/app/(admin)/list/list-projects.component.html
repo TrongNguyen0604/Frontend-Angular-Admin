@@ -1,0 +1,63 @@
+<div class="min-h-screen bg-gray-100 p-6">
+  <h2 class="text-2xl font-semibold mb-4">Danh sách sản phẩm</h2>
+
+  <div class="bg-white rounded-lg shadow overflow-auto">
+    <nz-table
+      #basicTable
+      [nzData]="listProjects"
+      [nzBordered]="true"
+      [nzScroll]="{ x: '1000px' }"
+      class="w-full"
+    >
+      <thead>
+        <tr class="bg-gray-200 text-left">
+          <th class="p-3">STT</th>
+          <th class="p-3">Tên dự án</th>
+          <th class="p-3">Mô tả</th>
+          <th class="p-3">Ngày bắt đầu</th>
+          <th class="p-3">Ngày kết thúc</th>
+          <th class="p-3">Hình ảnh</th>
+          <th class="p-3">Trạng thái</th>
+          <th class="p-3">Hành động</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (s of listProjects; track s.id) {
+        <tr class="border-b hover:bg-gray-50 transition">
+          <td class="p-3">{{ s.id }}</td>
+          <td class="p-3">{{ s.name }}</td>
+          <td class="p-3">{{ s.description }}</td>
+          <td class="p-3">{{ s.start_date }}</td>
+          <td class="p-3">{{ s.end_date }}</td>
+          <td class="p-3">
+            <img
+              [src]="s.image"
+              alt="Hình ảnh"
+              class="rounded border w-[50px] h-[50px] object-cover"
+            />
+          </td>
+          <td class="p-3">{{ s.status }}</td>
+          <td class="p-3">
+            <div class="flex gap-2">
+              <button
+                (click)="handleDelete(s.id)"
+                class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition"
+              >
+                Delete
+              </button>
+
+              <button
+                [routerLink]="['/admin/edit', s.id]"
+                class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 transition"
+              >
+                Edit
+              </button>
+            </div>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </nz-table>
+  </div>
+</div>

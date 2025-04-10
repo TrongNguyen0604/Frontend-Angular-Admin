@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Đăng ký</h2>
+  <form 
+    #register="ngForm"
+    (ngSubmit)="onRegister(register.value)"
+  >
+    <div>
+      <label for="" class="form-label">Email</label>
+      <input 
+        type="email" 
+        class="form-control" 
+        name="email" 
+        ngModel 
+        required 
+        email
+        #email="ngModel"
+      >
+      <div class="text-danger" *ngIf="email.invalid && email.touched">
+        <small *ngIf="email.errors?.['required']">Email không được để trống.</small>
+        <small *ngIf="email.errors?.['email']">Email không đúng định dạng.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="" class="form-label">Password</label>
+      <input 
+        type="password" 
+        class="form-control" 
+        name="password" 
+        ngModel 
+        required 
+        minlength="6"
+        #password="ngModel"
+      >
+      <div class="text-danger" *ngIf="password.invalid && password.touched">
+        <small *ngIf="password.errors?.['required']">Mật khẩu không được để trống.</small>
+        <small *ngIf="password.errors?.['minlength']">Mật khẩu tối thiểu 6 ký tự.</small>
+      </div>
+    </div>
+    <a href="/login">đăng nhập</a>
+    <button 
+      type="submit" 
+      class="btn btn-success" 
+      [disabled]="register.invalid"
+    >
+      Đăng ký
+    </button>
+  </form>
+</div>

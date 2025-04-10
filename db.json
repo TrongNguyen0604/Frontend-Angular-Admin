@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "Landing Page Builder",
+      "name": "Landing Page Builder ad",
       "description": "Tạo landing page bằng cách kéo thả ",
       "start_date": "2025-03-01",
       "end_date": "2025-06-13",
@@ -42,6 +42,36 @@
       "email": "trongnguyen12@gmail.com",
       "password": "$2a$10$zeZgFEOenA3/xvZQVRWB2ewwCNRg3GFg98uCQ38.UzbWJUx6qCX6m",
       "id": 1
+    },
+    {
+      "email": "trong1@gmail.com",
+      "password": "$2a$10$dtD64IABMAQxIeYVEKiDtOnHTyUYxmWeCjbm.cNFXWQjZQo56KVEK",
+      "id": 2
+    },
+    {
+      "email": "trongnguyen06042005@gmail.com",
+      "password": "$2a$10$OWEjsHkgUv1WgcRUfvgiv.roIkuy4yad7Ex61Inud2idrNgtazJHe",
+      "id": 3
+    },
+    {
+      "email": "trong1212@gmail.com",
+      "password": "$2a$10$kqa8WSW7XaNQ2wJPvONABO3l11sQp6HWqXAGGhGBa4AFKIK6Jodmq",
+      "id": 4
+    },
+    {
+      "email": "trong11@gmail.com",
+      "password": "$2a$10$2n1hgOAwyDG31EiqlhKHaugmTZIEa9yI1VREfhdRHwwz8Jk4Frzl6",
+      "id": 5
+    },
+    {
+      "email": "11@gmail.com",
+      "password": "$2a$10$nKMSVtMzRdjk7wlpAuSkkObPWI3/9DpMNIwTJ6yj2oCyyvBEIXery",
+      "id": 6
+    },
+    {
+      "email": "trong132@gmail.com",
+      "password": "$2a$10$2OfWe9g8qEz4sVgtNFKs/ewbZh5XKIjAoHuWS4P6hfrP5.CE96GjS",
+      "id": 7
     }
   ]
 }
