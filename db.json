@@ -1,85 +1,21 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Nike Air Zoom Pegasus 40",
-      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
-      "category": "Chạy bộ",
-      "brand": "Nike",
-      "price": 2890000,
+      "name": "ểtasert",
+      "description": "dfghdrfhesyu",
+      "category": "chạy boou ",
+      "brand": "niike",
+      "price": 1000,
       "images": [
-        "https://picsum.photos/id/1011/400/400",
-        "https://picsum.photos/id/1012/400/400"
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/200/300",
+        "https://picsum.photos/200/300"
       ],
-      "status": "Đang bán"
-    },
-    {
-      "id": 1,
-      "name": "Nike Air Zoom Pegasus 40",
-      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
-      "category": "Chạy bộ",
-      "brand": "Nike",
-      "price": 2890000,
-      "images": [
-        "https://picsum.photos/id/1011/400/400",
-        "https://picsum.photos/id/1012/400/400"
-      ],
-      "status": "Đang bán"
-    },
-    {
-      "id": 1,
-      "name": "Nike Air Zoom Pegasus 40",
-      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
-      "category": "Chạy bộ",
-      "brand": "Nike",
-      "price": 2890000,
-      "images": [
-        "https://picsum.photos/id/1011/400/400",
-        "https://picsum.photos/id/1012/400/400"
-      ],
-      "status": "Đang bán"
-    },
-    {
-      "id": 1,
-      "name": "Nike Air Zoom Pegasus 40",
-      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
-      "category": "Chạy bộ",
-      "brand": "Nike",
-      "price": 2890000,
-      "images": [
-        "https://picsum.photos/id/1011/400/400",
-        "https://picsum.photos/id/1012/400/400"
-      ],
-      "status": "Đang bán"
-    },
-    {
-      "id": 1,
-      "name": "Nike Air Zoom Pegasus 40",
-      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
-      "category": "Chạy bộ",
-      "brand": "Nike",
-      "price": 2890000,
-      "images": [
-        "https://picsum.photos/id/1011/400/400",
-        "https://picsum.photos/id/1012/400/400"
-      ],
-      "status": "Đang bán"
-    },
-    {
-      "id": 1,
-      "name": "Nike Air Zoom Pegasus 40",
-      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
-      "category": "Chạy bộ",
-      "brand": "Nike",
-      "price": 2890000,
-      "images": [
-        "https://picsum.photos/id/1011/400/400",
-        "https://picsum.photos/id/1012/400/400"
-      ],
-      "status": "Đang bán"
+      "status": "Ngừng bán",
+      "id": 5
     }
   ],
-
   "users": [
     {
       "email": "trongnguyen12@gmail.com",

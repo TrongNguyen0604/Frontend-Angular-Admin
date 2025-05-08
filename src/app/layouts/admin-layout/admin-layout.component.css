@@ -79,3 +79,35 @@
     height: 100%;
   }
   
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nz-layout {
+    height: 100vh;
+  }
+  
+  nz-content {
+    padding: 16px;
+    background: #f0f2f5;
+    overflow: auto;
+    min-height: 0; /* tránh lỗi tràn trong flex */
+  }
+  
+ 
+  
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    background: #001529;
+    color: white;
+  }
+  
+  .sidebar-logo img {
+    height: 32px;
+  }
+  

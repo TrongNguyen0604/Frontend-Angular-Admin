@@ -21,11 +21,16 @@
       <td>{{ s.category }}</td>
       <td>{{ s.brand }}</td>
       <td>{{ s.price }}</td>
+
       <td>
-        <img [src]="s.images[0]" alt="Hình ảnh sản phẩm" style="width: 100px; height: auto;" />
+        <ng-container *ngFor="let img of s.images">
+          <img [src]="img" alt="Ảnh sản phẩm" style="width: 50px; height: auto; margin-right: 8px;" />
+        </ng-container>
       </td>
+
       <td>{{ s.status }}</td>
-      <td>
+
+      <td style="text-align: center;">
         <div class="action-buttons">
           <button (click)="handleDelete(s.id)" class="btn-delete">
             Delete
@@ -35,6 +40,8 @@
           </button>
         </div>
       </td>
+
+
     </tr>
   </tbody>
 
