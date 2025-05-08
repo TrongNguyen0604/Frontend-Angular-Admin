@@ -25,7 +25,7 @@ export class CreateComponent {
     this.api.post(this.apiUrl, form.value).subscribe(res => {
       if (res) {
         alert('Thêm thành công');
-        this.router.navigate(['/list']);
+        this.router.navigate(['admin/list']);
       }
     });
   }

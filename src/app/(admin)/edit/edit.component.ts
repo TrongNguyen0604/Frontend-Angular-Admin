@@ -36,7 +36,7 @@ export class EditComponent {
     this.api.put(`${this.apiUrl}/${this.id}`,data).subscribe(res => {
       if (res) {
         alert('Cập nhật thành công');
-        this.router.navigate(['list']);
+        this.router.navigate(['admin/list']);
       }
     })
   }

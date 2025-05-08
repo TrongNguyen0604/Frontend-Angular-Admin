@@ -1,1 +1,34 @@
-<h1>home</h1>
+<nz-table
+#basicTable
+[nzData]="homeProjects"
+[nzBordered]="true"
+[nzScroll]="{ x: '1000px' }"
+class="w-full"
+>
+
+
+<tbody>
+  @for (s of homeProjects; track s.id) {
+  <tr class="border-b hover:bg-gray-50 transition">
+    
+    <td class="p-3">{{ s.name }}</td>
+    <td class="p-3">{{ s.description }}</td>
+    <td class="p-3">{{ s.start_date }}</td>
+    <td class="p-3">{{ s.end_date }}</td>
+    <td class="p-3">
+      <img
+        [src]="s.image"
+        alt="Hình ảnh"
+        class="rounded border w-[50px] h-[50px] object-cover"
+      />
+    </td>
+    <td class="p-3">{{ s.status }}</td>
+    <td class="p-3">
+      <div class="flex gap-2">
+      
+      </div>
+    </td>
+  </tr>
+  }
+</tbody>
+</nz-table>

@@ -5,15 +5,18 @@
   import {  NzButtonSize } from 'ng-zorro-antd/button';
   import { NzDividerModule } from 'ng-zorro-antd/divider';
   import { NzTableModule } from 'ng-zorro-antd/table';
+  import { NzTagModule } from 'ng-zorro-antd/tag';
   import { NzMessageService } from 'ng-zorro-antd/message';
 
  
   import { NzDrawerComponent, NzDrawerModule } from 'ng-zorro-antd/drawer';
   import { NzButtonModule } from 'ng-zorro-antd/button';
+import { CommonModule } from '@angular/common';
 
   @Component({
+    standalone: true,
     selector: 'app-list-projects',
-    imports: [NzDividerModule, NzTableModule, RouterLink, NzButtonModule,NzDrawerModule],
+    imports: [NzDividerModule, NzTableModule, RouterLink, NzButtonModule,NzDrawerModule,NzTagModule,CommonModule],
     templateUrl: './list-projects.component.html',
     styleUrl: './list-projects.component.css',
   })
@@ -25,7 +28,7 @@
     constructor(private api: HttpClient, private message: NzMessageService) {}
 
     size: NzButtonSize = 'default';
-    apiUrl: string = 'http://localhost:3000/projects';
+    apiUrl: string = 'http://localhost:3000/products';
     listProjects: any;
 
     ngOnInit(): void {

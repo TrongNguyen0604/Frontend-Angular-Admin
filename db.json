@@ -1,42 +1,85 @@
 {
-  "projects": [
+  "products": [
     {
-      "name": "Landing Page Builder ad",
-      "description": "Tạo landing page bằng cách kéo thả ",
-      "start_date": "2025-03-01",
-      "end_date": "2025-06-13",
-      "image": "https://picsum.photos/200/300",
-      "status": "Đã kết thúc",
-      "id": 3
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 40",
+      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
+      "category": "Chạy bộ",
+      "brand": "Nike",
+      "price": 2890000,
+      "images": [
+        "https://picsum.photos/id/1011/400/400",
+        "https://picsum.photos/id/1012/400/400"
+      ],
+      "status": "Đang bán"
     },
     {
-      "name": " Hệ thống quản lý học viên",
-      "description": "học trực tuyến với video bài giảng, bài tập trắc nghiệm",
-      "start_date": "2025-03-08",
-      "end_date": "2025-02-24",
-      "image": "https://picsum.photos/200/300",
-      "status": "Đang triển khai",
-      "id": 4
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 40",
+      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
+      "category": "Chạy bộ",
+      "brand": "Nike",
+      "price": 2890000,
+      "images": [
+        "https://picsum.photos/id/1011/400/400",
+        "https://picsum.photos/id/1012/400/400"
+      ],
+      "status": "Đang bán"
     },
     {
-      "name": "Ứng dụng theo dõi chi tiêu cá nhân ",
-      "description": "quản lý tài chính cá nhân bằng cách ghi chép thu chi",
-      "start_date": "2025-03-01",
-      "end_date": "2025-03-12",
-      "image": "https://picsum.photos/200/300",
-      "status": "Đã kết thúc",
-      "id": 6
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 40",
+      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
+      "category": "Chạy bộ",
+      "brand": "Nike",
+      "price": 2890000,
+      "images": [
+        "https://picsum.photos/id/1011/400/400",
+        "https://picsum.photos/id/1012/400/400"
+      ],
+      "status": "Đang bán"
     },
     {
-      "name": "Ứng dụng quản lý công việc",
-      "description": " sắp xếp công việc, đặt deadline, theo dõi tiến độ",
-      "start_date": "2025-03-06",
-      "end_date": "2025-03-15",
-      "image": "https://picsum.photos/200/300",
-      "status": "Chưa bắt đầu",
-      "id": 7
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 40",
+      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
+      "category": "Chạy bộ",
+      "brand": "Nike",
+      "price": 2890000,
+      "images": [
+        "https://picsum.photos/id/1011/400/400",
+        "https://picsum.photos/id/1012/400/400"
+      ],
+      "status": "Đang bán"
+    },
+    {
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 40",
+      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
+      "category": "Chạy bộ",
+      "brand": "Nike",
+      "price": 2890000,
+      "images": [
+        "https://picsum.photos/id/1011/400/400",
+        "https://picsum.photos/id/1012/400/400"
+      ],
+      "status": "Đang bán"
+    },
+    {
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 40",
+      "description": "Giày chạy bộ với đệm Zoom Air, phù hợp cho tập luyện hàng ngày.",
+      "category": "Chạy bộ",
+      "brand": "Nike",
+      "price": 2890000,
+      "images": [
+        "https://picsum.photos/id/1011/400/400",
+        "https://picsum.photos/id/1012/400/400"
+      ],
+      "status": "Đang bán"
     }
   ],
+
   "users": [
     {
       "email": "trongnguyen12@gmail.com",
@@ -72,6 +115,21 @@
       "email": "trong132@gmail.com",
       "password": "$2a$10$2OfWe9g8qEz4sVgtNFKs/ewbZh5XKIjAoHuWS4P6hfrP5.CE96GjS",
       "id": 7
+    },
+    {
+      "email": "tro1@gmail.com",
+      "password": "$2a$10$AA0jCXNCqElhYtYYqo2yuOPXMVL7L/rhMBbMCPCPHxmKWee.c3ymS",
+      "id": 8
+    },
+    {
+      "email": "trongnguyen1@gmail.com",
+      "password": "$2a$10$vBzZdWI95GdqYrZ9G9yGje4nl3/s3jUyP6A8.C3eQ8wppSZRERbrG",
+      "id": 9
+    },
+    {
+      "email": "trongnguyen0604@gmail.com",
+      "password": "$2a$10$FI/RnpXJYYzPDCDROS.kMOZ8Gy/DJFdPqSU8tiV3oTxzzcymgwRU6",
+      "id": 10
     }
   ]
 }

@@ -1,0 +1,105 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  thead {
+    background-color: #f5f5f5;
+  }
+  
+  thead th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+  }
+  
+  tbody tr:hover {
+    background-color: #fafafa;
+  }
+  
+  img {
+    width: 70px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  td:last-child {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  button,
+  Button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  Button[color='default'][variant='solid'] {
+    background-color: #ff4d4f;
+    color: white;
+  }
+  
+  .btn-edit {
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-edit:hover {
+    background-color: #40a9ff;
+  }
+  
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .btn-delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .btn-delete:hover {
+    background-color: darkred;
+  }
+  
+  .btn-edit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .btn-edit:hover {
+    background-color: darkgreen;
+  }
+  
