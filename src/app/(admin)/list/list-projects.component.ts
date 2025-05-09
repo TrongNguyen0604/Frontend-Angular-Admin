@@ -12,6 +12,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzDrawerComponent, NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CommonModule } from '@angular/common';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -77,24 +78,26 @@ export class ListProjectsComponent {
       return matchesCategory && matchesSearch;
     });
   }
-  
+
 
   //and tìm kiếm 
 
   // Xoá sản phẩm
+
+
   async handleDelete(id: number): Promise<void> {
-    if (confirm('Bạn có muốn xóa dự án này?')) {
-      this.api.delete(`${this.apiUrl}/${id}`).subscribe({
-        next: () => {
-          this.message.success('Xóa thành công!');
-          this.getList(); // Tải lại danh sách sau khi xoá
-        },
-        error: (err) => {
-          this.message.error(`Lỗi: ${err.message}`);
-        }
-      });
+    const confirmed = confirm('Bạn có muốn xóa dự án này?');
+    if (!confirmed) return;
+
+    try {
+      await firstValueFrom(this.api.delete(`${this.apiUrl}/${id}`));
+      this.message.success('Xóa thành công!');
+      this.getList(); // Tải lại danh sách sau khi xoá
+    } catch (err: any) {
+      this.message.error(`Lỗi khi xoá: ${err?.message || 'Không xác định'}`);
     }
   }
+
 
   // Drawer
   showDrawer(): void {

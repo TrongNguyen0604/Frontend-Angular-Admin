@@ -2,21 +2,34 @@
   "products": [
     {
       "name": "1",
-      "description": "cbdfdfgdfgdg",
+      "description": "dfgsdfgsgsg",
       "category": "thể thao",
-      "brand": "dfgd",
+      "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://picsum.photos/200/300",
       "image2": "https://picsum.photos/200/300",
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
       "status": "Đang bán",
-      "id": 1
+      "id": 3
     },
     {
-      "name": "2",
-      "description": "sssssssssss",
-      "category": "vinte",
+      "name": "ssss",
+      "description": "dfsdfsdfsdfdsf",
+      "category": "thể thao",
+      "brand": "Thương hiệu",
+      "price": 1000,
+      "image1": "https://picsum.photos/200/300",
+      "image2": "https://picsum.photos/200/300",
+      "image3": "https://picsum.photos/200/300",
+      "image4": "https://picsum.photos/200/300",
+      "status": "Đang bán",
+      "id": 4
+    },
+    {
+      "name": "ssss",
+      "description": "fsfssdfsdfsf",
+      "category": "thể thao",
       "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://picsum.photos/200/300",
@@ -24,7 +37,46 @@
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
       "status": "Hết hàng",
-      "id": 2
+      "id": 5
+    },
+    {
+      "name": "ssss",
+      "description": "sfsfsdfsfsdf",
+      "category": "thể thao",
+      "brand": "Thương hiệu",
+      "price": 1000,
+      "image1": "https://picsum.photos/200/300",
+      "image2": "https://picsum.photos/200/300",
+      "image3": "https://picsum.photos/200/300",
+      "image4": "https://picsum.photos/200/300",
+      "status": "Hết hàng",
+      "id": 6
+    },
+    {
+      "name": "ssss",
+      "description": "cfxgdxfgsgsd",
+      "category": "thời trang",
+      "brand": "Thương hiệu",
+      "price": 1000,
+      "image1": "https://picsum.photos/200/300",
+      "image2": "https://picsum.photos/200/300",
+      "image3": "https://picsum.photos/200/300",
+      "image4": "https://picsum.photos/200/300",
+      "status": "Hết hàng",
+      "id": 7
+    },
+    {
+      "name": "ssss",
+      "description": "fgsdgsdsdfsd",
+      "category": "thể thao",
+      "brand": "Thương hiệu",
+      "price": 1000,
+      "image1": "https://picsum.photos/200/300",
+      "image2": "https://picsum.photos/200/300",
+      "image3": "https://picsum.photos/200/300",
+      "image4": "https://picsum.photos/200/300",
+      "status": "Hết hàng",
+      "id": 8
     }
   ],
   "users": [

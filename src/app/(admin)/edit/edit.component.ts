@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NzMessageService } from 'ng-zorro-antd/message';
 @Component({
   selector: 'app-edit',
   imports: [CommonModule, FormsModule],
@@ -13,7 +14,8 @@ export class EditComponent {
   constructor(
     private actRoute: ActivatedRoute,
     private api: HttpClient,
-    private router: Router
+    private router: Router,
+    private message: NzMessageService // Tiêm message service
   ) { }
 
   apiUrl: string = 'http://localhost:3000/products';
@@ -42,13 +44,13 @@ export class EditComponent {
       console.error('Lỗi khi chuyển đổi dữ liệu thành JSON:', error);
       return; // Nếu có lỗi, không tiếp tục gửi request
     }
-  
+
     this.api.put(`${this.apiUrl}/${this.id}`, data).subscribe(res => {
       if (res) {
-        alert('Cập nhật thành công');
+        this.message.success('Thêm sản phẩm thành công!');
         this.router.navigate(['admin/list']);
       }
     });
   }
-  
+
 }

@@ -5,12 +5,25 @@
     <option value="Ngừng bán">Ngừng bán</option>
     <option value="Hết hàng">Hết hàng</option>
   </select>
-  <div style="position: relative;">
-    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: gray;"></i>
-    <input type="text" placeholder="Tìm kiếm"
-           style="padding-left: 25px;" 
-           (input)="onSearch($event)" />
+  <div style="position: relative; width: 250px; margin: 0 auto;">
+    <i class="fa fa-search"
+       style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>
+    <input
+      type="text"
+      placeholder="Tìm kiếm..."
+      (input)="onSearch($event)"
+      style="
+        width: 100%;
+        padding: 8px 12px 8px 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+       
+      "
+    />
   </div>
+  
 </div>
 <table>
 
