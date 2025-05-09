@@ -1,4 +1,11 @@
+<select class="form-select" name=""  >
+  <option value=" "  >chọn danh mục</option>
+  <option value="Đang bán">Đang bán</option>
+  <option value="Ngừng bán">Ngừng bán</option>
+  <option value="Hết hàng">Hết hàng</option>
+</select>
 <table>
+  
   <thead>
     <tr>
       <th style="text-align: center;">STT</th>
@@ -23,9 +30,10 @@
       <td>{{ s.price }}</td>
 
       <td>
-        <ng-container *ngFor="let img of s.images">
-          <img [src]="img" alt="Ảnh sản phẩm" style="width: 50px; height: auto; margin-right: 8px;" />
-        </ng-container>
+       <img src={{s.image1}} alt="">
+       <img src={{s.image2}} alt="">
+       <img src={{s.image3}} alt="">
+       <img src={{s.image4}} alt="">
       </td>
 
       <td>{{ s.status }}</td>

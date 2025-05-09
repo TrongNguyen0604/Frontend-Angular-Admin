@@ -23,11 +23,23 @@
     </div>
 
     <!-- Thể loại -->
-    <div class="mb-3">
-      <label class="form-label">Thể loại</label>
-      <input class="form-control" type="text" name="category" ngModel required placeholder="VD: Chạy bộ, Bóng rổ,...">
-    </div>
-
+    <select
+    class="form-select"
+    name="category"
+    ngModel
+    #category="ngModel"
+    required
+  >
+    <option [ngValue]="''" disabled>Chọn danh mục</option>
+    <option [ngValue]="'thể thao'">thể thao</option>
+    <option [ngValue]="'thời trang'">thời trang</option>
+    <option [ngValue]="'vinte'">vinte</option>
+  </select>
+  <small class="text-danger" *ngIf="category.invalid && category.touched">
+    Bạn phải chọn danh mục.
+  </small>
+  
+    
     <!-- Thương hiệu -->
     <div class="mb-3">
       <label class="form-label">Thương hiệu</label>
@@ -70,7 +82,7 @@
     <div class="mb-3">
       <label class="form-label">Trạng thái</label>
       <select class="form-select" name="status" ngModel required>
-        <option value="" disabled selected>Chọn trạng thái</option>
+        <option value="" disabled >Chọn trạng thái</option>
         <option value="Đang bán">Đang bán</option>
         <option value="Ngừng bán">Ngừng bán</option>
         <option value="Hết hàng">Hết hàng</option>

@@ -30,7 +30,11 @@ export class CreateComponent {
       category: formValue.category,
       brand: formValue.brand,
       price: +formValue.price,
-      images: [formValue.image1, formValue.image2, formValue.image3,formValue.image4].filter(Boolean),
+     
+      image1: formValue.image1,
+      image2: formValue.image2,
+      image3: formValue.image3,
+      image4: formValue.image4,
       status: formValue.status
     };
 
