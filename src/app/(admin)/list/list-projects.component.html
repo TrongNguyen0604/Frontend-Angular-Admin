@@ -1,11 +1,19 @@
-<select class="form-select" name=""  >
-  <option value=" "  >chọn danh mục</option>
-  <option value="Đang bán">Đang bán</option>
-  <option value="Ngừng bán">Ngừng bán</option>
-  <option value="Hết hàng">Hết hàng</option>
-</select>
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; ">
+  <select class="form-select" (change)="onCategoryChange($event)">
+    <option value="">Lọc theo danh mục</option>
+    <option value="Đang bán">Đang bán</option>
+    <option value="Ngừng bán">Ngừng bán</option>
+    <option value="Hết hàng">Hết hàng</option>
+  </select>
+  <div style="position: relative;">
+    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: gray;"></i>
+    <input type="text" placeholder="Tìm kiếm"
+           style="padding-left: 25px;" 
+           (input)="onSearch($event)" />
+  </div>
+</div>
 <table>
-  
+
   <thead>
     <tr>
       <th style="text-align: center;">STT</th>
@@ -21,7 +29,7 @@
 
   </thead>
   <tbody>
-    <tr *ngFor="let s of listProjects">
+    <tr *ngFor="let s of filteredProjects">
       <td>{{ s.id }}</td>
       <td>{{ s.name }}</td>
       <td>{{ s.description }}</td>
@@ -30,10 +38,10 @@
       <td>{{ s.price }}</td>
 
       <td>
-       <img src={{s.image1}} alt="">
-       <img src={{s.image2}} alt="">
-       <img src={{s.image3}} alt="">
-       <img src={{s.image4}} alt="">
+        <img src={{s.image1}} alt="">
+        <img src={{s.image2}} alt="">
+        <img src={{s.image3}} alt="">
+        <img src={{s.image4}} alt="">
       </td>
 
       <td>{{ s.status }}</td>

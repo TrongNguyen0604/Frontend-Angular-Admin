@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "name": "fdgfdg",
+      "name": "1",
       "description": "cbdfdfgdfgdg",
       "category": "thể thao",
       "brand": "dfgd",
@@ -10,11 +10,11 @@
       "image2": "https://picsum.photos/200/300",
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
-      "status": "Hết hàng",
+      "status": "Đang bán",
       "id": 1
     },
     {
-      "name": "ssss",
+      "name": "2",
       "description": "sssssssssss",
       "category": "vinte",
       "brand": "Thương hiệu",
