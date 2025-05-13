@@ -1,0 +1,64 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  thead {
+    background-color: #f5f5f5;
+  }
+  
+  thead th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+  }
+  
+  tbody tr:hover {
+    background-color: #fafafa;
+  }
+  
+  img {
+    width: 70px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* khoảng cách giữa các nút */
+  }
+  
+  .btn-delete, .btn-edit {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+    color: white;
+  }
+  
+ 

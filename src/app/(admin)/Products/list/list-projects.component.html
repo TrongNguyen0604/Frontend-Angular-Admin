@@ -1,18 +1,14 @@
 <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; ">
   <select class="form-select" (change)="onCategoryChange($event)">
-    <option value="">Lọc theo danh mục</option>
+    <option value="">Lọc theo trạng thái</option>
     <option value="Đang bán">Đang bán</option>
     <option value="Ngừng bán">Ngừng bán</option>
     <option value="Hết hàng">Hết hàng</option>
   </select>
   <div style="position: relative; width: 250px; margin: 0 auto;">
     <i class="fa fa-search"
-       style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>
-    <input
-      type="text"
-      placeholder="Tìm kiếm..."
-      (input)="onSearch($event)"
-      style="
+      style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>
+    <input type="text" placeholder="Tìm kiếm..." (input)="onSearch($event)" style="
         width: 100%;
         padding: 8px 12px 8px 35px;
         border: 1px solid #ccc;
@@ -20,10 +16,9 @@
         outline: none;
         font-size: 14px;
        
-      "
-    />
+      " />
   </div>
-  
+
 </div>
 <table>
 
@@ -46,7 +41,7 @@
       <td>{{ s.id }}</td>
       <td>{{ s.name }}</td>
       <td>{{ s.description }}</td>
-      <td>{{ s.category }}</td>
+      <td>{{ s.categoryName }}</td>
       <td>{{ s.brand }}</td>
       <td>{{ s.price }}</td>
 

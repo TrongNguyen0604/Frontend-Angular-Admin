@@ -23,23 +23,21 @@
     </div>
 
     <!-- Thể loại -->
-    <select
-    class="form-select"
-    name="category"
-    ngModel
-    #category="ngModel"
-    required
-  >
-    <option [ngValue]="''" disabled>Chọn danh mục</option>
-    <option [ngValue]="'thể thao'">thể thao</option>
-    <option [ngValue]="'thời trang'">thời trang</option>
-    <option [ngValue]="'vinte'">vinte</option>
-  </select>
-  <small class="text-danger" *ngIf="category.invalid && category.touched">
-    Bạn phải chọn danh mục.
-  </small>
-  
-    
+    <!-- Thể loại (danh mục sản phẩm) -->
+      <label class="form-label">Danh mục</label>
+    <select class="form-select" name="category" [(ngModel)]="category.name" #category="ngModel" required>
+      <option [ngValue]="''" disabled selected>Chọn danh mục</option>
+      <option *ngFor="let cate of categories" [ngValue]="cate.name">
+        {{ cate.name }}
+      </option>
+    </select>
+
+    <small class="text-danger" *ngIf="category.invalid && category.touched">
+      Bạn phải chọn danh mục.
+    </small>
+
+
+
     <!-- Thương hiệu -->
     <div class="mb-3">
       <label class="form-label">Thương hiệu</label>
@@ -82,7 +80,7 @@
     <div class="mb-3">
       <label class="form-label">Trạng thái</label>
       <select class="form-select" name="status" ngModel required>
-        <option value="" disabled >Chọn trạng thái</option>
+        <option value="" disabled>Chọn trạng thái</option>
         <option value="Đang bán">Đang bán</option>
         <option value="Ngừng bán">Ngừng bán</option>
         <option value="Hết hàng">Hết hàng</option>

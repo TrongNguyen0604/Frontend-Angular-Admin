@@ -1,0 +1,67 @@
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; ">
+  <select class="form-select" (change)="onCategoryChange($event)">
+    <option value="">Lọc theo trạng thái</option>
+    <option value="hoạt động">hoạt động</option>
+    <option value="không hoạt động">không hoạt động</option>
+  </select>
+  <div style="position: relative; width: 250px; margin: 0 auto;">
+    <i class="fa fa-search"
+      style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>
+    <input type="text" placeholder="Tìm kiếm..." (input)="onSearch($event)" style="
+        width: 100%;
+        padding: 8px 12px 8px 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+       
+      " />
+  </div>
+
+</div>
+<table>
+
+  <thead>
+    <tr>
+      <th style="text-align: center;">STT</th>
+      <th style="text-align: center;">Tên Danh mục</th>
+      <th style="text-align: center;">Mô tả</th>
+      <!-- <th style="text-align: center;">Số lượng sản phẩm</th> -->
+      <th style="text-align: center;">Hình ảnh </th>
+      <th style="text-align: center;">Trạng thái</th>
+      <th style="text-align: center;">Hành động</th>
+    </tr>
+
+  </thead>
+  <tbody style="text-align: center;">
+    <tr *ngFor="let s of filteredProjects">
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.description }}</td>
+      <!-- <td>{{s.product_count}}</td> -->
+      <td>
+        <img src={{s.image}} alt="">
+
+      </td>
+
+      <td style="text-align: center;">{{ s.status }}</td>
+
+      <td style="text-align: center;">
+        <div class="action-buttons">
+          <button (click)="handleDelete(s.id)" class="btn-delete">
+            Delete
+          </button>
+          <button [routerLink]="['/admin/Cateedit', s.id]" class="btn-edit">
+            Edit
+          </button>
+          <button [routerLink]="['/admin/CateDetail', s.id]" class="btn-detail">
+            Chi tiết
+          </button>
+        </div>
+      </td>
+
+
+    </tr>
+  </tbody>
+
+</table>

@@ -1,32 +1,31 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-
-import { RouterLink } from '@angular/router';
-import { NzButtonSize } from 'ng-zorro-antd/button';
+import { Component, ViewChild } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { NzButtonModule, NzButtonSize } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzDrawerModule, NzDrawerComponent } from 'ng-zorro-antd/drawer';
+import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTagModule } from 'ng-zorro-antd/tag';
-import { NzMessageService } from 'ng-zorro-antd/message';
-
-
-import { NzDrawerComponent, NzDrawerModule } from 'ng-zorro-antd/drawer';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { CommonModule } from '@angular/common';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
-  standalone: true,
-  selector: 'app-list-projects',
+  selector: 'app-list-cate',
   imports: [NzDividerModule, NzTableModule, RouterLink, NzButtonModule, NzDrawerModule, NzTagModule, CommonModule],
-  templateUrl: './list-projects.component.html',
-  styleUrl: './list-projects.component.css',
+  templateUrl: './list-cate.component.html',
+  styleUrl: './list-cate.component.css'
 })
+export class ListCateComponent {
 
-export class ListProjectsComponent {
   size: NzButtonSize = 'default';
-  apiUrl: string = 'http://localhost:3000/products';
+  apiUrl: string = 'http://localhost:3000/categories';
 
-  listProjects: any[] = [];        // Dữ liệu gốc
+  listProjects = [
+    { id: 1, name: 'Giày thể thao', description: 'Giày chất lượng', image: 'image1.jpg', status: 'hoạt động' },
+    { id: 2, name: 'Áo thun', description: 'Áo thun thời trang', image: 'image2.jpg', status: 'không hoạt động' },
+    // Thêm dữ liệu mẫu
+  ];      // Dữ liệu gốc
   filteredProjects: any[] = [];    // Dữ liệu sau khi lọc
 
   searchKeyword: string = '';
@@ -36,10 +35,15 @@ export class ListProjectsComponent {
 
   @ViewChild('drawerRef', { static: false }) drawer!: NzDrawerComponent;
 
-  constructor(private api: HttpClient, private message: NzMessageService) { }
+  constructor(private api: HttpClient, private message: NzMessageService, private router: Router) { }
 
   ngOnInit() {
     this.getList(); // Gọi khi khởi tạo
+  }
+
+
+  viewCategoryDetail(categoryName: string) {
+    this.router.navigate(['/categories', categoryName.toLowerCase()]);
   }
 
   // Hàm lấy danh sách từ API
@@ -99,6 +103,9 @@ export class ListProjectsComponent {
   }
 
 
+
+
+
   // Drawer
   showDrawer(): void {
     this.isVisible = true;
@@ -116,4 +123,6 @@ export class ListProjectsComponent {
   ngAfterViewInit(): void {
     console.log('Drawer đã render');
   }
+
+
 }

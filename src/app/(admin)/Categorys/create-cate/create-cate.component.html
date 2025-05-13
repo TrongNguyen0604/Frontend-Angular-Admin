@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Thêm danh mục</h2>
+    <form #createCateForm="ngForm" (ngSubmit)="onCreateCate(createCateForm)" novalidate>
+
+        <!-- Thương hiệu -->
+        <div class="mb-3">
+            <label class="form-label">Tên danh mục</label>
+            <input class="form-control" type="text" name="name" ngModel required placeholder="Nhập tên danh mục">
+        </div>
+
+        <!-- Giá tiền -->
+        <div class="mb-3">
+            <label class="form-label">Mô tả</label>
+            <input class="form-control" type="text" name="description" ngModel required min="1000"
+                placeholder="Nhập giá tiền sản phẩm">
+        </div>
+
+        <!-- Hình ảnh 1 -->
+        <!-- Ảnh chính -->
+        <div class="mb-3">
+            <label class="form-label">Ảnh chính</label>
+            <input class="form-control" type="text" name="image" ngModel required placeholder="Nhập URL ảnh chính">
+        </div>
+
+
+        <!-- Trạng thái -->
+        <div class="mb-3">
+            <label class="form-label">Trạng thái</label>
+            <select class="form-select" name="status" ngModel required>
+                <option value="" disabled>Chọn trạng thái</option>
+                <option value="hoạt động">hoạt động</option>
+                <option value="không hoạt động">không hoạt động</option>
+            </select>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

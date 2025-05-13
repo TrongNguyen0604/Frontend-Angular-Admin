@@ -1,0 +1,81 @@
+<form #editForm="ngForm" (ngSubmit)="onEdit()" novalidate>
+  <div class="mb-3">
+    <label class="form-label">Tên sản phẩm</label>
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="product.name"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Mô tả</label>
+    <textarea
+      class="form-control"
+      name="description"
+      [(ngModel)]="product.description"
+      required
+    ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Danh mục</label>
+    <select
+      class="form-select"
+      name="category"
+      [(ngModel)]="product.category"
+      required
+    >
+      <option [ngValue]="''" disabled>-- Chọn danh mục --</option>
+      <option *ngFor="let c of categories" [ngValue]="c.name">{{ c.name }}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Thương hiệu</label>
+    <input
+      type="text"
+      class="form-control"
+      name="brand"
+      [(ngModel)]="product.brand"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Giá</label>
+    <input
+      type="number"
+      class="form-control"
+      name="price"
+      [(ngModel)]="product.price"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Hình ảnh 1</label>
+    <input
+      type="text"
+      class="form-control"
+      name="image1"
+      [(ngModel)]="product.image1"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Trạng thái</label>
+    <select
+      class="form-select"
+      name="status"
+      [(ngModel)]="product.status"
+      required
+    >
+      <option value="Đang bán">Đang bán</option>
+      <option value="Ngừng bán">Ngừng bán</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Lưu chỉnh sửa</button>
+</form>

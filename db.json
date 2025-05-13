@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "name": "1",
-      "description": "dfgsdfgsgsg",
-      "category": "thể thao",
+      "name": "Nike Air Force 1 Low ",
+      "description": "Nike Air Force 1 Low ",
+      "category": "Thời trang ",
       "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://picsum.photos/200/300",
@@ -11,72 +11,56 @@
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
       "status": "Đang bán",
-      "id": 3
-    },
-    {
-      "name": "ssss",
-      "description": "dfsdfsdfsdfdsf",
-      "category": "thể thao",
-      "brand": "Thương hiệu",
-      "price": 1000,
-      "image1": "https://picsum.photos/200/300",
-      "image2": "https://picsum.photos/200/300",
-      "image3": "https://picsum.photos/200/300",
-      "image4": "https://picsum.photos/200/300",
-      "status": "Đang bán",
-      "id": 4
-    },
-    {
-      "name": "ssss",
-      "description": "fsfssdfsdfsf",
-      "category": "thể thao",
-      "brand": "Thương hiệu",
-      "price": 1000,
-      "image1": "https://picsum.photos/200/300",
-      "image2": "https://picsum.photos/200/300",
-      "image3": "https://picsum.photos/200/300",
-      "image4": "https://picsum.photos/200/300",
-      "status": "Hết hàng",
-      "id": 5
-    },
-    {
-      "name": "ssss",
-      "description": "sfsfsdfsfsdf",
-      "category": "thể thao",
-      "brand": "Thương hiệu",
-      "price": 1000,
-      "image1": "https://picsum.photos/200/300",
-      "image2": "https://picsum.photos/200/300",
-      "image3": "https://picsum.photos/200/300",
-      "image4": "https://picsum.photos/200/300",
-      "status": "Hết hàng",
       "id": 6
     },
     {
-      "name": "ssss",
-      "description": "cfxgdxfgsgsd",
-      "category": "thời trang",
+      "name": "1111",
+      "description": "2erdgthfgdfs",
+      "category": "Nike Air Force 1 Low ",
       "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://picsum.photos/200/300",
       "image2": "https://picsum.photos/200/300",
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
-      "status": "Hết hàng",
+      "status": "Ngừng bán",
       "id": 7
     },
     {
-      "name": "ssss",
-      "description": "fgsdgsdsdfsd",
-      "category": "thể thao",
-      "brand": "Thương hiệu",
+      "name": "111dfghjkl",
+      "description": "sadfghgfdsađ",
+      "category": "Thời trang ",
+      "brand": "ss",
       "price": 1000,
       "image1": "https://picsum.photos/200/300",
       "image2": "https://picsum.photos/200/300",
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
-      "status": "Hết hàng",
+      "status": "Đang bán",
       "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "name": "thể thao ",
+      "description": "rất đẹp",
+      "image": "https://picsum.photos/200/300",
+      "status": "hoạt động",
+      "id": 2
+    },
+    {
+      "name": "Thời trang ",
+      "description": "rất đẹp",
+      "image": "https://picsum.photos/200/300",
+      "status": "không hoạt động",
+      "id": 3
+    },
+    {
+      "name": "Nike Air Force 1 Low ",
+      "description": "rất đẹp",
+      "image": "https://th.bing.com/th/id/OIP.4hduJw_4pyASp4MocoZJ0AHaHk?pid=ImgDet&w=206&h=211&c=7&dpr=1.3",
+      "status": "hoạt động",
+      "id": 4
     }
   ],
   "users": [

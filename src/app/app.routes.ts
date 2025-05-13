@@ -13,9 +13,13 @@ import { RegisterComponent } from './(client)/register/register.component';
 
 // Admin components
 import { DashboardComponent } from './(admin)/dashboard/dashboard.component';
-import { ListProjectsComponent } from './(admin)/list/list-projects.component';
-import { CreateComponent } from './(admin)/create/create.component';
-import { EditComponent } from './(admin)/edit/edit.component';
+import { ListProjectsComponent } from './(admin)/Products/list/list-projects.component';
+import { CreateComponent } from './(admin)/Products/create/create.component';
+import { EditComponent } from './(admin)/Products/edit/edit.component';
+import { ListCateComponent } from './(admin)/Categorys/list-cate/list-cate.component';
+import { EditCateComponent } from './(admin)/Categorys/edit-cate/edit-cate.component';
+import { CreateCateComponent } from './(admin)/Categorys/create-cate/create-cate.component';
+import { DetailCateComponent } from './(admin)/Categorys/detail-cate/detail-cate.component';
 
 export const routes: Routes = [
 
@@ -39,9 +43,17 @@ export const routes: Routes = [
     // canActivate: [AuthGuard], // nếu có
     children: [
       { path: 'dashboard', component: DashboardComponent },
+
       { path: 'list', component: ListProjectsComponent },
       { path: 'create', component: CreateComponent },
-      { path: 'edit/:id', component: EditComponent }
+      { path: 'edit/:id', component: EditComponent },
+
+      { path: 'CateList', component: ListCateComponent },
+      { path: 'CateCreate', component: CreateCateComponent },
+      { path: 'Cateedit/:id', component: EditCateComponent },
+      { path: 'CateDetail/:id', component: DetailCateComponent }
+
+
     ]
   },
 
