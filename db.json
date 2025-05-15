@@ -3,14 +3,14 @@
     {
       "name": "Nike Air Force 1 Low ",
       "description": "Nike Air Force 1 Low ",
-      "category": "Thời trang ",
+      "category": "Nike Air Force 1 Low ",
       "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://picsum.photos/200/300",
       "image2": "https://picsum.photos/200/300",
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
-      "status": "Đang bán",
+      "status": "Ngừng bán",
       "id": 6
     },
     {
@@ -23,7 +23,7 @@
       "image2": "https://picsum.photos/200/300",
       "image3": "https://picsum.photos/200/300",
       "image4": "https://picsum.photos/200/300",
-      "status": "Ngừng bán",
+      "status": "Hết hàng",
       "id": 7
     },
     {

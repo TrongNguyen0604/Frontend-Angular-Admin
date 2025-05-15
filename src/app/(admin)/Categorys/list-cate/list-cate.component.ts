@@ -21,15 +21,11 @@ export class ListCateComponent {
   size: NzButtonSize = 'default';
   apiUrl: string = 'http://localhost:3000/categories';
 
-  listProjects = [
-    { id: 1, name: 'Giày thể thao', description: 'Giày chất lượng', image: 'image1.jpg', status: 'hoạt động' },
-    { id: 2, name: 'Áo thun', description: 'Áo thun thời trang', image: 'image2.jpg', status: 'không hoạt động' },
-    // Thêm dữ liệu mẫu
-  ];      // Dữ liệu gốc
-  filteredProjects: any[] = [];    // Dữ liệu sau khi lọc
+  listProjects: any[] = [];
+  filteredProjects: any[] = [];
 
-  searchKeyword: string = '';
   selectedCategory: string = '';
+  searchKeyword: string = '';
 
   isVisible: boolean = false;
 
@@ -39,56 +35,55 @@ export class ListCateComponent {
 
   ngOnInit() {
     this.getList(); // Gọi khi khởi tạo
-  }
 
+  }
 
   viewCategoryDetail(categoryName: string) {
     this.router.navigate(['/categories', categoryName.toLowerCase()]);
   }
 
-  // Hàm lấy danh sách từ API
-  async getList(): Promise<void> {
+  getList(): void {
     this.api.get<any[]>(this.apiUrl).subscribe((res) => {
+      //  console.log('DATA từ API:', res);
       this.listProjects = res;
-      this.filteredProjects = res; // Gán dữ liệu ban đầu cho bảng
+      this.applyFilters(); // Quan trọng: áp dụng bộ lọc ban đầu
     });
   }
 
-  // Hàm lọc theo trạng thái
-  filterByCategory(selectedCategory: string) {
-    if (!selectedCategory) {
-      this.filteredProjects = this.listProjects; // Không chọn gì → hiện tất cả
-    } else {
-      this.filteredProjects = this.listProjects.filter(project => project.status === selectedCategory);
-    }
-  }
+  // Hàm xử lý khi chọn trạng thái
   onCategoryChange(event: Event): void {
     const target = event.target as HTMLSelectElement;
-    const selectedValue = target.value;
-    this.filterByCategory(selectedValue);
+    this.selectedCategory = target.value;
+    this.applyFilters();
   }
-  // and lọc
 
-  //tìm kiếm 
+  // Hàm xử lý khi nhập từ khóa tìm kiếm
   onSearch(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.searchKeyword = input.value.toLowerCase();
     this.applyFilters();
   }
+
+  // Hàm áp dụng cả tìm kiếm + lọc theo trạng thái
   applyFilters(): void {
     this.filteredProjects = this.listProjects.filter(project => {
-      const matchesCategory = !this.selectedCategory || project.status === this.selectedCategory;
-      const matchesSearch = !this.searchKeyword || project.name.toLowerCase().includes(this.searchKeyword);
+      const matchesCategory =
+        !this.selectedCategory ||
+        (project.status && project.status.toLowerCase() === this.selectedCategory.toLowerCase());
+
+      const matchesSearch =
+        !this.searchKeyword ||
+        (project.name && project.name.toLowerCase().includes(this.searchKeyword));
+
       return matchesCategory && matchesSearch;
     });
   }
 
 
-  //and tìm kiếm 
+  // Gọi hàm này khi load dữ liệu ban đầu
+
 
   // Xoá sản phẩm
-
-
   async handleDelete(id: number): Promise<void> {
     const confirmed = confirm('Bạn có muốn xóa dự án này?');
     if (!confirmed) return;
@@ -101,28 +96,5 @@ export class ListCateComponent {
       this.message.error(`Lỗi khi xoá: ${err?.message || 'Không xác định'}`);
     }
   }
-
-
-
-
-
-  // Drawer
-  showDrawer(): void {
-    this.isVisible = true;
-    setTimeout(() => {
-      if (this.drawer) {
-        console.log('Nội dung Drawer:', this.drawer.getContentComponent());
-      }
-    }, 100);
-  }
-
-  closeDrawer(): void {
-    this.isVisible = false;
-  }
-
-  ngAfterViewInit(): void {
-    console.log('Drawer đã render');
-  }
-
 
 }

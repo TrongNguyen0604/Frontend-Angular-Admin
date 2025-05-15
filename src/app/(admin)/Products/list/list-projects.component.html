@@ -1,10 +1,12 @@
 <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; ">
-  <select class="form-select" (change)="onCategoryChange($event)">
-    <option value="">Lọc theo trạng thái</option>
+  <select class="form-select" (change)="onStatusChange($event)">
+    <option value="">Lọc theo trạng thái</option>
     <option value="Đang bán">Đang bán</option>
     <option value="Ngừng bán">Ngừng bán</option>
     <option value="Hết hàng">Hết hàng</option>
   </select>
+
+
   <div style="position: relative; width: 250px; margin: 0 auto;">
     <i class="fa fa-search"
       style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>

@@ -29,20 +29,19 @@ import { firstValueFrom } from 'rxjs';
 export class ListProjectsComponent implements OnInit, AfterViewInit {
   size: NzButtonSize = 'default';
   apiUrl: string = 'http://localhost:3000/products';
+  categories: any[] = [];
 
   listProjects: any[] = [];
   filteredProjects: any[] = [];
-
-  categories: any[] = [];
-
-  searchKeyword: string = '';
   selectedCategory: string = '';
+  searchKeyword: string = '';
+
 
   isVisible: boolean = false;
 
   @ViewChild('drawerRef', { static: false }) drawer!: NzDrawerComponent;
 
-  constructor(private http: HttpClient, private message: NzMessageService) {}
+  constructor(private http: HttpClient,private api: HttpClient, private message: NzMessageService) {}
 
   ngOnInit(): void {
     this.loadData(); // ✅ Load cả sản phẩm và danh mục
@@ -67,24 +66,39 @@ export class ListProjectsComponent implements OnInit, AfterViewInit {
     });
   }
 
-  onCategoryChange(event: Event): void {
+   getList(): void {
+    this.api.get<any[]>(this.apiUrl).subscribe((res) => {
+      //  console.log('DATA từ API:', res);
+      this.listProjects = res;
+      this.applyFilters(); // Quan trọng: áp dụng bộ lọc ban đầu
+    });
+  }
+
+ // Hàm xử lý khi chọn trạng thái
+  onStatusChange(event: Event): void {
     const target = event.target as HTMLSelectElement;
     this.selectedCategory = target.value;
     this.applyFilters();
   }
 
+  // Hàm xử lý khi nhập từ khóa tìm kiếm
   onSearch(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.searchKeyword = input.value.toLowerCase();
     this.applyFilters();
   }
 
+  // Hàm áp dụng cả tìm kiếm + lọc theo trạng thái
   applyFilters(): void {
-    this.filteredProjects = this.listProjects.filter((project) => {
+    this.filteredProjects = this.listProjects.filter(project => {
       const matchesCategory =
-        !this.selectedCategory || project.categoryName === this.selectedCategory;
+        !this.selectedCategory ||
+        (project.status && project.status.toLowerCase() === this.selectedCategory.toLowerCase());
+
       const matchesSearch =
-        !this.searchKeyword || project.name.toLowerCase().includes(this.searchKeyword);
+        !this.searchKeyword ||
+        (project.name && project.name.toLowerCase().includes(this.searchKeyword));
+
       return matchesCategory && matchesSearch;
     });
   }

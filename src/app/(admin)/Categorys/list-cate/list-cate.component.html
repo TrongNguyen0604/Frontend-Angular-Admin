@@ -1,9 +1,12 @@
-<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; ">
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px;">
   <select class="form-select" (change)="onCategoryChange($event)">
     <option value="">Lọc theo trạng thái</option>
-    <option value="hoạt động">hoạt động</option>
-    <option value="không hoạt động">không hoạt động</option>
+    <option value="hoạt động">hoạt động</option>
+    <option value="không hoạt động">không hoạt động</option>
   </select>
+
+
+
   <div style="position: relative; width: 250px; margin: 0 auto;">
     <i class="fa fa-search"
       style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>
@@ -14,11 +17,12 @@
         border-radius: 5px;
         outline: none;
         font-size: 14px;
-       
       " />
   </div>
-
 </div>
+
+
+
 <table>
 
   <thead>
