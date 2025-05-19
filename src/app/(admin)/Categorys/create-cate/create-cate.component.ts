@@ -47,6 +47,8 @@ export class CreateCateComponent {
         console.error(err);
       }
     });
+
+    
   }
 
 

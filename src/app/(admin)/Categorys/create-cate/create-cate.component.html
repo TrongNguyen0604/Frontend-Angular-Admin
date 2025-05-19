@@ -1,39 +1,48 @@
 <div class="container">
-    <h2>Thêm danh mục</h2>
-    <form #createCateForm="ngForm" (ngSubmit)="onCreateCate(createCateForm)" novalidate>
+  <h2>Thêm danh mục</h2>
+  <form #createCateForm="ngForm" (ngSubmit)="onCreateCate(createCateForm)" novalidate>
 
-        <!-- Thương hiệu -->
-        <div class="mb-3">
-            <label class="form-label">Tên danh mục</label>
-            <input class="form-control" type="text" name="name" ngModel required placeholder="Nhập tên danh mục">
-        </div>
+    <!-- Tên danh mục -->
+    <div class="mb-3">
+      <label class="form-label">Tên danh mục</label>
+      <input class="form-control" type="text" name="name" ngModel required placeholder="Nhập tên danh mục">
+      <div class="text-danger" *ngIf="createCateForm.submitted && createCateForm.controls['name']?.invalid">
+        Tên danh mục là bắt buộc
+      </div>
+    </div>
 
-        <!-- Giá tiền -->
-        <div class="mb-3">
-            <label class="form-label">Mô tả</label>
-            <input class="form-control" type="text" name="description" ngModel required min="1000"
-                placeholder="Nhập giá tiền sản phẩm">
-        </div>
+    <!-- Mô tả -->
+    <div class="mb-3">
+      <label class="form-label">Mô tả</label>
+      <input class="form-control" type="text" name="description" ngModel required placeholder="Nhập mô tả danh mục">
+      <div class="text-danger" *ngIf="createCateForm.submitted && createCateForm.controls['description']?.invalid">
+        Mô tả là bắt buộc
+      </div>
+    </div>
 
-        <!-- Hình ảnh 1 -->
-        <!-- Ảnh chính -->
-        <div class="mb-3">
-            <label class="form-label">Ảnh chính</label>
-            <input class="form-control" type="text" name="image" ngModel required placeholder="Nhập URL ảnh chính">
-        </div>
+    <!-- Ảnh chính -->
+    <div class="mb-3">
+      <label class="form-label">Ảnh chính</label>
+      <input class="form-control" type="text" name="image" ngModel required placeholder="Nhập URL ảnh chính">
+      <div class="text-danger" *ngIf="createCateForm.submitted && createCateForm.controls['image']?.invalid">
+        Ảnh là bắt buộc
+      </div>
+    </div>
 
+    <!-- Trạng thái -->
+    <div class="mb-3">
+      <label class="form-label">Trạng thái</label>
+      <select class="form-select" name="status" ngModel required>
+        <option value="" disabled selected>Chọn trạng thái</option>
+        <option value="hoạt động">hoạt động</option>
+        <option value="không hoạt động">không hoạt động</option>
+      </select>
+      <div class="text-danger" *ngIf="createCateForm.submitted && createCateForm.controls['status']?.invalid">
+        Trạng thái là bắt buộc
+      </div>
+    </div>
 
-        <!-- Trạng thái -->
-        <div class="mb-3">
-            <label class="form-label">Trạng thái</label>
-            <select class="form-select" name="status" ngModel required>
-                <option value="" disabled>Chọn trạng thái</option>
-                <option value="hoạt động">hoạt động</option>
-                <option value="không hoạt động">không hoạt động</option>
-            </select>
-        </div>
-
-        <!-- Submit -->
-        <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary">Lưu</button>
+  </form>
 </div>
