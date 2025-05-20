@@ -14,7 +14,7 @@
     </div>
     <div class="Head1">
         <div class="Head1_LogoNike">
-            <img src="Image/LogoNike.png" alt="">
+            <img src="" alt="">
         </div>
         <div class="Head1_Menu">
             <ul>
@@ -27,8 +27,10 @@
         </div>
         <div class="Head1_Icon">
             <div class="Head1_Search">
-                <input type="text">
+                <input type="text" placeholder="Tìm sản phẩm..." [(ngModel)]="searchTerm" (input)="onSearch()" />
             </div>
+
+            <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-heart"></i>
             <i class="fa-solid fa-cart-shopping"></i>
         </div>
@@ -37,7 +39,7 @@
         <div class="SlideShow">
             <p>Move, Shop, Customise & Celebrate With Us No matter what you feel
                 <br> like doing today, It’s better as a
-                Member. Join Us
+                Member
         </div>
 
     </div>

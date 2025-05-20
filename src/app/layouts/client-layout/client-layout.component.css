@@ -31,6 +31,7 @@ nav {
     text-decoration: none;
     font-size: 12px;
     transition: color 0.3s;
+    font-weight: bold;
 }
 
 .Head_support ul li a:hover {
@@ -38,7 +39,7 @@ nav {
 }
 
 .Head1_Menu {
-    margin-left: 120px;
+    margin-left: 240px;
 }
 
 /* Định dạng thanh menu */
@@ -55,6 +56,7 @@ nav {
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
+     font-weight: bold;
 }
 
 .Head1_Menu ul li a:hover {

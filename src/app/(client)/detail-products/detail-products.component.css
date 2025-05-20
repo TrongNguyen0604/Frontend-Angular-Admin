@@ -1,0 +1,299 @@
+.main_product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    margin-top: 50px;
+
+}
+
+.main_product_Air img {
+    width: 540px;
+    height: 718px;
+    margin-right: 40px;
+}
+
+.main_product_small {
+    margin-top: 80px;
+
+}
+
+.main_product_small img {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 100px;
+
+
+}
+
+.main_product_information {
+    margin-left: 50px;
+    margin-top: 0;
+}
+
+
+.main_product_information_title h1 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.main_product_information_title p {
+    font-size: 20px;
+
+
+}
+
+.main_product_information_content p {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main_product_information_size button {
+    width: 101px;
+    height: 46px;
+    color: rgb(122, 122, 122);
+    border: 1px solid rgb(122, 122, 122);
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.main_product_information_size button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+
+}
+
+.main_product_information_button {
+    margin-top: 40px;
+
+}
+
+.main_product_information_button button {
+    background-color: black;
+    width: 485px;
+    height: 57px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+.main_product_information_button button:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px gray;
+    color: rgb(1, 1, 1);
+    border: 1px solid gray;
+}
+
+.main_product_information_button button i {
+    margin-right: 10px;
+}
+
+.main_product_information_Notes {
+    margin-top: 40px;
+
+}
+
+.main_product_information_Notes h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main_product_information_Notes p {
+    font-size: 16px;
+    margin-top: 0;
+    color: gray;
+    line-height: 25px;
+
+}
+
+
+.main_product_how {
+    margin-top: 50px;
+}
+
+.main_product_how_more {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.main_product_how_title h1 {
+    font-size: 32px;
+    margin-left: 100px;
+}
+
+.main_product_how_title p {
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+.main_product_how_more img {
+    width: 420px;
+    height: 451px;
+    margin-left: 100px;
+}
+
+.main_product_how_more button {
+    width: 420px;
+    height: 451px;
+    margin-right: 545px;
+
+}
+
+
+.Customer {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.Customer_feedback {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Customer_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Customer_title h1 {
+    font-size: 32px;
+    margin-left: 100px;
+
+}
+
+.Customer_feedback_1 {
+    width: 600px;
+    height: 250px;
+    border: 1px solid gray;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    margin-left: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Customer_feedback_2 {
+    width: 600px;
+    height: 250px;
+    border: 1px solid gray;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 100px;
+
+}
+
+.Customer_feedback_link ul {
+    list-style-type: none;
+}
+
+.Customer_feedback_link ul li {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.Customer_feedback_link ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-right: 100px;
+}
+
+.Customer_feedback_link ul li a:hover {
+    color: #ffffff;
+    background-color: #000000;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.Customer_feedback_content1 p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.Customer_feedback_content2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Customer_feedback_content2_img img {
+    width: 134px;
+    height: 134px;
+    margin-top: 10px;
+}
+
+.Customer_feedback_content2_information {
+    margin-right: 300px;
+    margin-top: 10px;
+}
+
+.Customer_feedback_content2_information_p {
+    margin-top: 50px;
+    color: rgb(158, 158, 158);
+}
+
+/* ---------------------------------------- */
+.Customer_Comments_title {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.Customer_Comments_feedback {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.Customer_Comments_feedback_information {
+    padding-right: 400px;
+}
+
+.Customer_Comments_feedback {
+    width: 85%;
+    border: 1px solid gray;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    margin-left: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.Customer_Comments_feedback_information_1 {
+    margin-top: 50px;
+    color: rgb(151, 151, 151);
+}
+
+.Customer_Comments_feedback_icon {
+    margin: 15px 10px;
+
+}
+
+.Customer_Comments_feedback_img img {
+    width: 120px;
+    height: 120px;
+    margin: 15px 10px;
+}
+
+.button button {
+    width: 1328px;
+    height: 52px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+   
+}

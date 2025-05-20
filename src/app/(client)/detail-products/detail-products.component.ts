@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild, ElementRef, AfterViewInit, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NzButtonSize } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -9,6 +9,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzDrawerComponent, NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CommonModule } from '@angular/common';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 
 
 @Component({
@@ -17,24 +18,25 @@ import { CommonModule } from '@angular/common';
   imports: [
     NzDividerModule,
     NzTableModule,
-    RouterModule,
+    NzSpinModule,
     NzButtonModule,
     NzDrawerModule,
     NzTagModule,
     CommonModule
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  templateUrl: './detail-products.component.html',
+  styleUrl: './detail-products.component.css',
 })
-export class HomeComponent implements OnInit {
+export class DetailProductsComponent implements OnInit {
   size: NzButtonSize = 'default';
-  apiUrl: string = 'http://localhost:3000/products';
+  apiUrl: string = 'http://localhost:3000/products/${id}';
   categories: any[] = [];
 
   homeProjects: any[] = [];
   filteredProjects: any[] = [];
   selectedCategory: string = '';
   searchKeyword: string = '';
+  isLoading = true;
 
 
   isVisible: boolean = false;
@@ -44,28 +46,48 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient, private api: HttpClient, private message: NzMessageService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.loadData();
-    const id = this.route.snapshot.paramMap.get('id'); // ✅ Load cả sản phẩm và danh mục
-  }
+    const id = this.route.snapshot.paramMap.get('id');
+    this.isLoading = true; // 👉 Bắt đầu loading
 
-  loadData(): void {
-    this.http.get<any[]>('http://localhost:3000/categories').subscribe((categories) => {
-      this.categories = categories;
+    if (id) {
+      this.http.get<any[]>('http://localhost:3000/categories').subscribe((categories) => {
+        this.categories = categories;
 
-      this.http.get<any[]>('http://localhost:3000/products').subscribe((products) => {
-        const enrichedProducts = products.map((product) => {
-          const category = this.categories.find((c) => c.id === product.categoryId || c.name === product.category);
-          return {
+        this.http.get<any>(`http://localhost:3000/products/${id}`).subscribe((product) => {
+          const category = categories.find((c) => c.id === product.categoryId || c.name === product.category);
+          const enrichedProduct = {
             ...product,
             categoryName: category ? category.name : 'Không xác định'
           };
-        });
 
-        this.homeProjects = enrichedProducts;
-        this.filteredProjects = enrichedProducts;
+          this.homeProjects = [enrichedProduct];
+          this.filteredProjects = [enrichedProduct];
+
+          this.isLoading = false; // 👉 Dừng loading sau khi lấy xong
+        });
+      });
+    }
+  }
+
+
+
+  if(id: any) {
+    this.http.get<any[]>('http://localhost:3000/categories').subscribe((categories) => {
+      this.categories = categories;
+
+      this.http.get<any>(`http://localhost:3000/products/${id}`).subscribe((product) => {
+        const category = categories.find((c) => c.id === product.categoryId || c.name === product.category);
+        const enrichedProduct = {
+          ...product,
+          categoryName: category ? category.name : 'Không xác định'
+        };
+
+        this.homeProjects = [enrichedProduct];
+        this.filteredProjects = [enrichedProduct];
       });
     });
   }
+
 
   getList(): void {
     this.api.get<any[]>(this.apiUrl).subscribe((res) => {

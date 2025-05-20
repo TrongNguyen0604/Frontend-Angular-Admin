@@ -20,6 +20,7 @@ import { ListCateComponent } from './(admin)/Categorys/list-cate/list-cate.compo
 import { EditCateComponent } from './(admin)/Categorys/edit-cate/edit-cate.component';
 import { CreateCateComponent } from './(admin)/Categorys/create-cate/create-cate.component';
 import { DetailCateComponent } from './(admin)/Categorys/detail-cate/detail-cate.component';
+import { DetailProductsComponent } from './(client)/detail-products/detail-products.component';
 
 export const routes: Routes = [
 
@@ -31,7 +32,8 @@ export const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'detail/:id', component: DetailProductsComponent }
     ]
   },
   

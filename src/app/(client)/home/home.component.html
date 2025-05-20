@@ -1,34 +1,42 @@
-<nz-table
-#basicTable
-[nzData]="homeProjects"
-[nzBordered]="true"
-[nzScroll]="{ x: '1000px' }"
-class="w-full"
->
+<header>
+    <div class="header_banner">
+        <!-- <img src="https://i.pinimg.com/736x/cd/4c/0b/cd4c0bf32edc69e28a18f2a2147275b3.jpg" alt=""> -->
+    </div>
+    <div class="header_title">
+        <p>Nike Running</p>
+        <h1>WINNING ISN’T COMFORTABLE</h1>
+        <p>Tincidunt at mi sit risus fermentum risus ac neT est feugiat congue </p>
+    </div>
+    <div class="header_button">
+        <button>Shop Running</button>
+    </div>
+</header>
 
 
-<tbody>
-  @for (s of homeProjects; track s.id) {
-  <tr class="border-b hover:bg-gray-50 transition">
-    
-    <td class="p-3">{{ s.name }}</td>
-    <td class="p-3">{{ s.description }}</td>
-    <td class="p-3">{{ s.start_date }}</td>
-    <td class="p-3">{{ s.end_date }}</td>
-    <td class="p-3">
-      <img
-        [src]="s.image"
-        alt="Hình ảnh"
-        class="rounded border w-[50px] h-[50px] object-cover"
-      />
-    </td>
-    <td class="p-3">{{ s.status }}</td>
-    <td class="p-3">
-      <div class="flex gap-2">
-      
-      </div>
-    </td>
-  </tr>
-  }
-</tbody>
-</nz-table>
+
+<div class="See_What_New">
+
+    <!-- <div class="Main_title">
+        <h2>See What's New</h2>
+    </div> -->
+    <!-- Container cha chứa tất cả sản phẩm -->
+    <div class="See_product">
+        <!-- Lặp từng sản phẩm -->
+        <div class="product1" *ngFor="let s of filteredProjects">
+            <div class="product_img">
+                <img [src]="s.image1" alt="{{ s.name }}" class="product-image" />
+            </div>
+            <div class="product_Content">
+                <div class="name">
+                        <a [routerLink]="['/detail', s.id]">{{ s.name }}</a>  
+                </div>
+
+                <p>{{ s.description }}</p>
+                <div class="price">
+                    <p>{{ s.price | currency:'VND' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
