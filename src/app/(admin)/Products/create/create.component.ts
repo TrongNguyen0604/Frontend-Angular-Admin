@@ -1,66 +1,90 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-create-category',
-  standalone: true,
+  selector: 'app-create-product',
   imports: [CommonModule, FormsModule],
-  templateUrl: './create.component.html',
-  styleUrl: './create.component.css'
+  templateUrl: 'create.component.html',
+  styleUrls: ['./create.component.css'],
 })
-export class CreateComponent implements OnInit {
+export class CreateProductComponent implements OnInit {
+  categories: any[] = [];
+  sizeOptions: string[] = ['FR34', 'FR35', 'FR36', 'FR37', 'FR38', 'FR39', 'FR40'];
+  product: {
+    name: string;
+    description: string;
+    categoryName: string;
+    brand: string;
+    price: number | null;
+    image1: string;
+    image2: string;
+    image3: string;
+    image4: string;
+    sizes: string[];     // 👉 Khai báo rõ kiểu mảng string
+    status: string;
+  } = {
+      name: '',
+      description: '',
+      categoryName: '',
+      brand: '',
+      price: null,
+      image1: '',
+      image2: '',
+      image3: '',
+      image4: '',
+      sizes: [],           // 👈 Lúc này TypeScript biết đây là string[]
+      status: ''
+    };
+
+
   constructor(
-    private api: HttpClient,
+    private http: HttpClient,
     private router: Router,
     private message: NzMessageService
-  ) {}
-
-  apiUrl: string = 'http://localhost:3000/categories';
-  categories: any[] = [];
-
-  category = {
-    name: '',
-    description: '',
-    image: '',
-    status: 'hoạt động'
-  };
-
-
+  ) { }
 
   ngOnInit(): void {
-    this.getCategories();
-  }
-
-  getCategories(): void {
-    this.api.get<any[]>(this.apiUrl).subscribe(data => {
+    this.http.get<any[]>('http://localhost:3000/categories').subscribe(data => {
       this.categories = data;
     });
   }
 
-  isDuplicateName(name: string): boolean {
-    return this.categories.some(c => c.name.trim().toLowerCase() === name.trim().toLowerCase());
+  onSizeChange(event: any): void {
+    const value = event.target.value;
+    if (event.target.checked) {
+      this.product.sizes.push(value);
+    } else {
+      this.product.sizes = this.product.sizes.filter(size => size !== value);
+    }
   }
 
-  onCreate(form: NgForm): void {
-    if (form.invalid) {
-      this.message.warning('Vui lòng điền đúng thông tin!');
+  onCreate(): void {
+    if (
+      !this.product.name ||
+      !this.product.description ||
+      !this.product.categoryName ||
+      !this.product.brand ||
+      !this.product.price ||
+      !this.product.image1 ||
+      !this.product.status
+    ) {
+      this.message.warning('Vui lòng điền đầy đủ thông tin!');
       return;
     }
 
-   
-
-    this.api.post(this.apiUrl, this.category).subscribe({
+    this.http.post('http://localhost:3000/products', this.product).subscribe({
       next: () => {
-        this.message.success('Tạo danh mục thành công!');
+        this.message.success('Thêm sản phẩm thành công!');
         this.router.navigate(['/admin/list']);
       },
       error: () => {
-        this.message.error('Đã có lỗi xảy ra khi tạo danh mục!');
-      }
+        this.message.error('Thêm sản phẩm thất bại!');
+      },
     });
   }
 }
+

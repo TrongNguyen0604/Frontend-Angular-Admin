@@ -2,42 +2,38 @@
   "products": [
     {
       "name": "Nike Air Force 1 Low ",
-      "description": "Nike Air Force 1 Low ",
-      "category": "Nike Air Force 1 Low ",
+      "description": "gfhgj,nk",
+      "categoryName": "thể thao ",
       "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
-      "image2": "https://picsum.photos/200/300",
-      "image3": "https://picsum.photos/200/300",
-      "image4": "https://picsum.photos/200/300",
-      "status": "Ngừng bán",
-      "id": 6
-    },
-    {
-      "name": "1111",
-      "description": "2erdgthfgdfs",
-      "category": "Nike Air Force 1 Low ",
-      "brand": "Thương hiệu",
-      "price": 1000,
-      "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
-      "image2": "https://picsum.photos/200/300",
-      "image3": "https://picsum.photos/200/300",
-      "image4": "https://picsum.photos/200/300",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "FR36",
+        "FR37"
+      ],
       "status": "Hết hàng",
-      "id": 7
+      "id": 1
     },
     {
-      "name": "111dfghjkl",
-      "description": "sadfghgfdsađ",
-      "category": "Thời trang ",
-      "brand": "ss",
+      "name": "Nike Air Force 1 Low ",
+      "description": "sdfdg",
+      "categoryName": "Thời trang ",
+      "brand": "Thương hiệu",
       "price": 1000,
       "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
-      "image2": "https://picsum.photos/200/300",
-      "image3": "https://picsum.photos/200/300",
-      "image4": "https://picsum.photos/200/300",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "FR36",
+        "FR37"
+      ],
       "status": "Đang bán",
-      "id": 8
+      "id": 2,
+      "category": "thể thao "
     }
   ],
   "categories": [
@@ -54,13 +50,6 @@
       "image": "https://picsum.photos/200/300",
       "status": "không hoạt động",
       "id": 3
-    },
-    {
-      "name": "Nike Air Force 1 Low ",
-      "description": "rất đẹp",
-      "image": "https://th.bing.com/th/id/OIP.4hduJw_4pyASp4MocoZJ0AHaHk?pid=ImgDet&w=206&h=211&c=7&dpr=1.3",
-      "status": "hoạt động",
-      "id": 4
     }
   ],
   "users": [

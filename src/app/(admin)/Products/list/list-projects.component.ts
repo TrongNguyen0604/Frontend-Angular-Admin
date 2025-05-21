@@ -41,7 +41,7 @@ export class ListProjectsComponent implements OnInit, AfterViewInit {
 
   @ViewChild('drawerRef', { static: false }) drawer!: NzDrawerComponent;
 
-  constructor(private http: HttpClient,private api: HttpClient, private message: NzMessageService) {}
+  constructor(private http: HttpClient, private api: HttpClient, private message: NzMessageService) { }
 
   ngOnInit(): void {
     this.loadData(); // ✅ Load cả sản phẩm và danh mục
@@ -53,7 +53,7 @@ export class ListProjectsComponent implements OnInit, AfterViewInit {
 
       this.http.get<any[]>('http://localhost:3000/products').subscribe((products) => {
         const enrichedProducts = products.map((product) => {
-          const category = this.categories.find((c) => c.id === product.categoryId || c.name === product.category);
+          const category = this.categories.find((c) => c.name.trim().toLowerCase() === product.categoryName.trim().toLowerCase());
           return {
             ...product,
             categoryName: category ? category.name : 'Không xác định'
@@ -66,7 +66,7 @@ export class ListProjectsComponent implements OnInit, AfterViewInit {
     });
   }
 
-   getList(): void {
+  getList(): void {
     this.api.get<any[]>(this.apiUrl).subscribe((res) => {
       //  console.log('DATA từ API:', res);
       this.listProjects = res;
@@ -74,7 +74,7 @@ export class ListProjectsComponent implements OnInit, AfterViewInit {
     });
   }
 
- // Hàm xử lý khi chọn trạng thái
+  // Hàm xử lý khi chọn trạng thái
   onStatusChange(event: Event): void {
     const target = event.target as HTMLSelectElement;
     this.selectedCategory = target.value;

@@ -68,6 +68,11 @@ export class DetailProductsComponent implements OnInit {
       });
     }
   }
+ 
+
+  setMainImage(product: any, image: string): void {
+  product.currentImage = image;
+}
 
 
 

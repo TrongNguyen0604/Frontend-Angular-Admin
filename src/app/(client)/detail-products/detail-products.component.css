@@ -1,299 +1,183 @@
+/* Reset mặc định và thiết lập font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Container chính */
 .main_product {
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
-    margin-top: 50px;
-
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
-.main_product_Air img {
-    width: 540px;
-    height: 718px;
-    margin-right: 40px;
-}
-
+/* Phần hình ảnh nhỏ (thumbnail) */
 .main_product_small {
-    margin-top: 80px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80px;
 }
 
 .main_product_small img {
-    display: block;
-    margin-bottom: 15px;
-    margin-left: 100px;
-
-
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
+.main_product_small img:hover {
+    transform: scale(1.05);
+}
+
+/* Phần hình ảnh chính */
+.main_product_Air {
+    flex: 1;
+    max-width: 600px;
+}
+
+.main_product_Air img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+/* Phần thông tin sản phẩm */
 .main_product_information {
-    margin-left: 50px;
-    margin-top: 0;
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-
-.main_product_information_title h1 {
-    font-size: 40px;
-    margin-top: 0;
-}
-
-.main_product_information_title p {
-    font-size: 20px;
-
-
+.main_product_information_title h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
 }
 
 .main_product_information_content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.main_product_information_content p:nth-child(2) {
     font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    color: #111;
+}
+
+.main_product_information_content p:nth-child(1) {
+    color: #ff6200; /* Màu cam cho "Sustainable Materials" */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Phần chọn kích cỡ */
+.main_product_information_size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .main_product_information_size button {
-    width: 101px;
-    height: 46px;
-    color: rgb(122, 122, 122);
-    border: 1px solid rgb(122, 122, 122);
-    margin-right: 15px;
-    margin-top: 15px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .main_product_information_size button:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-
+    border-color: #111;
+    background-color: #f5f5f5;
 }
 
-.main_product_information_button {
-    margin-top: 40px;
+.main_product_information_size button:focus {
+    border-color: #111;
+    background-color: #111;
+    color: #fff;
+}
 
+/* Phần nút hành động */
+.main_product_information_button {
+    display: flex;
+    gap: 10px;
 }
 
 .main_product_information_button button {
-    background-color: black;
-    width: 485px;
-    height: 57px;
-    color: white;
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
     font-size: 16px;
-    border-radius: 5px;
-
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.main_product_information_button button:hover {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 3px 3px 3px gray;
-    color: rgb(1, 1, 1);
-    border: 1px solid gray;
+.main_product_information_button button:first-child {
+    background-color: #111;
+    color: #fff;
 }
 
-.main_product_information_button button i {
-    margin-right: 10px;
+.main_product_information_button button:first-child:hover {
+    background-color: #333;
 }
 
-.main_product_information_Notes {
-    margin-top: 40px;
-
+.main_product_information_button button:last-child {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #111;
 }
 
+.main_product_information_button button:last-child:hover {
+    background-color: #f5f5f5;
+}
+
+/* Phần ghi chú */
 .main_product_information_Notes h5 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
 }
 
 .main_product_information_Notes p {
-    font-size: 16px;
-    margin-top: 0;
-    color: gray;
-    line-height: 25px;
-
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
 }
 
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .main_product {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.main_product_how {
-    margin-top: 50px;
-}
+    .main_product_small {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
 
-.main_product_how_more {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
+    .main_product_Air {
+        max-width: 100%;
+    }
 
-.main_product_how_title h1 {
-    font-size: 32px;
-    margin-left: 100px;
-}
-
-.main_product_how_title p {
-    font-size: 16px;
-    margin-left: 100px;
-}
-
-.main_product_how_more img {
-    width: 420px;
-    height: 451px;
-    margin-left: 100px;
-}
-
-.main_product_how_more button {
-    width: 420px;
-    height: 451px;
-    margin-right: 545px;
-
-}
-
-
-.Customer {
-    margin-top: 50px;
-    margin-bottom: 40px;
-}
-
-.Customer_feedback {
-    display: flex;
-    justify-content: space-between;
-}
-
-.Customer_title {
-    display: flex;
-    justify-content: space-between;
-}
-
-.Customer_title h1 {
-    font-size: 32px;
-    margin-left: 100px;
-
-}
-
-.Customer_feedback_1 {
-    width: 600px;
-    height: 250px;
-    border: 1px solid gray;
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    margin-left: 100px;
-    border-radius: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.Customer_feedback_2 {
-    width: 600px;
-    height: 250px;
-    border: 1px solid gray;
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-right: 100px;
-
-}
-
-.Customer_feedback_link ul {
-    list-style-type: none;
-}
-
-.Customer_feedback_link ul li {
-    display: inline-block;
-    margin: 5px 0;
-}
-
-.Customer_feedback_link ul li a {
-    color: #000000;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    transition: 0.3s;
-    margin-right: 100px;
-}
-
-.Customer_feedback_link ul li a:hover {
-    color: #ffffff;
-    background-color: #000000;
-    transform: scale(1.1);
-    text-decoration: none;
-}
-
-.Customer_feedback_content1 p {
-    font-size: 16px;
-    line-height: 25px;
-}
-
-.Customer_feedback_content2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.Customer_feedback_content2_img img {
-    width: 134px;
-    height: 134px;
-    margin-top: 10px;
-}
-
-.Customer_feedback_content2_information {
-    margin-right: 300px;
-    margin-top: 10px;
-}
-
-.Customer_feedback_content2_information_p {
-    margin-top: 50px;
-    color: rgb(158, 158, 158);
-}
-
-/* ---------------------------------------- */
-.Customer_Comments_title {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.Customer_Comments_feedback {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 100px;
-    margin-right: 100px;
-
-}
-
-.Customer_Comments_feedback_information {
-    padding-right: 400px;
-}
-
-.Customer_Comments_feedback {
-    width: 85%;
-    border: 1px solid gray;
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    margin-left: 100px;
-    border-radius: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-left: 100px;
-    margin-right: 100px;
-
-}
-
-.Customer_Comments_feedback_information_1 {
-    margin-top: 50px;
-    color: rgb(151, 151, 151);
-}
-
-.Customer_Comments_feedback_icon {
-    margin: 15px 10px;
-
-}
-
-.Customer_Comments_feedback_img img {
-    width: 120px;
-    height: 120px;
-    margin: 15px 10px;
-}
-
-.button button {
-    width: 1328px;
-    height: 52px;
-    margin-left: 100px;
-    margin-right: 100px;
-
-   
+    .main_product_information {
+        max-width: 100%;
+    }
 }

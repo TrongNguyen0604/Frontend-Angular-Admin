@@ -1,23 +1,29 @@
-   <main>
+<main>
     <nz-spin [nzSpinning]="isLoading">
-        <div class="main_product" *ngFor="let s of filteredProjects" >
+        <div class="main_product" *ngFor="let s of filteredProjects">
             <div class="main_product_small">
-                <img src="Image/Air1.png" alt="">
-                <img src="Image/Air2.png" alt="">
-                <img src="Image/Air3.png" alt="">
-                <img src="Image/Air4.png" alt="">
-                <img src="Image/Air5.png" alt="">
+                <img [src]="s.image2" alt="{{ s.name }}" class="product-image"
+                    (mouseenter)="setMainImage(s, s.image2)" />
+                <img [src]="s.image3" alt="{{ s.name }}" class="product-image"
+                    (mouseenter)="setMainImage(s, s.image3)" />
+                <img [src]="s.image4" alt="{{ s.name }}" class="product-image"
+                    (mouseenter)="setMainImage(s, s.image4)" />
             </div>
+
             <div class="main_product_Air">
-               <img [src]="s.image1" alt="{{ s.name }}" class="product-image" />
+                <img [src]="s.currentImage || s.image1" alt="{{ s.name }}" class="product-image main-image" />
             </div>
+
+
+
             <div class="main_product_information">
                 <div class="main_product_information_title">
-                   <h3>{{ s.name }}</h3>
+                    <h2>Sustainable Materials</h2>
+                    <h3>{{ s.name }}</h3>
                 </div>
                 <div class="main_product_information_content">
-                    <p>{{ s.description }}</p>
-                     <p>{{ s.price  }}</p>
+
+                    <p>{{ s.price }}</p>
                     <p>Color: Black</p>
                     <p>Size: One Size</p>
                 </div>
@@ -34,18 +40,16 @@
                     <button>Add to Bag</button>
                 </div>
                 <div class="main_product_information_button">
-                    <button><i class="fa-regular fa-heart"></i>Add to With List</button>
+                    <button>Add to With List</button>
                 </div>
                 <div class="main_product_information_Notes">
                     <h5>EDITS NOTES</h5>
-                    <p>Jonathan Anderson released Loewe's 'Puzzle' bag in 2015 and it remains one of the house's
-                        best-selling styles because it still looks so fresh Jonathan Anderson released Loewe's 'Puzzle'
-                        bag in 2015 and it remains .</p>
+                    <p>{{ s.description }}</p>
                 </div>
             </div>
         </div>
-        </nz-spin>
-        <!-- <div class="main_product_how">
+    </nz-spin>
+    <!-- <div class="main_product_how">
             <div class="main_product_how_title">
                 <h1>How Others Are Wearing It</h1>
                 <p>Upload your photo or mention </p>
@@ -119,4 +123,4 @@
             </div>
         </div> -->
 
-    </main>
+</main>
