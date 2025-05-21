@@ -15,13 +15,13 @@ import { RegisterComponent } from './(client)/register/register.component';
 import { DashboardComponent } from './(admin)/dashboard/dashboard.component';
 import { ListProjectsComponent } from './(admin)/Products/list/list-projects.component';
 
-import { EditComponent } from './(admin)/Products/edit/edit.component';
 import { ListCateComponent } from './(admin)/Categorys/list-cate/list-cate.component';
 import { EditCateComponent } from './(admin)/Categorys/edit-cate/edit-cate.component';
 import { CreateCateComponent } from './(admin)/Categorys/create-cate/create-cate.component';
 import { DetailCateComponent } from './(admin)/Categorys/detail-cate/detail-cate.component';
 import { DetailProductsComponent } from './(client)/detail-products/detail-products.component';
 import { CreateProductComponent } from './(admin)/Products/create/create.component';
+import { EditProductComponent } from './(admin)/Products/edit/edit.component';
 
 export const routes: Routes = [
 
@@ -49,7 +49,7 @@ export const routes: Routes = [
 
       { path: 'list', component: ListProjectsComponent },
       { path: 'create', component: CreateProductComponent },
-      { path: 'edit/:id', component: EditComponent },
+      { path: 'edit/:id', component: EditProductComponent },
 
       { path: 'CateList', component: ListCateComponent },
       { path: 'CateCreate', component: CreateCateComponent },

@@ -1,82 +1,68 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { NzMessageService } from 'ng-zorro-antd/message';
-import { CommonModule } from '@angular/common';
-
 @Component({
-  selector: 'app-edit',
-  standalone: true,
+  selector: 'app-edit-product',
   imports: [CommonModule, FormsModule],
   templateUrl: './edit.component.html',
-  styleUrl: './edit.component.css'
+  styleUrls: ['./edit.component.css'],
 })
-export class EditComponent implements OnInit {
-  constructor(
-    private actRoute: ActivatedRoute,
-    private api: HttpClient,
-    private router: Router,
-    private message: NzMessageService
-  ) {}
-
-  apiUrl: string = 'http://localhost:3000/products';
-  id: number = 0;
-  oldStudent: any;
-  
+export class EditProductComponent implements OnInit {
   product: any = {
     name: '',
     description: '',
-    category: '',
+    categoryName: '',
     brand: '',
     price: 0,
     image1: '',
     image2: '',
     image3: '',
     image4: '',
+    sizes: [],
     status: ''
   };
 
   categories: any[] = [];
+  sizeOptions: string[] = ['36', '37', '38', '39', '40', '41', '42', '43', '44'];
+
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
-    this.id = +this.actRoute.snapshot.params['id'];
-    this.getCategories();
-    this.getDetail();
-  }
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.http.get<any>(`http://localhost:3000/products/${id}`).subscribe(data => {
+        this.product = data;
+      });
+    }
 
-  getCategories(): void {
-    this.api.get<any[]>('http://localhost:3000/categories').subscribe(data => {
+    this.http.get<any[]>(`http://localhost:3000/categories`).subscribe(data => {
       this.categories = data;
     });
   }
 
-  getDetail(): void {
-    this.api.get(`${this.apiUrl}/${this.id}`).subscribe(res => {
-      if (res) {
-        this.product = res;
+  onSizeChange(event: any): void {
+    const size = event.target.value;
+    if (event.target.checked) {
+      if (!this.product.sizes.includes(size)) {
+        this.product.sizes.push(size);
       }
-    });
+    } else {
+      this.product.sizes = this.product.sizes.filter((s: string) => s !== size);
+    }
   }
 
-  onEdit(): void {
-    try {
-      console.log('Dữ liệu gửi lên:', JSON.stringify(this.product));
-    } catch (error) {
-      console.error('Lỗi khi chuyển đổi dữ liệu thành JSON:', error);
-      return;
-    }
-
-    this.api.put(`${this.apiUrl}/${this.id}`, this.product).subscribe({
-      next: () => {
-        this.message.success('Cập nhật sản phẩm thành công!');
-        this.router.navigate(['/admin/list']);
-      },
-      error: (err) => {
-        this.message.error('Cập nhật thất bại.');
-        console.error(err);
-      }
+  onUpdate(): void {
+    const id = this.product.id;
+    this.http.put(`http://localhost:3000/products/${id}`, this.product).subscribe(() => {
+      alert('Cập nhật sản phẩm thành công!');
+      this.router.navigate(['/admin/list']);
     });
   }
 }

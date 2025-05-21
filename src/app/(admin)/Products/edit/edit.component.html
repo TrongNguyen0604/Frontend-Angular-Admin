@@ -1,109 +1,122 @@
-<form #editForm="ngForm" (ngSubmit)="onEdit()" novalidate>
-  <div class="mb-3">
-    <label class="form-label">Tên sản phẩm</label>
+<form #editForm="ngForm" (ngSubmit)="onUpdate()" novalidate style="max-width: 600px; display: flex; flex-direction: column; gap: 16px;">
+  <h2 style="font-weight: bold;">🛠️ Cập nhật sản phẩm</h2>
+
+  <!-- Tên sản phẩm -->
+  <div>
+    <label for="name">Tên sản phẩm</label>
     <input
-      type="text"
-      class="form-control"
+      id="name"
       name="name"
       [(ngModel)]="product.name"
       required
+      placeholder="Nhập tên sản phẩm"
+      style="width: 100%; padding: 8px;"
     />
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Mô tả</label>
+  <!-- Mô tả -->
+  <div>
+    <label for="description">Mô tả</label>
     <textarea
-      class="form-control"
+      id="description"
       name="description"
       [(ngModel)]="product.description"
       required
+      placeholder="Nhập mô tả"
+      rows="4"
+      style="width: 100%; padding: 8px;"
     ></textarea>
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Danh mục</label>
+  <!-- Danh mục -->
+  <div>
+    <label for="category">Danh mục</label>
     <select
-      class="form-select"
-      name="category"
-      [(ngModel)]="product.category"
+      id="category"
+      name="categoryName"
+      [(ngModel)]="product.categoryName"
       required
+      style="width: 100%; padding: 8px;"
     >
-      <option [ngValue]="''" disabled>-- Chọn danh mục --</option>
-      <option *ngFor="let c of categories" [ngValue]="c.name">{{ c.name }}</option>
+      <option value="" disabled selected>Chọn danh mục</option>
+      <option *ngFor="let cate of categories" [value]="cate.name">{{ cate.name }}</option>
     </select>
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Thương hiệu</label>
+  <!-- Thương hiệu -->
+  <div>
+    <label for="brand">Thương hiệu</label>
     <input
-      type="text"
-      class="form-control"
+      id="brand"
       name="brand"
       [(ngModel)]="product.brand"
+      required
+      placeholder="Nhập thương hiệu"
+      style="width: 100%; padding: 8px;"
     />
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Giá</label>
+  <!-- Giá -->
+  <div>
+    <label for="price">Giá</label>
     <input
+      id="price"
       type="number"
-      class="form-control"
       name="price"
       [(ngModel)]="product.price"
       required
+      placeholder="Nhập giá"
+      style="width: 100%; padding: 8px;"
     />
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Hình ảnh 1</label>
-    <input
-      type="text"
-      class="form-control"
-      name="image1"
-      [(ngModel)]="product.image1"
-    />
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Hình ảnh 2</label>
-    <input
-      type="text"
-      class="form-control"
-      name="image2"
-      [(ngModel)]="product.image2"
-    />
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Hình ảnh 3</label>
-    <input
-      type="text"
-      class="form-control"
-      name="image3"
-      [(ngModel)]="product.image3"
-    />
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Hình ảnh 4</label>
-    <input
-      type="text"
-      class="form-control"
-      name="image4"
-      [(ngModel)]="product.image4"
-    />
+  <!-- Ảnh -->
+  <div>
+    <label>Ảnh sản phẩm</label>
+    <input name="image1" [(ngModel)]="product.image1" required placeholder="Ảnh chính" style="width: 100%; padding: 8px; margin-bottom: 6px;" />
+    <input name="image2" [(ngModel)]="product.image2" placeholder="Ảnh phụ 1" style="width: 100%; padding: 8px; margin-bottom: 6px;" />
+    <input name="image3" [(ngModel)]="product.image3" placeholder="Ảnh phụ 2" style="width: 100%; padding: 8px; margin-bottom: 6px;" />
+    <input name="image4" [(ngModel)]="product.image4" placeholder="Ảnh phụ 3" style="width: 100%; padding: 8px;" />
   </div>
 
-  <div class="mb-3">
-    <label class="form-label">Trạng thái</label>
+  <!-- Size -->
+  <div>
+    <label>Chọn size</label>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+      <label *ngFor="let size of sizeOptions" style="display: flex; align-items: center; gap: 4px;">
+        <input
+          type="checkbox"
+          [value]="size"
+          (change)="onSizeChange($event)"
+          [checked]="product.sizes.includes(size)"
+        />
+        {{ size }}
+      </label>
+    </div>
+  </div>
+
+  <!-- Trạng thái -->
+  <div>
+    <label for="status">Trạng thái</label>
     <select
-      class="form-select"
+      id="status"
       name="status"
       [(ngModel)]="product.status"
       required
+      style="width: 100%; padding: 8px;"
     >
+      <option value="" disabled>Chọn trạng thái</option>
       <option value="Đang bán">Đang bán</option>
       <option value="Ngừng bán">Ngừng bán</option>
-       <option value="Hết hàng">Hết hàng</option>
+      <option value="Hết hàng">Hết hàng</option>
     </select>
   </div>
 
-  <button class="btn btn-primary" type="submit">Lưu chỉnh sửa</button>
+  <!-- Nút cập nhật -->
+  <button
+    type="submit"
+    style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;"
+  >
+    ✅ Cập nhật sản phẩm
+  </button>
 </form>
