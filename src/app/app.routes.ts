@@ -22,6 +22,7 @@ import { DetailCateComponent } from './(admin)/Categorys/detail-cate/detail-cate
 import { DetailProductsComponent } from './(client)/detail-products/detail-products.component';
 import { CreateProductComponent } from './(admin)/Products/create/create.component';
 import { EditProductComponent } from './(admin)/Products/edit/edit.component';
+import { CartClientComponent } from './(client)/cart-client/cart-client.component';
 
 export const routes: Routes = [
 
@@ -34,7 +35,8 @@ export const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
-      { path: 'detail/:id', component: DetailProductsComponent }
+      { path: 'detail/:id', component: DetailProductsComponent },
+      { path: 'cart', component: CartClientComponent }
     ]
   },
   

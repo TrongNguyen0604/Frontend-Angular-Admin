@@ -68,11 +68,11 @@ export class DetailProductsComponent implements OnInit {
       });
     }
   }
- 
+
 
   setMainImage(product: any, image: string): void {
-  product.currentImage = image;
-}
+    product.currentImage = image;
+  }
 
 
 
@@ -125,6 +125,22 @@ export class DetailProductsComponent implements OnInit {
       return matchesCategory && matchesSearch;
     });
   }
+
+  addToCart(product: any): void {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+
+    const existingProduct = cart.find((item: any) => item.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    this.message.success(`Đã thêm "${product.name}" vào giỏ hàng!`);
+  }
+
 
 
 
