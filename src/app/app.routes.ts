@@ -23,6 +23,7 @@ import { DetailProductsComponent } from './(client)/detail-products/detail-produ
 import { CreateProductComponent } from './(admin)/Products/create/create.component';
 import { EditProductComponent } from './(admin)/Products/edit/edit.component';
 import { CartClientComponent } from './(client)/cart-client/cart-client.component';
+import { HeartComponent } from './(client)/heart/heart.component';
 
 export const routes: Routes = [
 
@@ -36,7 +37,8 @@ export const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'detail/:id', component: DetailProductsComponent },
-      { path: 'cart', component: CartClientComponent }
+      { path: 'cart', component: CartClientComponent },
+      { path: 'heart', component: HeartComponent }
     ]
   },
   

@@ -9,6 +9,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzDrawerComponent, NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CommonModule } from '@angular/common';
+import { HeartComponent } from '../heart/heart.component';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
     NzButtonModule,
     NzDrawerModule,
     NzTagModule,
-    CommonModule
+    CommonModule,
+    HeartComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -31,10 +33,17 @@ export class HomeComponent implements OnInit {
   apiUrl: string = 'http://localhost:3000/products';
   categories: any[] = [];
 
+  // Biến để lưu danh sách dự án (sản phẩm)
   homeProjects: any[] = [];
   filteredProjects: any[] = [];
   selectedCategory: string = '';
   searchKeyword: string = '';
+
+
+  // Biến để lưu danh sách sản phẩm yêu thích
+  wishlist: number[] = [];
+  messages: string = '';
+  showMessage: boolean = false;
 
 
   isVisible: boolean = false;
@@ -77,6 +86,7 @@ export class HomeComponent implements OnInit {
 
 
 
+
   // Hàm xử lý khi nhập từ khóa tìm kiếm
   onSearch(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -99,6 +109,29 @@ export class HomeComponent implements OnInit {
     });
   }
 
+
+  toggleWishlist(productId: number) {
+    const index = this.wishlist.indexOf(productId);
+    if (index === -1) {
+      this.wishlist.push(productId);
+      this.showTempMessage('Đã thêm vào yêu thích ❤️');
+    } else {
+      this.wishlist.splice(index, 1);
+      this.showTempMessage('Đã xóa khỏi yêu thích 💔');
+    }
+
+    // Lưu vào localStorage nếu cần
+    localStorage.setItem('wishlist', JSON.stringify(this.wishlist));
+  }
+
+  showTempMessage(msg: string) {
+    this.messages = msg;
+    this.showMessage = true;
+
+    setTimeout(() => {
+      this.showMessage = false;
+    }, 2000); // 2 giây
+  }
 
 
 

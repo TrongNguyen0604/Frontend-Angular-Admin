@@ -1,0 +1,30 @@
+<h2 class="wishlist-title">Sản phẩm yêu thích ❤️</h2>
+
+<div *ngIf="wishlistProducts.length === 0" class="empty-message">
+  <p>Chưa có sản phẩm nào được yêu thích.</p>
+</div>
+
+<table *ngIf="wishlistProducts.length > 0" class="wishlist-table">
+  <thead>
+    <tr>
+      <th>Hình ảnh</th>
+      <th>Tên sản phẩm</th>
+      <th>Mô tả</th>
+      <th>Giá</th>
+      <th>Hành động</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of wishlistProducts">
+      <td><img [src]="item.image1" [alt]="item.name" class="table-img" /></td>
+      <td><a [routerLink]="['/detail', item.id]">{{ item.name }}</a></td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.price | currency: 'VND' }}</td>
+      <td>
+        <button class="remove-btn" (click)="removeFromWishlist(item.id)">
+          <i class="fa-solid fa-trash"></i> Xoá
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -14,29 +14,36 @@
 
 
 
+
+
 <div class="See_What_New">
 
-    <!-- <div class="Main_title">
-        <h2>See What's New</h2>
-    </div> -->
-    <!-- Container cha chứa tất cả sản phẩm -->
+    <div *ngIf="showMessage" class="toast-message">
+        {{ messages }}
+    </div>
+
+    <!-- Hiển thị danh sách sản phẩm như bạn đã có -->
+
     <div class="See_product">
-        <!-- Lặp từng sản phẩm -->
         <div class="product1" *ngFor="let s of filteredProjects">
             <div class="product_img">
                 <img [src]="s.image1" alt="{{ s.name }}" class="product-image" />
+                <i class="fa-solid fa-heart heart-icon" [ngClass]="{ active: wishlist.includes(s.id) }"
+                    (click)="toggleWishlist(s.id)"></i>
             </div>
             <div class="product_Content">
                 <div class="name">
-                        <a [routerLink]="['/detail', s.id]">{{ s.name }}</a>  
+                    <a [routerLink]="['/detail', s.id]">{{ s.name }}</a>
                 </div>
-
                 <p>{{ s.description }}</p>
                 <div class="price">
-                    <p>{{ s.price | currency:'VND' }}</p>
+                    <p>{{ s.price | currency: 'VND' }}</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Hiển thị trang yêu thích -->
+    <app-heart [filteredProjects]="filteredProjects"></app-heart>
 
 </div>
