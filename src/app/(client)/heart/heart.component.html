@@ -1,30 +1,37 @@
-<h2 class="wishlist-title">Sản phẩm yêu thích ❤️</h2>
+<nz-table
+  *ngIf="wishlistProducts.length > 0"
+  [nzData]="wishlistProducts"
+  [nzBordered]="true"
+  [nzSize]="'middle'"
+  [nzScroll]="{ x: '800px' }"
 
-<div *ngIf="wishlistProducts.length === 0" class="empty-message">
-  <p>Chưa có sản phẩm nào được yêu thích.</p>
-</div>
-
-<table *ngIf="wishlistProducts.length > 0" class="wishlist-table">
+>
   <thead>
     <tr>
-      <th>Hình ảnh</th>
+      <th>Ảnh</th>
       <th>Tên sản phẩm</th>
-      <th>Mô tả</th>
       <th>Giá</th>
-      <th>Hành động</th>
+      <th>Thao tác</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of wishlistProducts">
-      <td><img [src]="item.image1" [alt]="item.name" class="table-img" /></td>
-      <td><a [routerLink]="['/detail', item.id]">{{ item.name }}</a></td>
-      <td>{{ item.description }}</td>
-      <td>{{ item.price | currency: 'VND' }}</td>
+    <tr *ngFor="let product of wishlistProducts" class="hover-row">
       <td>
-        <button class="remove-btn" (click)="removeFromWishlist(item.id)">
-          <i class="fa-solid fa-trash"></i> Xoá
+        <img [src]="product.image1" alt="{{ product.name }}" width="80" style="border-radius: 6px;" />
+      </td>
+      <td>
+        <a [routerLink]="['/detail', product.id]">{{ product.name }}</a>
+      </td>
+      <td>{{ product.price | currency: 'VND' }}</td>
+      <td>
+        <button nz-button nzType="default" nzDanger (click)="removeFromWishlist(product.id)">
+          Xóa khỏi yêu thích 💔
         </button>
       </td>
     </tr>
   </tbody>
-</table>
+</nz-table>
+
+<div *ngIf="wishlistProducts.length === 0" class="empty-state">
+  <p>Chưa có sản phẩm nào trong danh sách yêu thích.</p>
+</div>
