@@ -78,54 +78,20 @@
   ],
   "users": [
     {
-      "email": "trongnguyen12@gmail.com",
-      "password": "$2a$10$zeZgFEOenA3/xvZQVRWB2ewwCNRg3GFg98uCQ38.UzbWJUx6qCX6m",
-      "id": 1
-    },
-    {
-      "email": "trong1@gmail.com",
-      "password": "$2a$10$dtD64IABMAQxIeYVEKiDtOnHTyUYxmWeCjbm.cNFXWQjZQo56KVEK",
+      "email": "trongnguyen06005@gmail.com",
+      "password": "$2a$10$gUclJPqJcXwHi3PZTmTWOeFL7MtZmhV/2GGvbydlXxAcmGe8RvOvK",
+      "fullName": "Nike Air Force 1 Low update",
+      "phone": "0345824489",
+      "dob": "2025-05-08",
       "id": 2
     },
     {
-      "email": "trongnguyen06042005@gmail.com",
-      "password": "$2a$10$OWEjsHkgUv1WgcRUfvgiv.roIkuy4yad7Ex61Inud2idrNgtazJHe",
+      "email": "6042005@gmail.com",
+      "password": "$2a$10$/78aRjmlgBtv/AEoy3C9fuJRbG0BmCV13aZR28TJP.l.7AkK5oxgy",
+      "fullName": "trọng ",
+      "phone": "0345824489",
+      "dob": "2025-05-08",
       "id": 3
-    },
-    {
-      "email": "trong1212@gmail.com",
-      "password": "$2a$10$kqa8WSW7XaNQ2wJPvONABO3l11sQp6HWqXAGGhGBa4AFKIK6Jodmq",
-      "id": 4
-    },
-    {
-      "email": "trong11@gmail.com",
-      "password": "$2a$10$2n1hgOAwyDG31EiqlhKHaugmTZIEa9yI1VREfhdRHwwz8Jk4Frzl6",
-      "id": 5
-    },
-    {
-      "email": "11@gmail.com",
-      "password": "$2a$10$nKMSVtMzRdjk7wlpAuSkkObPWI3/9DpMNIwTJ6yj2oCyyvBEIXery",
-      "id": 6
-    },
-    {
-      "email": "trong132@gmail.com",
-      "password": "$2a$10$2OfWe9g8qEz4sVgtNFKs/ewbZh5XKIjAoHuWS4P6hfrP5.CE96GjS",
-      "id": 7
-    },
-    {
-      "email": "tro1@gmail.com",
-      "password": "$2a$10$AA0jCXNCqElhYtYYqo2yuOPXMVL7L/rhMBbMCPCPHxmKWee.c3ymS",
-      "id": 8
-    },
-    {
-      "email": "trongnguyen1@gmail.com",
-      "password": "$2a$10$vBzZdWI95GdqYrZ9G9yGje4nl3/s3jUyP6A8.C3eQ8wppSZRERbrG",
-      "id": 9
-    },
-    {
-      "email": "trongnguyen0604@gmail.com",
-      "password": "$2a$10$FI/RnpXJYYzPDCDROS.kMOZ8Gy/DJFdPqSU8tiV3oTxzzcymgwRU6",
-      "id": 10
     }
   ]
 }

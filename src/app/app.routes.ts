@@ -24,6 +24,7 @@ import { CreateProductComponent } from './(admin)/Products/create/create.compone
 import { EditProductComponent } from './(admin)/Products/edit/edit.component';
 import { CartClientComponent } from './(client)/cart-client/cart-client.component';
 import { HeartComponent } from './(client)/heart/heart.component';
+import { AccountComponent } from './(admin)/account/account.component';
 
 export const routes: Routes = [
 
@@ -41,7 +42,7 @@ export const routes: Routes = [
       { path: 'heart', component: HeartComponent }
     ]
   },
-  
+
 
   // 🔐 ADMIN
   {
@@ -58,8 +59,9 @@ export const routes: Routes = [
       { path: 'CateList', component: ListCateComponent },
       { path: 'CateCreate', component: CreateCateComponent },
       { path: 'Cateedit/:id', component: EditCateComponent },
-      { path: 'CateDetail/:id', component: DetailCateComponent }
+      { path: 'CateDetail/:id', component: DetailCateComponent },
 
+      { path: 'account', component: AccountComponent },
 
     ]
   },

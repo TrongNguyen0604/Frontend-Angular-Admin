@@ -1,48 +1,60 @@
 <div class="container">
   <h2>Đăng ký</h2>
-  <form 
-    #register="ngForm"
-    (ngSubmit)="onRegister(register.value)"
-  >
+  <form #register="ngForm" (ngSubmit)="onRegister(register.value)">
+    <!-- Họ tên -->
     <div>
-      <label for="" class="form-label">Email</label>
-      <input 
-        type="email" 
-        class="form-control" 
-        name="email" 
-        ngModel 
-        required 
-        email
-        #email="ngModel"
-      >
+      <label class="form-label">Họ tên</label>
+      <input type="text" class="form-control" name="fullName" ngModel required minlength="2" #fullName="ngModel">
+      <div class="text-danger" *ngIf="fullName.invalid && fullName.touched">
+        <small *ngIf="fullName.errors?.['required']">Họ tên không được để trống.</small>
+        <small *ngIf="fullName.errors?.['minlength']">Họ tên tối thiểu 2 ký tự.</small>
+      </div>
+    </div>
+
+    <!-- Số điện thoại -->
+    <div>
+      <label class="form-label">Số điện thoại</label>
+      <input type="tel" class="form-control" name="phone" ngModel required pattern="^0[0-9]{9}$" #phone="ngModel">
+      <div class="text-danger" *ngIf="phone.invalid && phone.touched">
+        <small *ngIf="phone.errors?.['required']">Số điện thoại không được để trống.</small>
+        <small *ngIf="phone.errors?.['pattern']">Số điện thoại không đúng định dạng (VD: 0901234567).</small>
+      </div>
+    </div>
+
+    <!-- Ngày sinh -->
+    <div>
+      <label class="form-label">Ngày sinh</label>
+      <input type="date" class="form-control" name="dob" ngModel required #dob="ngModel">
+      <div class="text-danger" *ngIf="dob.invalid && dob.touched">
+        <small *ngIf="dob.errors?.['required']">Vui lòng chọn ngày sinh.</small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" ngModel required email #email="ngModel">
       <div class="text-danger" *ngIf="email.invalid && email.touched">
         <small *ngIf="email.errors?.['required']">Email không được để trống.</small>
         <small *ngIf="email.errors?.['email']">Email không đúng định dạng.</small>
       </div>
     </div>
 
+    <!-- Mật khẩu -->
     <div>
-      <label for="" class="form-label">Password</label>
-      <input 
-        type="password" 
-        class="form-control" 
-        name="password" 
-        ngModel 
-        required 
-        minlength="6"
-        #password="ngModel"
-      >
+      <label class="form-label">Mật khẩu</label>
+      <input type="password" class="form-control" name="password" ngModel required minlength="6" #password="ngModel">
       <div class="text-danger" *ngIf="password.invalid && password.touched">
         <small *ngIf="password.errors?.['required']">Mật khẩu không được để trống.</small>
         <small *ngIf="password.errors?.['minlength']">Mật khẩu tối thiểu 6 ký tự.</small>
       </div>
     </div>
-    <a href="/login">đăng nhập</a>
-    <button 
-      type="submit" 
-      class="btn btn-success" 
-      [disabled]="register.invalid"
-    >
+
+
+
+    <!-- Link & Submit -->
+    <a href="/login">Đăng nhập</a>
+    <button type="submit" class="btn btn-success mt-2" [disabled]="register.invalid">
       Đăng ký
     </button>
   </form>

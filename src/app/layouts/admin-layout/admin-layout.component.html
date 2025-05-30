@@ -1,71 +1,67 @@
 <nz-layout class="app-layout">
-    <!-- menu sider -->
-    <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md"
-      [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-      <div class="sidebar-logo">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
-        <h1>Admin</h1>
+  <!-- menu sider -->
+  <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
+      <h1>Admin</h1>
+    </div>
+
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="dashboard">Dashboard</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu nzOpen nzTitle="Products" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="list">Quản lý sản phẩm</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="create">Thêm sản phẩm</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu nzOpen nzTitle="Category" nzIcon="form">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="CateList">Quản lý danh mục</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="CateCreate">Thêm danh mục</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu nzOpen nzTitle="Users" nzIcon="user">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="account">Quản lý tài khoản</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+
+  <!-- content -->
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+          <nz-icon class="trigger" [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" />
+        </span>
       </div>
-  
-      <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-        <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
-          <ul>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="dashboard">Dashboard</a>
-            </li>
-          </ul>
-        </li>
-  
-        <li nz-submenu nzOpen nzTitle="Products" nzIcon="form">
-          <ul>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="list">Quản lý sản phẩm</a>
-            </li>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="create">Thêm sản phẩm</a>
-            </li>
-          </ul>
-        </li>
-  
-        <li nz-submenu nzOpen nzTitle="Category" nzIcon="form">
-          <ul>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="CateList">Quản lý danh mục</a>
-            </li>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="CateCreate">Thêm danh mục</a>
-            </li>
-          </ul>
-        </li>
-  
-        <li nz-submenu nzOpen nzTitle="Users" nzIcon="user">
-          <ul>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="/register">Register</a>
-            </li>
-            <li nz-menu-item nzMatchRouter>
-              <a routerLink="/login">Login</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nz-sider>
-  
-    <!-- content -->
-    <nz-layout>
-      <nz-header>
-        <div class="app-header">
-          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-            <nz-icon class="trigger" [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" />
-          </span>
-        </div>
-      </nz-header>
-  
-      <nz-content>
-        <div >
-          <router-outlet></router-outlet>
-        </div>
-      </nz-content>
-    </nz-layout>
+    </nz-header>
+
+    <nz-content>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
   </nz-layout>
-  
+</nz-layout>
