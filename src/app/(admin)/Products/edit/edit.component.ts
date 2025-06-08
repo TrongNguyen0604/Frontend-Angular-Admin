@@ -26,7 +26,7 @@ export class EditProductComponent implements OnInit {
   };
 
   categories: any[] = [];
-  sizeOptions: string[] = ['36', '37', '38', '39', '40', '41', '42', '43', '44'];
+  sizeOptions: string[] = ['FR34', 'FR35', 'FR36', 'FR37', 'FR38', 'FR39', 'FR40'];
 
   constructor(
     private route: ActivatedRoute,
