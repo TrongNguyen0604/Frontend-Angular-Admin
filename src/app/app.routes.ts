@@ -25,6 +25,8 @@ import { EditProductComponent } from './(admin)/Products/edit/edit.component';
 import { CartClientComponent } from './(client)/cart-client/cart-client.component';
 import { HeartComponent } from './(client)/heart/heart.component';
 import { AccountComponent } from './(admin)/account/account.component';
+import { SizeComponent } from './(admin)/size/size.component';
+import { ColorComponent } from './(admin)/color/color.component';
 
 export const routes: Routes = [
 
@@ -62,6 +64,9 @@ export const routes: Routes = [
       { path: 'CateDetail/:id', component: DetailCateComponent },
 
       { path: 'account', component: AccountComponent },
+
+      { path: 'size', component: SizeComponent },
+      { path: 'color', component: ColorComponent },
 
     ]
   },

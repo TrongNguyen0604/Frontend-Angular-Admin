@@ -51,6 +51,45 @@
       ],
       "status": "Đang bán",
       "id": 4
+    },
+    {
+      "name": "Nike Air ",
+      "description": "đẹp vcl ",
+      "categoryName": "thể thao ",
+      "brand": "Thương hiệudfgh",
+      "price": 100000000,
+      "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "FR35",
+        "FR34",
+        "FR36",
+        "FR37",
+        "FR38",
+        "FR39",
+        "FR40"
+      ],
+      "status": "Đang bán",
+      "id": 5
+    },
+    {
+      "name": "Nike Air đ",
+      "description": "dd",
+      "categoryName": "thể thao ",
+      "brand": "Thương hiệudfgh",
+      "price": 100000000,
+      "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "FR35",
+        "FR34"
+      ],
+      "status": "Hết hàng",
+      "id": 6
     }
   ],
   "categories": [
@@ -84,6 +123,20 @@
       "fullName": "trọng ",
       "phone": "0345824489",
       "dob": "2025-05-08",
+      "id": 3
+    }
+  ],
+  "size": [
+    {
+      "id": 1,
+      "name": "l"
+    },
+    {
+      "name": "m",
+      "id": 2
+    },
+    {
+      "name": "s",
       "id": 3
     }
   ]
