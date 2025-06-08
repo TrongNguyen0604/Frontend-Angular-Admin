@@ -1,1 +1,24 @@
-<p>color works!</p>
+<div class="container">
+  <h2>📏 Quản lý color</h2>
+
+  <div class="form">
+    <input [(ngModel)]="newcolor" placeholder="Nhập color..." />
+
+    <div class="buttons">
+      <button class="btn add" (click)="editMode ? updatecolor() : addcolor()">
+        {{ editMode ? 'Cập nhật' : 'Thêm' }}
+      </button>
+      <button class="btn cancel" *ngIf="editMode" (click)="cancelEdit()">Hủy</button>
+    </div>
+  </div>
+
+  <ul class="color-list">
+    <li *ngFor="let color of color" class="color-item">
+      <span class="color-name">{{ color.name }}</span>
+      <div class="action-buttons">
+        <button class="btn edit" (click)="startEdit(color)">Sửa</button>
+        <button class="btn delete" (click)="deletecolor(color.id)">Xóa</button>
+      </div>
+    </li>
+  </ul>
+</div>
