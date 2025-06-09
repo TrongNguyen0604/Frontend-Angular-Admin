@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart-client',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './cart-client.component.html',
   styleUrl: './cart-client.component.css'
 })

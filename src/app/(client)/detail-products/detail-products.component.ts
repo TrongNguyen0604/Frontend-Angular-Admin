@@ -22,7 +22,8 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
     NzButtonModule,
     NzDrawerModule,
     NzTagModule,
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
   templateUrl: './detail-products.component.html',
   styleUrl: './detail-products.component.css',

@@ -37,7 +37,7 @@
     </table>
 
     <div class="checkout-bar">
-      <button>Thanh toán</button>
+      <button [routerLink]="['pay']" >Thanh toán</button>
       <h3 class="total">Tổng cộng: {{ getTotal() | currency: 'VND' }}</h3>
     </div>
   </div>
