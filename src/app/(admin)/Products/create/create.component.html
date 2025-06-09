@@ -51,17 +51,19 @@
     <input name="image4" [(ngModel)]="product.image4" placeholder="Ảnh phụ 3" style="width: 100%; padding: 8px;" />
   </div>
 
-  <!-- Size -->
-  <div>
-    <label>Chọn size</label>
-    <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-      <label *ngFor="let size of sizeOptions" style="display: flex; align-items: center; gap: 4px;">
-        <input type="checkbox" [value]="size" (change)="onSizeChange($event)"
-          [checked]="product.sizes.includes(size)" />
-        {{ size }}
-      </label>
-    </div>
+
+  <label class="size-label">Kích cỡ</label>
+  <div class="size-options">
+    <label class="size-option" *ngFor="let size of sizes">
+      <input type="checkbox" [value]="size.name" (change)="onSizeChange($event)"
+        [checked]="product.sizes.includes(size.name)" />
+      <span>{{ size.name }}</span>
+    </label>
   </div>
+
+
+
+
 
   <!-- Trạng thái -->
   <div>

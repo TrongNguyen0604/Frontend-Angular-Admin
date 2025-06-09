@@ -5,6 +5,12 @@ import { Router } from '@angular/router';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { CommonModule } from '@angular/common';
 
+interface Size {
+  id: number;
+  name: string;
+}
+
+
 @Component({
   selector: 'app-create-product',
   imports: [CommonModule, FormsModule],
@@ -13,7 +19,9 @@ import { CommonModule } from '@angular/common';
 })
 export class CreateProductComponent implements OnInit {
   categories: any[] = [];
-  sizeOptions: string[] = ['FR34', 'FR35', 'FR36', 'FR37', 'FR38', 'FR39', 'FR40'];
+  sizes: Size[] = [];
+  selectedSizeId: number | null = null;
+
   product: {
     name: string;
     description: string;
@@ -24,7 +32,7 @@ export class CreateProductComponent implements OnInit {
     image2: string;
     image3: string;
     image4: string;
-    sizes: string[];     // 👉 Khai báo rõ kiểu mảng string
+    sizes: string[]; // ✅ sẽ dùng để lưu nhiều size
     status: string;
   } = {
       name: '',
@@ -36,7 +44,7 @@ export class CreateProductComponent implements OnInit {
       image2: '',
       image3: '',
       image4: '',
-      sizes: [],           // 👈 Lúc này TypeScript biết đây là string[]
+      sizes: [],      // ✅ danh sách size được chọn
       status: ''
     };
 
@@ -48,17 +56,33 @@ export class CreateProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.fetchCategories();   // gọi API danh mục 
+    this.fetchSizes();  // gọi API size
+  }
+  fetchCategories(): void {
     this.http.get<any[]>('http://localhost:3000/categories').subscribe(data => {
       this.categories = data;
     });
   }
 
+  fetchSizes(): void {
+    this.http.get<Size[]>('http://localhost:3000/size').subscribe(data => {
+      this.sizes = data;
+    });
+  }
+
+
+
+
+
   onSizeChange(event: any): void {
     const value = event.target.value;
     if (event.target.checked) {
-      this.product.sizes.push(value);
+      if (!this.product.sizes.includes(value)) {
+        this.product.sizes.push(value);
+      }
     } else {
-      this.product.sizes = this.product.sizes.filter(size => size !== value);
+      this.product.sizes = this.product.sizes.filter(s => s !== value);
     }
   }
 
@@ -70,7 +94,8 @@ export class CreateProductComponent implements OnInit {
       !this.product.brand ||
       !this.product.price ||
       !this.product.image1 ||
-      !this.product.status
+      !this.product.status ||
+      !this.product.sizes   // ✅ kiểm tra thêm sizeId
     ) {
       this.message.warning('Vui lòng điền đầy đủ thông tin!');
       return;
@@ -86,5 +111,6 @@ export class CreateProductComponent implements OnInit {
       },
     });
   }
+
 }
 
