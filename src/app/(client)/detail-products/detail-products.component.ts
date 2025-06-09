@@ -38,6 +38,8 @@ export class DetailProductsComponent implements OnInit {
   searchKeyword: string = '';
   isLoading = true;
 
+  sizes: any[] = [];
+
 
   isVisible: boolean = false;
 
@@ -48,6 +50,11 @@ export class DetailProductsComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.isLoading = true; // 👉 Bắt đầu loading
+
+    // Lấy danh sách size
+    this.http.get<any[]>('http://localhost:3000/size').subscribe((sizes) => {
+      this.sizes = sizes;
+    });
 
     if (id) {
       this.http.get<any[]>('http://localhost:3000/categories').subscribe((categories) => {

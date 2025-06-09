@@ -28,14 +28,11 @@
                     <p>Size: One Size</p>
                 </div>
                 <div class="main_product_information_size">
-                    <button>FR34</button>
-                    <button>FR35</button>
-                    <button>FR36</button>
-                    <button>FR37</button>
-                    <button>FR38</button>
-                    <button>FR39</button>
-                    <button>FR40</button>
+                    <button *ngFor="let size of sizes">
+                        {{ size.name }}
+                    </button>
                 </div>
+
                 <div class="main_product_information_button">
                     <button>Add to Bag</button>
                 </div>
