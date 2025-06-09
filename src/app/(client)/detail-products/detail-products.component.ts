@@ -39,6 +39,7 @@ export class DetailProductsComponent implements OnInit {
   isLoading = true;
 
   sizes: any[] = [];
+  selectedSize: { [key: number]: string } = {}; // key là id của sản phẩm
 
 
   isVisible: boolean = false;
@@ -55,6 +56,7 @@ export class DetailProductsComponent implements OnInit {
     this.http.get<any[]>('http://localhost:3000/size').subscribe((sizes) => {
       this.sizes = sizes;
     });
+
 
     if (id) {
       this.http.get<any[]>('http://localhost:3000/categories').subscribe((categories) => {
@@ -76,6 +78,9 @@ export class DetailProductsComponent implements OnInit {
     }
   }
 
+  selectSize(productId: number, size: string) {
+    this.selectedSize[productId] = size;
+  }
 
   setMainImage(product: any, image: string): void {
     product.currentImage = image;
@@ -132,20 +137,28 @@ export class DetailProductsComponent implements OnInit {
       return matchesCategory && matchesSearch;
     });
   }
-
   addToCart(product: any): void {
+    const size = this.selectedSize[product.id];
+
+    if (!size) {
+      this.message.warning('Vui lòng chọn size trước khi thêm vào giỏ hàng!');
+      return;
+    }
+
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
 
-    const existingProduct = cart.find((item: any) => item.id === product.id);
+    const existingProduct = cart.find(
+      (item: any) => item.id === product.id && item.selectedSize === size
+    );
 
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      cart.push({ ...product, quantity: 1 });
+      cart.push({ ...product, selectedSize: size, quantity: 1 });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    this.message.success(`Đã thêm "${product.name}" vào giỏ hàng!`);
+    this.message.success(`Đã thêm "${product.name}" - size ${size} vào giỏ hàng!`);
   }
 
 

@@ -27,8 +27,10 @@
                     <p>Color: Black</p>
                     <p>Size: One Size</p>
                 </div>
+                
                 <div class="main_product_information_size">
-                    <button *ngFor="let size of sizes">
+                    <button *ngFor="let size of sizes" (click)="selectSize(s.id, size.name)"
+                        [class.selected]="selectedSize[s.id] === size.name">
                         {{ size.name }}
                     </button>
                 </div>
