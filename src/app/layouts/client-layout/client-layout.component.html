@@ -8,7 +8,9 @@
                 <li><a href="">Find a Store</a></li>|
                 <li><a href="">Help</a></li>|
                 <li><a href="">Join Us</a></li>|
-                <li><a href="/login">Sign In</a></li>|
+                <li><a *ngIf="!auth.isLoggedIn()" routerLink="/login">Sign In</a></li>
+                <li><a *ngIf="auth.isLoggedIn()" (click)="logout()">Sign Up</a></li>
+
             </ul>
         </div>
     </div>
@@ -43,7 +45,7 @@
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
             <a href="/profile">
-              <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"></i>
             </a>
 
         </div>

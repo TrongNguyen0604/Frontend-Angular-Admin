@@ -70,6 +70,14 @@
       "phone": "0328819987",
       "dob": "2025-06-04",
       "id": 5
+    },
+    {
+      "email": "tro11n@gmail.com",
+      "password": "$2a$10$mU9XC643KOMRHv5U.pGyXO3mUdItHZUojCZlaiYL98ZBuxt4IqxgO",
+      "fullName": "tron",
+      "phone": "0328819987",
+      "dob": "2025-06-04",
+      "id": 6
     }
   ],
   "size": [
