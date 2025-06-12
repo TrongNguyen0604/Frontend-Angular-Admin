@@ -10,7 +10,7 @@ import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-register',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -22,14 +22,25 @@ export class LoginComponent {
 
   onlogin(data: any): void {
     this.auth.login(data).subscribe((res: any) => {
-      console.log(res)
-     //lấy token lưu vào localStorage
-     //lấy accessToken từ res
-     const token = res?.accessToken;
-     // lưu token vào trong localStorate
-     localStorage.setItem('key', token);
-     alert('đăng nhập thành công'), this.router.navigate(['/'])
-    })
+      const token = res?.accessToken;
+      if (token) {
+        localStorage.setItem('token', token);
+
+        // Gọi tiếp để lấy danh sách users
+        this.auth.getUsers().subscribe((users: any[]) => {
+          const currentUser = users.find(u => u.email === data.email); // tìm user theo email đăng nhập
+
+          if (currentUser) {
+            localStorage.setItem('user', JSON.stringify(currentUser));
+            alert('Đăng nhập thành công');
+            this.router.navigate(['/profile']);
+          } else {
+            alert('Không tìm thấy người dùng');
+          }
+        });
+      }
+    });
   }
+
 
 }

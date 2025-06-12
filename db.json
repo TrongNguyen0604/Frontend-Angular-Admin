@@ -54,6 +54,22 @@
       "phone": "0345824489",
       "dob": "2025-05-08",
       "id": 3
+    },
+    {
+      "email": "trongnguyen060dfghj42005@gmail.com",
+      "password": "$2a$10$4BrQIGD9LiDlVKDPKdOb5.MvWhVkrXts5.iN2V0IecNFtMc8/XnR6",
+      "fullName": "nguyễn trọng",
+      "phone": "0328819987",
+      "dob": "2025-06-04",
+      "id": 4
+    },
+    {
+      "email": "tron@gmail.com",
+      "password": "$2a$10$7Riw2Kl1u7bKv3iMEH9xHu87b5KO2qzJA2WIM8cDmV7dmY9yba5Ha",
+      "fullName": "tron",
+      "phone": "0328819987",
+      "dob": "2025-06-04",
+      "id": 5
     }
   ],
   "size": [
