@@ -30,6 +30,7 @@ import { ColorComponent } from './(admin)/color/color.component';
 import { PayComponent } from './(client)/pay/pay.component';
 import { CommentComponent } from './(admin)/comment/comment.component';
 import { ProfileComponent } from './(client)/profile/profile.component';
+import { OrdersComponent } from './(admin)/orders/orders.component';
 
 export const routes: Routes = [
 
@@ -74,6 +75,7 @@ export const routes: Routes = [
       { path: 'color', component: ColorComponent },
 
       { path: 'comment', component: CommentComponent },
+      { path: 'Order', component: OrdersComponent },
 
 
 

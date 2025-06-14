@@ -40,14 +40,6 @@
   ],
   "users": [
     {
-      "email": "trongnguyen06005@gmail.com",
-      "password": "$2a$10$gUclJPqJcXwHi3PZTmTWOeFL7MtZmhV/2GGvbydlXxAcmGe8RvOvK",
-      "fullName": "Nike Air Force 1 Low update",
-      "phone": "0345824489",
-      "dob": "2025-05-08",
-      "id": 2
-    },
-    {
       "email": "6042005@gmail.com",
       "password": "$2a$10$/78aRjmlgBtv/AEoy3C9fuJRbG0BmCV13aZR28TJP.l.7AkK5oxgy",
       "fullName": "trọng ",
@@ -78,6 +70,14 @@
       "phone": "0328819987",
       "dob": "2025-06-04",
       "id": 6
+    },
+    {
+      "email": "trongng5@gmail.com",
+      "password": "$2a$10$XrwkCSauPM.eqKzQE6eMuOLgQr5w0W2ipkSYo6oGBuQ2STetSG3we",
+      "fullName": "nguyễn trọng",
+      "phone": "0328819987",
+      "dob": "2025-06-19",
+      "id": 7
     }
   ],
   "size": [
@@ -869,5 +869,17 @@
       ],
       "id": 13
     }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerName": "Nguyễn Văn A",
+      "items": [
+        { "productId": 101, "name": "Giày Nike", "quantity": 2, "price": 1500000 }
+      ],
+      "totalPrice": 3000000,
+      "status": "pending"
+    }
   ]
+  
 }

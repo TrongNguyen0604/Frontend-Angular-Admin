@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../../service/auth.service';
+import { AuthService } from '../../service/auth/auth.service';
 
 
 @Component({
