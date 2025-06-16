@@ -1,0 +1,885 @@
+{
+  "products": [
+    {
+      "name": "Nike Air Force 1 Low c",
+      "description": "d",
+      "categoryName": "Thời trang ",
+      "brand": "Thương hiệu",
+      "price": 2222342,
+      "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "34",
+        "35",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "status": "Đang bán",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "name": "thể thao ",
+      "description": "rất đẹp",
+      "image": "https://picsum.photos/200/300",
+      "status": "hoạt động",
+      "id": 2
+    },
+    {
+      "name": "Thời trang ",
+      "description": "rất đẹp",
+      "image": "https://picsum.photos/200/300",
+      "status": "không hoạt động",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "6042005@gmail.com",
+      "password": "$2a$10$/78aRjmlgBtv/AEoy3C9fuJRbG0BmCV13aZR28TJP.l.7AkK5oxgy",
+      "fullName": "trọng ",
+      "phone": "0345824489",
+      "dob": "2025-05-08",
+      "id": 3
+    },
+    {
+      "email": "trongnguyen060dfghj42005@gmail.com",
+      "password": "$2a$10$4BrQIGD9LiDlVKDPKdOb5.MvWhVkrXts5.iN2V0IecNFtMc8/XnR6",
+      "fullName": "nguyễn trọng",
+      "phone": "0328819987",
+      "dob": "2025-06-04",
+      "id": 4
+    },
+    {
+      "email": "tron@gmail.com",
+      "password": "$2a$10$7Riw2Kl1u7bKv3iMEH9xHu87b5KO2qzJA2WIM8cDmV7dmY9yba5Ha",
+      "fullName": "tron",
+      "phone": "0328819987",
+      "dob": "2025-06-04",
+      "id": 5
+    },
+    {
+      "email": "tro11n@gmail.com",
+      "password": "$2a$10$mU9XC643KOMRHv5U.pGyXO3mUdItHZUojCZlaiYL98ZBuxt4IqxgO",
+      "fullName": "tron",
+      "phone": "0328819987",
+      "dob": "2025-06-04",
+      "id": 6
+    },
+    {
+      "email": "trongng5@gmail.com",
+      "password": "$2a$10$XrwkCSauPM.eqKzQE6eMuOLgQr5w0W2ipkSYo6oGBuQ2STetSG3we",
+      "fullName": "nguyễn trọng",
+      "phone": "0328819987",
+      "dob": "2025-06-19",
+      "id": 7
+    }
+  ],
+  "size": [
+    {
+      "id": 1,
+      "name": "34"
+    },
+    {
+      "id": 2,
+      "name": "35"
+    },
+    {
+      "id": 3,
+      "name": "36"
+    },
+    {
+      "name": "37",
+      "id": 4
+    },
+    {
+      "name": "38",
+      "id": 5
+    },
+    {
+      "name": "39",
+      "id": 6
+    },
+    {
+      "name": "40",
+      "id": 7
+    }
+  ],
+  "color": [
+    {
+      "name": "xanh",
+      "id": 1
+    },
+    {
+      "name": "đỏ",
+      "id": 2
+    },
+    {
+      "name": "tím",
+      "id": 3
+    }
+  ],
+  "carts": [
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "34",
+          "quantity": 2
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "selectedSize": "35",
+          "quantity": 7
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "selectedSize": "40",
+          "quantity": 3
+        }
+      ],
+      "id": 1
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "selectedSize": "35",
+          "quantity": 7
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "selectedSize": "40",
+          "quantity": 3
+        }
+      ],
+      "id": 2
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "selectedSize": "40",
+          "quantity": 3
+        }
+      ],
+      "id": 3
+    },
+    {
+      "items": [],
+      "id": 4
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "36",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "37",
+          "quantity": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "36",
+          "quantity": 2
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "37",
+          "quantity": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "36",
+          "quantity": 3
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "37",
+          "quantity": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "36",
+          "quantity": 4
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "currentImage": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "selectedSize": "37",
+          "quantity": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "37",
+          "quantity": 2
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "38",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "39",
+          "quantity": 1
+        }
+      ],
+      "id": 9
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "37",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "38",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "39",
+          "quantity": 1
+        }
+      ],
+      "id": 10
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "37",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "38",
+          "quantity": 2
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "39",
+          "quantity": 1
+        }
+      ],
+      "id": 11
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "37",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "38",
+          "quantity": 3
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "39",
+          "quantity": 1
+        }
+      ],
+      "id": 12
+    },
+    {
+      "items": [
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "37",
+          "quantity": 1
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "38",
+          "quantity": 4
+        },
+        {
+          "name": "Nike Air Force 1 Low c",
+          "description": "d",
+          "categoryName": "Không xác định",
+          "brand": "Thương hiệu",
+          "price": 2222342,
+          "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+          "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+          "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+          "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+          "sizes": [
+            "34",
+            "35",
+            "37",
+            "38",
+            "39",
+            "40"
+          ],
+          "status": "Đang bán",
+          "id": 1,
+          "selectedSize": "39",
+          "quantity": 1
+        }
+      ],
+      "id": 13
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerName": "Nguyễn Văn A",
+      "items": [
+        { "productId": 101, "name": "Giày Nike", "quantity": 2, "price": 1500000 }
+      ],
+      "totalPrice": 3000000,
+      "status": "pending"
+    }
+  ]
+  
+}

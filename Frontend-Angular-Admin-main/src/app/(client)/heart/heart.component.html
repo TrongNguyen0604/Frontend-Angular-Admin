@@ -1,0 +1,37 @@
+<nz-table
+  *ngIf="wishlistProducts.length > 0"
+  [nzData]="wishlistProducts"
+  [nzBordered]="true"
+  [nzSize]="'middle'"
+  [nzScroll]="{ x: '800px' }"
+
+>
+  <thead>
+    <tr>
+      <th>Ảnh</th>
+      <th>Tên sản phẩm</th>
+      <th>Giá</th>
+      <th>Thao tác</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of wishlistProducts" class="hover-row">
+      <td>
+        <img [src]="product.image1" alt="{{ product.name }}" width="80" style="border-radius: 6px;" />
+      </td>
+      <td>
+        <a [routerLink]="['/detail', product.id]">{{ product.name }}</a>
+      </td>
+      <td>{{ product.price | currency: 'VND' }}</td>
+      <td>
+        <button nz-button nzType="default" nzDanger (click)="removeFromWishlist(product.id)">
+          Xóa khỏi yêu thích 💔
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<div *ngIf="wishlistProducts.length === 0" class="empty-state">
+  <p>Chưa có sản phẩm nào trong danh sách yêu thích.</p>
+</div>

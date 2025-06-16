@@ -1,0 +1,59 @@
+<div class="pay-page">
+  <h2>Trang thanh toán</h2>
+
+  <div class="pay-content">
+    <!-- Cột trái: Thông tin sản phẩm -->
+    <div class="cart-info">
+      <h3>Sản phẩm đã chọn</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Ảnh</th>
+            <th>Tên</th>
+            <th>Size</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td><img [src]="item.image1" width="60" /></td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.selectedSize }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price * item.quantity | currency: 'VND' }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="total"><strong>Tổng tiền:</strong> {{ total | currency: 'VND' }}</p>
+    </div>
+
+    <!-- Cột phải: Form thông tin người dùng -->
+    <form class="payment-form" (ngSubmit)="onSubmit()">
+      <h3>Thông tin người nhận</h3>
+
+      <label>
+        Họ và tên:
+        <input type="text" [(ngModel)]="fullName" name="fullName" required />
+      </label>
+
+      <label>
+        Email:
+        <input type="email" [(ngModel)]="email" name="email" required />
+      </label>
+
+      <label>
+        Số điện thoại:
+        <input type="tel" [(ngModel)]="phone" name="phone" required />
+      </label>
+
+      <label>
+        Địa chỉ giao hàng:
+        <textarea [(ngModel)]="address" name="address" required></textarea>
+      </label>
+
+      <button type="submit">Xác nhận thanh toán</button>
+    </form>
+  </div>
+</div>

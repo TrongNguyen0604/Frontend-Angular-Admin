@@ -1,0 +1,46 @@
+.wishlist-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+}
+
+.wishlist-image {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.wishlist-name {
+  font-weight: 500;
+  color: #1890ff;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.wishlist-name:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+.wishlist-price {
+  font-weight: bold;
+  color: #fa541c;
+}
+
+.wishlist-remove-btn {
+  transition: all 0.3s;
+}
+
+.hover-row:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+}

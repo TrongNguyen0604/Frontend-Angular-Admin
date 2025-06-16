@@ -1,0 +1,46 @@
+<header>
+    <div class="header_banner">
+        <!-- <img src="https://i.pinimg.com/736x/cd/4c/0b/cd4c0bf32edc69e28a18f2a2147275b3.jpg" alt=""> -->
+    </div>
+    <div class="header_title">
+        <p>Nike Running</p>
+        <h1>WINNING ISN’T COMFORTABLE</h1>
+        <p>Tincidunt at mi sit risus fermentum risus ac neT est feugiat congue </p>
+    </div>
+    <div class="header_button">
+        <button>Shop Running</button>
+    </div>
+</header>
+
+
+
+
+
+<div class="See_What_New">
+
+    <div *ngIf="showMessage" class="toast-message">
+        {{ messages }}
+    </div>
+
+    <!-- Hiển thị danh sách sản phẩm như bạn đã có -->
+
+    <div class="See_product">
+        <div class="product1" *ngFor="let s of filteredProjects">
+            <div class="product_img">
+                <img [src]="s.image1" alt="{{ s.name }}" class="product-image" />
+                <i class="fa-solid fa-heart heart-icon" [ngClass]="{ active: wishlist.includes(s.id) }"
+                    (click)="toggleWishlist(s.id)"></i>
+            </div>
+            <div class="product_Content">
+                <div class="name">
+                    <a [routerLink]="['/detail', s.id]">{{ s.name }}</a>
+                </div>
+                <p>{{ s.description }}</p>
+                <div class="price">
+                    <p>{{ s.price | currency: 'VND' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+.size-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 16px;
+}
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.size-option {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+.size-option input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.size-option:hover {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+}
+
+.size-option input[type="checkbox"]:checked+span {
+    font-weight: bold;
+    color: #1890ff;
+}

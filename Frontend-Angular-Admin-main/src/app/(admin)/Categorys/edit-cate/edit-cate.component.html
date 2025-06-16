@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Thêm danh mục</h2>
+    <form #editCateForm="ngForm" (ngSubmit)="onEditCate()" novalidate>
+
+        <!-- Thương hiệu -->
+        <div class="mb-3">
+            <label class="form-label">Tên danh mục</label>
+            <input class="form-control" type="text" name="name" [(ngModel)]="category.name" required
+                placeholder="Nhập tên danh mục">
+        </div>
+
+        <!-- Giá tiền -->
+        <div class="mb-3">
+            <label class="form-label">Mô tả</label>
+            <input class="form-control" type="text" name="description" [(ngModel)]="category.description" required
+                min="1000" placeholder="Nhập giá tiền sản phẩm">
+        </div>
+
+        <!-- Hình ảnh 1 -->
+        <!-- Ảnh chính -->
+        <div class="mb-3">
+            <label class="form-label">Ảnh chính</label>
+            <input class="form-control" type="text" name="image" [(ngModel)]="category.image" required
+                placeholder="Nhập URL ảnh chính">
+        </div>
+
+        <label class="form-label">Danh mục</label>
+        <div class="mb-3">
+            <select class="form-select" name="status" [(ngModel)]="category.status" #status="ngModel" required>
+               <option value="hoạt động" >hoạt động</option>
+                <option value="không hoạt động">không hoạt động</option>
+            </select>
+            <small class="text-danger" *ngIf="status.invalid && status.touched">
+                Bạn phải chọn danh mục.
+            </small>
+        </div>
+
+        
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>

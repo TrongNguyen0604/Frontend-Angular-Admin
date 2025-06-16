@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>📏 Quản lý Size</h2>
+
+  <div class="form">
+    <input [(ngModel)]="newSize" placeholder="Nhập size..." />
+
+    <div class="buttons">
+      <button class="btn add" (click)="editMode ? updateSize() : addSize()">
+        {{ editMode ? 'Cập nhật' : 'Thêm' }}
+      </button>
+      <button class="btn cancel" *ngIf="editMode" (click)="cancelEdit()">Hủy</button>
+    </div>
+  </div>
+
+  <ul class="size-list">
+    <li *ngFor="let size of sizes" class="size-item">
+      <span class="size-name">{{ size.name }}</span>
+      <div class="action-buttons">
+        <button class="btn edit" (click)="startEdit(size)">Sửa</button>
+        <button class="btn delete" (click)="deleteSize(size.id)">Xóa</button>
+      </div>
+    </li>
+  </ul>
+</div>

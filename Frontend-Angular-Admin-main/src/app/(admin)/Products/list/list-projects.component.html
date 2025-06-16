@@ -1,0 +1,74 @@
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 16px; ">
+  <select class="form-select" (change)="onStatusChange($event)">
+    <option value="">Lọc theo trạng thái</option>
+    <option value="Đang bán">Đang bán</option>
+    <option value="Ngừng bán">Ngừng bán</option>
+    <option value="Hết hàng">Hết hàng</option>
+  </select>
+
+
+  <div style="position: relative; width: 250px; margin: 0 auto;">
+    <i class="fa fa-search"
+      style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #999;"></i>
+    <input type="text" placeholder="Tìm kiếm..." (input)="onSearch($event)" style="
+        width: 100%;
+        padding: 8px 12px 8px 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+      " />
+  </div>
+
+</div>
+<table>
+
+  <thead>
+    <tr>
+      <th style="text-align: center;">STT</th>
+      <th style="text-align: left;">Tên Giày</th>
+      <th style="text-align: left;">Mô tả</th>
+      <th style="text-align: center;">Danh mục</th>
+      <th style="text-align: center;">Hãng giày</th>
+      <th style="text-align: center;">Giá</th>
+      <th style="text-align: center;">Hình ảnh </th>
+      <th style="text-align: center;">Size</th>
+      <th style="text-align: center;">Trạng thái</th>
+      <th style="text-align: center;">Hành động</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of filteredProjects">
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.description }}</td>
+      <td>{{ s.categoryName }}</td>
+      <td>{{ s.brand }}</td>
+      <td>{{ s.price }}</td>
+
+      <td>
+        <img src={{s.image1}} alt="">
+        <img src={{s.image2}} alt="">
+        <img src={{s.image3}} alt="">
+        <img src={{s.image4}} alt="">
+      </td>
+      <td>{{ s.sizes }}</td>
+      <td>{{ s.status }}</td>
+
+      <td style="text-align: center;">
+        <div class="action-buttons">
+          <button (click)="handleDelete(s.id)" class="btn-delete">
+            Delete
+          </button>
+          <button [routerLink]="['/admin/edit', s.id]" class="btn-edit">
+            Edit
+          </button>
+        </div>
+      </td>
+
+
+    </tr>
+  </tbody>
+
+</table>
