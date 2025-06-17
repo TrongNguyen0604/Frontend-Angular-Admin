@@ -181,3 +181,142 @@
         max-width: 100%;
     }
 }
+
+
+.Customer {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Customer_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.Customer_title h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.Customer_feedback_link ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Customer_feedback_link a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.Customer_feedback_link a:hover {
+  color: #0056b3;
+}
+
+.Customer_feedback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Customer_feedback_1,
+.Customer_feedback_2 {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(50% - 20px);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.Customer_feedback_1:hover,
+.Customer_feedback_2:hover {
+  transform: translateY(-5px);
+}
+
+.Customer_feedback_content1 {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.Customer_feedback_content1 i {
+  color: #e74c3c;
+  margin-right: 5px;
+}
+
+.Customer_feedback_content1 p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.Customer_feedback_content2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.Customer_feedback_content2_img img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.Customer_feedback_content2_information {
+  display: flex;
+  flex-direction: column;
+}
+
+.Customer_feedback_content2_information i {
+  color: #f1c40f;
+  margin-right: 2px;
+}
+
+.Customer_feedback_content2_information p {
+  margin: 4px 0 0;
+  font-weight: 500;
+}
+
+.Customer_feedback_content2_information_p {
+  font-size: 14px;
+  color: #999;
+}
+.Customer {
+  max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+  margin: 0 auto;     /* Căn giữa */
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+.main_product_how_title {
+  max-width: 1200px;  /* Giới hạn chiều rộng */
+  margin: 0 auto;     /* Căn giữa nội dung */
+  padding: 40px 20px; /* Khoảng cách hai bên */
+  text-align: center; /* (tùy chọn) căn giữa chữ */
+}
+.Customer_feedback_content2_information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.Customer_feedback_content2_information i.fa-star {
+    color: gold;
+    margin-right: 4px;
+}
+
+/* Dòng chứa các ngôi sao */
+.Customer_feedback_content2_information_stars {
+    display: flex;
+    align-items: center;
+}

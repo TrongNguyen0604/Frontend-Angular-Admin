@@ -23,7 +23,8 @@
                 </div>
                 <div class="main_product_information_content">
 
-                    <p>{{ s.price }}</p>
+                    <p>{{ s.price | number:'1.0-0' }} ₫</p>
+
 
                     <p>Color: Black</p>
                     <p>Size: One Size</p>
@@ -50,78 +51,83 @@
             </div>
         </div>
     </nz-spin>
-    <!-- <div class="main_product_how">
-            <div class="main_product_how_title">
-                <h1>How Others Are Wearing It</h1>
-                <p>Upload your photo or mention </p>
-            </div>
-            <div class="main_product_how_more">
-                <img src="Image/How.png" alt="">
-                <button><i class="fa-solid fa-circle-plus h"></i></button>
+
+
+    <div class="main_product_how">
+        <div class="main_product_how_title">
+            <h1>How Others Are Wearing It</h1>
+            <p>Upload your photo or mention </p>
+        </div>
+
+    </div>
+    <div class="Customer">
+        <div class="Customer_title">
+            <h1>Customer feedback</h1>
+            <div class="Customer_feedback_link">
+                <ul>
+                    <li>
+                        <a href="Comments_page.html">Xem thêm</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="Customer">
-            <div class="Customer_title">
-                <h1>Customer feedback</h1>
-                <div class="Customer_feedback_link">
-                    <ul>
-                        <li>
-                            <a href="Comments_page.html">Xem thêm</a>
-                        </li>
-                    </ul>
+        <div class="Customer_feedback">
+            <div class="Customer_feedback_1">
+                <div class="Customer_feedback_content1">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
+                        <br> fermentum sed eleifend fermen fermentum.
+                    </p>
+                </div>
+                <div class="Customer_feedback_content2">
+                    <div class="Customer_feedback_content2_img">
+                        <img src="Image/customer.png" alt="">
+                    </div>
+                    <div class="Customer_feedback_content2_information">
+                        <div class="Customer_feedback_content2_information_stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>Mỹ Linh</p>
+                        <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
+                    </div>
                 </div>
             </div>
-            <div class="Customer_feedback">
-                <div class="Customer_feedback_1">
-                    <div class="Customer_feedback_content1">
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
-                            <br> fermentum sed eleifend fermen fermentum.
-                        </p>
-                    </div>
-                    <div class="Customer_feedback_content2">
-                        <div class="Customer_feedback_content2_img">
-                            <img src="Image/customer.png" alt="">
-                        </div>
-                        <div class="Customer_feedback_content2_information">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <p>Mỹ Linh</p>
-                            <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
-                        </div>
-                    </div>
+            <div class="Customer_feedback_2">
+                <div class="Customer_feedback_content1">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
+                        <br> fermentum sed eleifend fermen fermentum.
+                    </p>
                 </div>
-                <div class="Customer_feedback_2">
-                    <div class="Customer_feedback_content1">
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
-                            <br> fermentum sed eleifend fermen fermentum.
-                        </p>
+                <div class="Customer_feedback_content2">
+                    <div class="Customer_feedback_content2_img">
+                        <img src="Image/customer1.png" alt="">
                     </div>
-                    <div class="Customer_feedback_content2">
-                        <div class="Customer_feedback_content2_img">
-                            <img src="Image/customer1.png" alt="">
+                    <div class="Customer_feedback_content2_information">
+                        <div class="Customer_feedback_content2_information_stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
-                        <div class="Customer_feedback_content2_information">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <p>Mỹ Trang</p>
-                            <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
-                        </div>
+                        <p>Mỹ Linh</p>
+                        <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
                     </div>
-                </div>
 
+
+                </div>
             </div>
-        </div> -->
+
+        </div>
+    </div>
 
 </main>

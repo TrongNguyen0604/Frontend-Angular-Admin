@@ -27,6 +27,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
   ],
   templateUrl: './detail-products.component.html',
   styleUrl: './detail-products.component.css',
+  
 })
 export class DetailProductsComponent implements OnInit {
   size: NzButtonSize = 'default';
@@ -83,8 +84,8 @@ export class DetailProductsComponent implements OnInit {
     this.selectedSize[productId] = size;
   }
 
-  setMainImage(product: any, image: string): void {
-    product.currentImage = image;
+  setMainImage(s: any, imageUrl: string) {
+    s.currentImage = imageUrl;
   }
 
 
