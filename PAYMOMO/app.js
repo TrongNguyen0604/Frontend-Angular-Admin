@@ -1,101 +1,110 @@
+require("dotenv").config();
 const express = require("express");
-const { url } = require("inspector");
-const app = express();
+const cors = require("cors");
 const axios = require("axios");
+const crypto = require("crypto");
 
+const app = express();
+
+// Middlewares
+app.use(cors());
+app.use(express.json());
+
+const {
+  MOMO_ACCESS_KEY,
+  MOMO_SECRET_KEY,
+  MOMO_PARTNER_CODE,
+  MOMO_REDIRECT_URL,
+  MOMO_IPN_URL,
+} = process.env;
+
+if (!MOMO_ACCESS_KEY || !MOMO_SECRET_KEY || !MOMO_PARTNER_CODE) {
+  console.error("❌ Missing MOMO_… env variables!");
+  process.exit(1);
+}
 
 app.post("/payment", async (req, res) => {
-  //https://developers.momo.vn/#/docs/en/aiov2/?id=payment-method
-  //parameters
-  var accessKey = "F8BBA842ECF85";
-  var secretKey = "K951B6PE1waDMi640xX08PD3vg6EkVlz";
-  var orderInfo = "pay with MoMo";
-  var partnerCode = "MOMO";
-  var redirectUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
-  var ipnUrl = "https://webhook.site/b3088a6a-2d17-4f8d-a383-71389a6c600b";
-  var requestType = "payWithMethod";
-  var amount = "50000";
-  var orderId = partnerCode + new Date().getTime();
-  var requestId = orderId;
-  var extraData = "";
-  var orderGroupId = "";
-  var autoCapture = true;
-  var lang = "vi";
-
-  //before sign HMAC SHA256 with format
-  //accessKey=$accessKey&amount=$amount&extraData=$extraData&ipnUrl=$ipnUrl&orderId=$orderId&orderInfo=$orderInfo&partnerCode=$partnerCode&redirectUrl=$redirectUrl&requestId=$requestId&requestType=$requestType
-  var rawSignature =
-    "accessKey=" +
-    accessKey +
-    "&amount=" +
-    amount +
-    "&extraData=" +
-    extraData +
-    "&ipnUrl=" +
-    ipnUrl +
-    "&orderId=" +
-    orderId +
-    "&orderInfo=" +
-    orderInfo +
-    "&partnerCode=" +
-    partnerCode +
-    "&redirectUrl=" +
-    redirectUrl +
-    "&requestId=" +
-    requestId +
-    "&requestType=" +
-    requestType;
-  //puts raw signature
-  console.log("--------------------RAW SIGNATURE----------------");
-  console.log(rawSignature);
-  //signature
-  const crypto = require("crypto");
-  var signature = crypto
-    .createHmac("sha256", secretKey)
-    .update(rawSignature)
-    .digest("hex");
-  console.log("--------------------SIGNATURE----------------");
-  console.log(signature);
-
-  //json object send to MoMo endpoint
-  const requestBody = JSON.stringify({
-    partnerCode: partnerCode,
-    partnerName: "Test",
-    storeId: "MomoTestStore",
-    requestId: requestId,
-    amount: amount,
-    orderId: orderId,
-    orderInfo: orderInfo,
-    redirectUrl: redirectUrl,
-    ipnUrl: ipnUrl,
-    lang: lang,
-    requestType: requestType,
-    autoCapture: autoCapture,
-    extraData: extraData,
-    orderGroupId: orderGroupId,
-    signature: signature,
-  });
-
-  const option = {
-    method: "POST",
-    url: "https://test-payment.momo.vn/v2/gateway/api/create",
-    headers: {
-      "Content-Type": "application/json",
-      "Content-Length": Buffer.byteLength(requestBody),
-    },
-    data: requestBody,
-  };
-
-  let result;
   try {
-    result = await axios(option);
-    return res.status(200).json(result.data);
+    // 1. Chuẩn bị dữ liệu
+    const orderInfo = "pay with MoMo";
+    const requestType = "payWithMethod";
+    const amount = "50000"; // có thể gửi từ req.body
+    const orderId = MOMO_PARTNER_CODE + Date.now();
+    const requestId = orderId;
+    const extraData = "";
+    const autoCapture = true;
+    const lang = "vi";
+
+    // 2. Tạo rawSignature
+    const rawSignature = [
+      `accessKey=${MOMO_ACCESS_KEY}`,
+      `amount=${amount}`,
+      `extraData=${extraData}`,
+      `ipnUrl=${MOMO_IPN_URL}`,
+      `orderId=${orderId}`,
+      `orderInfo=${orderInfo}`,
+      `partnerCode=${MOMO_PARTNER_CODE}`,
+      `redirectUrl=${MOMO_REDIRECT_URL}`,
+      `requestId=${requestId}`,
+      `requestType=${requestType}`,
+    ].join("&");
+
+    console.log("--- RAW SIGNATURE ---");
+    console.log(rawSignature);
+
+    // 3. Tạo signature HMAC SHA256
+    const signature = crypto
+      .createHmac("sha256", MOMO_SECRET_KEY)
+      .update(rawSignature)
+      .digest("hex");
+
+    console.log("--- SIGNATURE ---");
+    console.log(signature);
+
+    // 4. Định nghĩa body gửi đến MoMo
+    const requestBody = {
+      partnerCode: MOMO_PARTNER_CODE,
+      partnerName: "Test",
+      storeId: "MomoTestStore",
+      requestId,
+      amount,
+      orderId,
+      orderInfo,
+      redirectUrl: MOMO_REDIRECT_URL,
+      ipnUrl: MOMO_IPN_URL,
+      lang,
+      requestType,
+      autoCapture,
+      extraData,
+      orderGroupId: "", // nếu có
+      signature,
+    };
+
+    // 5. Gửi request đến MoMo
+    const response = await axios.post(
+      "https://test-payment.momo.vn/v2/gateway/api/create",
+      requestBody,
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+
+    console.log("MoMo response:", response.data);
+
+    // 6. Trả payUrl cho frontend
+    return res.json({ payUrl: response.data.payUrl });
   } catch (error) {
-    console.error("Error during payment request:", error);
-    return res.status(500).json({ error: "Payment request failed" });
+    console.error(
+      "Error during payment request:",
+      error.response?.data || error.message
+    );
+    return res
+      .status(500)
+      .json({ error: "Payment request failed", detail: error.response?.data });
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
 });
