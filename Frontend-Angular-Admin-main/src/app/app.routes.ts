@@ -29,6 +29,7 @@ import { SizeComponent } from './(admin)/size/size.component';
 import { ColorComponent } from './(admin)/color/color.component';
 import { PayComponent } from './(client)/pay/pay.component';
 import { CommentComponent } from './(admin)/comment/comment.component';
+import { CommentComponentClient } from './(client)/comment/comment.component';
 import { ProfileComponent } from './(client)/profile/profile.component';
 import { OrdersComponent } from './(admin)/orders/orders.component';
 
@@ -48,6 +49,7 @@ export const routes: Routes = [
       { path: 'heart', component: HeartComponent },
       { path: 'cart/pay', component: PayComponent },
       { path: 'profile', component: ProfileComponent },
+      { path: 'comment', component: CommentComponentClient  },
     ]
   },
 
