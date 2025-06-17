@@ -22,7 +22,7 @@ export class PayComponent implements OnInit {
   total = 0;
   cartItems: any[] = [];
 
-  constructor(private router: Router,private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     const cart = localStorage.getItem('cart');
@@ -33,7 +33,9 @@ export class PayComponent implements OnInit {
   onSubmit() {
     if (this.fullName && this.email && this.phone && this.address) {
       // Gửi yêu cầu đến Node.js server
-      this.http.post<any>('http://localhost:5000/payment', {}).subscribe({
+      this.http.post<any>('http://localhost:5000/payment', {
+        amount: this.total,
+      }).subscribe({
         next: (response) => {
           const payUrl = response.payUrl;
           if (payUrl) {
@@ -51,6 +53,7 @@ export class PayComponent implements OnInit {
     } else {
       alert('Vui lòng điền đầy đủ thông tin.');
     }
+
   }
 
 }

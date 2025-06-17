@@ -28,7 +28,7 @@ app.post("/payment", async (req, res) => {
     // 1. Chuẩn bị dữ liệu
     const orderInfo = "pay with MoMo";
     const requestType = "payWithMethod";
-    const amount = "50000"; // có thể gửi từ req.body
+    const amount = req.body.amount?.toString() || "0";
     const orderId = MOMO_PARTNER_CODE + Date.now();
     const requestId = orderId;
     const extraData = "";
