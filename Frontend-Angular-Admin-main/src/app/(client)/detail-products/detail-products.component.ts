@@ -10,6 +10,7 @@ import { NzDrawerComponent, NzDrawerModule } from 'ng-zorro-antd/drawer';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { CommonModule } from '@angular/common';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -23,7 +24,8 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
     NzDrawerModule,
     NzTagModule,
     CommonModule,
-    RouterLink
+    RouterLink,
+    FormsModule
   ],
   templateUrl: './detail-products.component.html',
   styleUrl: './detail-products.component.css',
@@ -43,6 +45,10 @@ export class DetailProductsComponent implements OnInit {
   sizes: any[] = [];
   selectedSize: { [key: number]: string } = {}; // key là id của sản phẩm
 
+  currentUser: any = null;
+  newComment = { content: '' };
+  comments: any[] = [];
+
 
   isVisible: boolean = false;
 
@@ -51,6 +57,9 @@ export class DetailProductsComponent implements OnInit {
   constructor(private http: HttpClient, private api: HttpClient, private message: NzMessageService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getCurrentUser();
+    this.loadComments();
+
     const id = this.route.snapshot.paramMap.get('id');
     this.isLoading = true; // 👉 Bắt đầu loading
 
@@ -78,6 +87,7 @@ export class DetailProductsComponent implements OnInit {
         });
       });
     }
+
   }
 
   selectSize(productId: number, size: string) {
@@ -161,6 +171,38 @@ export class DetailProductsComponent implements OnInit {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     this.message.success(`Đã thêm "${product.name}" - size ${size} vào giỏ hàng!`);
+  }
+
+
+
+  getCurrentUser() {
+    // Giả sử user đang được lưu trong localStorage
+    const user = localStorage.getItem('user');
+    if (user) {
+      this.currentUser = JSON.parse(user);
+    }
+  }
+
+  submitComment() {
+    if (!this.newComment.content.trim()) return;
+
+    const payload = {
+      userId: this.currentUser.id,
+      content: this.newComment.content,
+      createdAt: new Date()
+    };
+
+    this.http.post('http://localhost:3000/comments', payload).subscribe(() => {
+      this.newComment.content = '';
+      this.loadComments();
+    });
+  }
+  
+
+  loadComments() {
+    this.http.get<any[]>('http://localhost:3000/comments?_expand=user').subscribe(res => {
+      this.comments = res.reverse(); // mới nhất lên đầu
+    });
   }
 
 
