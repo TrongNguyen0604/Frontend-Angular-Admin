@@ -63,99 +63,103 @@
 
     <!-- 1 -->
     <div class="Customer">
-            <div class="Customer_title">
-                <h1>Customer feedback</h1>
-                <div class="Customer_feedback_link">
-                    <ul>
-                        <li>
-                            <a href="/comment">Xem thêm</a>
-                        </li>
-                    </ul>
+        <div class="Customer_title">
+            <h1>Customer feedback</h1>
+            <div class="Customer_feedback_link">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" (click)="toggleComments()">Xem thêm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Customer_feedback">
+            <div class="Customer_feedback_1">
+                <div class="Customer_feedback_content1">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
+                        <br> fermentum sed eleifend fermen fermentum.
+                    </p>
+                </div>
+                <div class="Customer_feedback_content2">
+                    <div class="Customer_feedback_content2_img">
+                        <img src="Image/customer.png" alt="">
+                    </div>
+                    <div class="Customer_feedback_content2_information">
+                        <div class="Customer_feedback_content2_information_stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>Mỹ Linh</p>
+                        <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
+                    </div>
                 </div>
             </div>
-            <div class="Customer_feedback"> 
-                <div class="Customer_feedback_1">
-                    <div class="Customer_feedback_content1">
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
-                            <br> fermentum sed eleifend fermen fermentum.
-                        </p>
-                    </div>
-                    <div class="Customer_feedback_content2">
-                        <div class="Customer_feedback_content2_img">
-                            <img src="Image/customer.png" alt="">
-                        </div>
-                        <div class="Customer_feedback_content2_information">
-                            <div class="Customer_feedback_content2_information_stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>Mỹ Linh</p>
-                            <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
-                        </div>
-                    </div>
+            <div class="Customer_feedback_2">
+                <div class="Customer_feedback_content1">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
+                        <br> fermentum sed eleifend fermen fermentum.
+                    </p>
                 </div>
-                <div class="Customer_feedback_2">
-                    <div class="Customer_feedback_content1">
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <i class="fa-solid fa-location-pin"></i>
-                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
-                            <br> fermentum sed eleifend fermen fermentum.
-                        </p>
+                <div class="Customer_feedback_content2">
+                    <div class="Customer_feedback_content2_img">
+                        <img src="Image/customer1.png" alt="">
                     </div>
-                    <div class="Customer_feedback_content2">
-                        <div class="Customer_feedback_content2_img">
-                            <img src="Image/customer1.png" alt="">
+                    <div class="Customer_feedback_content2_information">
+                        <div class="Customer_feedback_content2_information_stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
-                        <div class="Customer_feedback_content2_information">
-                            <div class="Customer_feedback_content2_information_stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>Mỹ Linh</p>
-                            <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
-                        </div>
+                        <p>Mỹ Linh</p>
+                        <p class="Customer_feedback_content2_information_p">Amet consectetur</p>
                     </div>
                 </div>
             </div>
         </div>
-<!-- and1 -->
- 
+    </div>
+    <!-- and1 -->
+
 
 
 
     <!-- 2 -->
-    <div class="comment-form" *ngIf="currentUser">
-        <h2 class="comment-title">Viết bình luận</h2>
-        <form (ngSubmit)="submitComment()" class="comment-form-container">
-            <textarea [(ngModel)]="newComment.content" name="commentContent" required
-                placeholder="Nhập bình luận của bạn..."></textarea>
-            <button type="submit" class="btn-submit">Gửi bình luận</button>
-        </form>
-    </div>
+    <div *ngIf="showComments">
+        <!-- Form Viết bình luận -->
+        <div class="comment-form" *ngIf="currentUser">
+            <h2 class="comment-title">Viết bình luận</h2>
+            <form (ngSubmit)="submitComment()" class="comment-form-container">
+                <textarea [(ngModel)]="newComment.content" name="commentContent" required
+                    placeholder="Nhập bình luận của bạn..."></textarea>
+                <button type="submit" class="btn-submit">Gửi bình luận</button>
+            </form>
+        </div>
 
-    <!-- Danh sách bình luận -->
-    <div class="comment-list">
-        <h2 class="comment-title">Bình luận gần đây</h2>
-        <div *ngFor="let comment of comments" class="comment-item">
-            <div class="comment-avatar">
-                <img src="https://i.pravatar.cc/40?u={{ comment.user.id }}" alt="avatar" />
-            </div>
-            <div class="comment-content">
-                <p class="comment-user">{{ comment.user.fullName }}</p>
-                <p class="comment-text">{{ comment.content }}</p>
+        <!-- Danh sách bình luận -->
+        <div class="comment-list">
+            <h2 class="comment-title">Bình luận gần đây</h2>
+            <div *ngFor="let comment of comments" class="comment-item">
+                <div class="comment-avatar">
+                    <img src="https://i.pravatar.cc/40?u={{ comment.user.id }}" alt="avatar" />
+                </div>
+                <div class="comment-content">
+                    <p class="comment-user">{{ comment.user.fullName }}</p>
+                    <p class="comment-text">{{ comment.content }}</p>
+                </div>
             </div>
         </div>
     </div>
+
     <!-- and2 -->
 
 

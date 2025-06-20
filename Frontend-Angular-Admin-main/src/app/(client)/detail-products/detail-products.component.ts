@@ -48,7 +48,7 @@ export class DetailProductsComponent implements OnInit {
   currentUser: any = null;
   newComment = { content: '' };
   comments: any[] = [];
-
+  showComments = false; 
 
   isVisible: boolean = false;
 
@@ -206,7 +206,9 @@ export class DetailProductsComponent implements OnInit {
   }
 
 
-
+ toggleComments() {
+    this.showComments = !this.showComments;
+  }
 
 
 }

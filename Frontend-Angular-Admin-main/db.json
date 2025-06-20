@@ -24,6 +24,27 @@
       ],
       "status": "Đang bán",
       "id": 1
+    },
+    {
+      "name": "Nike Air Force 1 Low ",
+      "description": "dd",
+      "categoryName": "thể thao ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "40"
+      ],
+      "status": "Hết hàng",
+      "id": 2
     }
   ],
   "categories": [
@@ -1142,6 +1163,12 @@
       "content": "hihih\n\n",
       "createdAt": "2025-06-20T13:49:16.451Z",
       "id": 4
+    },
+    {
+      "userId": 2,
+      "content": "cgvh",
+      "createdAt": "2025-06-20T13:56:02.367Z",
+      "id": 5
     }
   ]
 }
