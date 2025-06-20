@@ -16,9 +16,10 @@ export class AuthService {
 
 
   // khai báo hàm đăng ký 
-  register(data: any): Observable<object> {
-    return this.api.post(this.apiUrl + '/register', data)
+  registerUser(formData: FormData) {
+    return this.api.post('http://localhost:3000/users', formData);
   }
+
 
 
 

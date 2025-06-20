@@ -1,4 +1,6 @@
 <div *ngIf="user">
+  <img [src]="'http://localhost:3000/uploads/' + user.avatar" *ngIf="user.avatar">
+
   <h2>Xin chào {{ user.fullName }}</h2>
   <p>Email: {{ user.email }}</p>
   <p>Số điện thoại: {{ user.phone }}</p>

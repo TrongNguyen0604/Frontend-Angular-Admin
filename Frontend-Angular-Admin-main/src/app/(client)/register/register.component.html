@@ -30,6 +30,16 @@
       </div>
     </div>
 
+    <!-- Ảnh đại diện -->
+    <div>
+      <label class="form-label">Ảnh đại diện</label>
+      <input type="file" class="form-control" (change)="onFileChange($event)" accept="image/*">
+      <div *ngIf="previewUrl" class="mt-2">
+        <img [src]="previewUrl" alt="Preview" width="150" height="150">
+      </div>
+    </div>
+
+
     <!-- Email -->
     <div>
       <label class="form-label">Email</label>

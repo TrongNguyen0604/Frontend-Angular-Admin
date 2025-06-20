@@ -1,35 +1,59 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../../service/auth/auth.service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
 })
-
 export class RegisterComponent {
+  selectedFile: File | null = null;
+  previewUrl: string | ArrayBuffer | null = null;
+  avatarUrl: string = '';
   constructor(
-    // private api: HttpClient, -> chuyển sang sử dụng service 
-    private auth:AuthService,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) { }
 
-  // apiUrl: string = 'http://localhost:3000/register'; bỏ vì chuyển đổi sang service r 
+  onFileChange(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const formData = new FormData();
+      formData.append('file', file);
 
-  onRegister(data: any): void {
-    // this.api.post(this.apiUrl, data).subscribe((res) => {
-    this.auth.register(data).subscribe(res => {
-      if (res) {
-        alert("đăng ký thành công");
-        this.router.navigate(['login']);
-      }
-    })
+      this.http.post<{ url: string }>('http://localhost:3000/upload', formData).subscribe({
+        next: (res) => {
+          this.avatarUrl = res.url;        // URL trả về từ server
+          this.previewUrl = res.url;       // hiển thị ảnh
+        },
+        error: (err) => {
+          console.error('Upload ảnh thất bại', err);
+        }
+      });
+    }
   }
+
+
+  onRegister(formValue: any): void {
+    // Nếu không có previewUrl thì dùng ảnh mặc định
+    formValue.avatar = this.previewUrl || 'https://i.pravatar.cc/150?img=3';
+
+    this.http.post('http://localhost:3000/users', formValue)
+      .subscribe({
+        next: res => {
+          alert('Đăng ký thành công!');
+          this.router.navigate(['/login']);
+        },
+        error: err => {
+          console.error('Đăng ký thất bại:', err);
+        }
+      });
+  }
+
 }
