@@ -70,7 +70,7 @@
                 <div class="Customer_feedback_link">
                     <ul>
                         <li>
-                            <a href="javascript:void(0)" (click)="toggleComments(s.id)">Xem thêm</a>
+                            <a (click)="toggleComments(s.id)">Xem thêm</a>
                         </li>
                     </ul>
                 </div>
@@ -84,6 +84,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur. Mauris sed eleifend fermen
                             <br> fermentum sed eleifend fermen fermentum.
                         </p>
+
                     </div>
                     <div class="Customer_feedback_content2">
                         <div class="Customer_feedback_content2_img">
@@ -137,26 +138,30 @@
 
 
     <!-- 2 -->
-    <div *ngFor="let s of filteredProjects">
-        <!-- sản phẩm -->
+    <div *ngFor="let s of filteredProjects" class="product-item">
+        <!-- Thông tin sản phẩm ở đây -->
 
-        <div class="Customer">
-            <a (click)="toggleComments(s.id)">Xem thêm</a>
-
-            <div *ngIf="showComments[s.id]">
+        <div class="customer-section centered-container">
+            <div *ngIf="showComments[s.id]" class="comment-container">
                 <!-- Form bình luận -->
-                <form (ngSubmit)="submitComment(s.id)">
-                    <textarea [(ngModel)]="newComment[s.id]" name="comment_{{s.id}}"></textarea>
-                    <button type="submit">Gửi</button>
+                <form class="comment-form" (ngSubmit)="submitComment(s.id)">
+                    <textarea [(ngModel)]="newComment[s.id]" name="comment_{{s.id}}" class="comment-textarea"
+                        placeholder="Nhập bình luận của bạn..."></textarea>
+                    <button type="submit" class="comment-submit-btn">Gửi</button>
                 </form>
 
                 <!-- Danh sách bình luận -->
-                <div *ngFor="let c of comments[s.id]">
-                    <p><strong>{{ c.user.fullName }}</strong>: {{ c.content }}</p>
+                <div class="comment-list">
+                    <div *ngFor="let c of comments[s.id]" class="comment-item">
+                        <p class="comment-user"><strong>{{ c.user.fullName }}</strong></p>
+                        <p class="comment-content">{{ c.content }}</p>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
+
 
     <!-- and2 -->
 

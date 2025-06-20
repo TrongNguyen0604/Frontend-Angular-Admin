@@ -1195,6 +1195,62 @@
         "id": 2
       },
       "id": 4
+    },
+    {
+      "productId": 1,
+      "content": "zxxfcgvhmb",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
+      "id": 5
+    },
+    {
+      "productId": 2,
+      "content": "ẻyetytuy",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
+      "id": 6
+    },
+    {
+      "productId": 2,
+      "content": "d",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
+      "id": 7
+    },
+    {
+      "productId": 2,
+      "content": "sfdgfhgjfhkjlkl",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
+      "id": 8
     }
   ]
 }
