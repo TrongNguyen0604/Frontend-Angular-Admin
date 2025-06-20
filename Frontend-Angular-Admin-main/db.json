@@ -1141,34 +1141,60 @@
   ],
   "comments": [
     {
-      "userId": 1,
-      "content": "dd",
-      "createdAt": "2025-06-20T13:44:58.235Z",
+      "productId": 1,
+      "content": "w",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
       "id": 1
     },
     {
-      "userId": 1,
-      "content": "rất đẹp \n",
-      "createdAt": "2025-06-20T13:45:10.920Z",
+      "productId": 1,
+      "content": "đ",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
       "id": 2
     },
     {
-      "userId": 2,
-      "content": "đẹp thực sự lun ý ",
-      "createdAt": "2025-06-20T13:46:04.296Z",
+      "productId": 1,
+      "content": "qưerth",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
       "id": 3
     },
     {
-      "userId": 2,
-      "content": "hihih\n\n",
-      "createdAt": "2025-06-20T13:49:16.451Z",
+      "productId": 2,
+      "content": "dfdgf",
+      "user": {
+        "email": "1233@gmail.com",
+        "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
+        "fullName": "Nguyễn A",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 2
+      },
       "id": 4
-    },
-    {
-      "userId": 2,
-      "content": "cgvh",
-      "createdAt": "2025-06-20T13:56:02.367Z",
-      "id": 5
     }
   ]
 }

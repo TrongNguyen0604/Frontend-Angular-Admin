@@ -29,7 +29,7 @@ import { FormsModule } from '@angular/forms';
   ],
   templateUrl: './detail-products.component.html',
   styleUrl: './detail-products.component.css',
-  
+
 })
 export class DetailProductsComponent implements OnInit {
   size: NzButtonSize = 'default';
@@ -46,9 +46,17 @@ export class DetailProductsComponent implements OnInit {
   selectedSize: { [key: number]: string } = {}; // key là id của sản phẩm
 
   currentUser: any = null;
-  newComment = { content: '' };
-  comments: any[] = [];
-  showComments = false; 
+
+
+
+  //bình luận 
+  // Gán nhiều bình luận theo id sản phẩm
+  showComments: { [key: number]: boolean } = {};
+
+  newComment: { [key: number]: string } = {};
+
+  comments: any[] = []; // Danh sách bình luận (bao gồm cả productId)
+
 
   isVisible: boolean = false;
 
@@ -183,21 +191,6 @@ export class DetailProductsComponent implements OnInit {
     }
   }
 
-  submitComment() {
-    if (!this.newComment.content.trim()) return;
-
-    const payload = {
-      userId: this.currentUser.id,
-      content: this.newComment.content,
-      createdAt: new Date()
-    };
-
-    this.http.post('http://localhost:3000/comments', payload).subscribe(() => {
-      this.newComment.content = '';
-      this.loadComments();
-    });
-  }
-  
 
   loadComments() {
     this.http.get<any[]>('http://localhost:3000/comments?_expand=user').subscribe(res => {
@@ -206,9 +199,45 @@ export class DetailProductsComponent implements OnInit {
   }
 
 
- toggleComments() {
-    this.showComments = !this.showComments;
+
+
+  toggleComments(productId: number) {
+    this.showComments[productId] = !this.showComments[productId];
+
+    if (this.showComments[productId]) {
+      this.getCommentsByProductId(productId).subscribe((data) => {
+        this.comments[productId] = data;
+      });
+    }
   }
+
+
+  submitComment(productId: number) {
+    const content = this.newComment[productId];
+    if (!content) return;
+
+    const comment = {
+      productId: productId,
+      content: content,
+      user: this.currentUser
+    };
+
+    this.http.post('http://localhost:3000/comments', comment).subscribe(() => {
+      this.newComment[productId] = '';
+
+      // Sau khi gửi -> gọi lại API để cập nhật bình luận mới
+      this.getCommentsByProductId(productId).subscribe((data) => {
+        this.comments[productId] = data;
+      });
+    });
+  }
+
+
+
+  getCommentsByProductId(productId: number) {
+    return this.http.get<Comment[]>(`http://localhost:3000/comments?productId=${productId}`);
+  }
+
 
 
 }
