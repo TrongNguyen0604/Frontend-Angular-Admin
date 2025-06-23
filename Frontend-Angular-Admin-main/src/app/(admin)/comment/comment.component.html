@@ -1,1 +1,17 @@
-<p>comment works!</p>
+<div *ngFor="let product of products" class="product-item">
+  <h3>{{ product.name }}</h3>
+
+  <button (click)="toggleComments(product.id)">
+    {{ expandedProductId === product.id ? 'Ẩn bình luận' : 'Chi tiết bình luận' }}
+  </button>
+
+  <div *ngIf="expandedProductId === product.id" class="comment-list">
+    <div *ngFor="let c of getCommentsByProduct(product.id)" class="comment-item">
+      <p><strong>{{ c.user.fullName }}</strong>: {{ c.content }}</p>
+    </div>
+
+    <p *ngIf="getCommentsByProduct(product.id).length === 0">
+      Chưa có bình luận nào.
+    </p>
+  </div>
+</div>

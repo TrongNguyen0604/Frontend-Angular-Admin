@@ -33,6 +33,7 @@ import { CommentComponentClient } from './(client)/comment/comment.component';
 import { ProfileComponent } from './(client)/profile/profile.component';
 import { OrdersComponent } from './(admin)/orders/orders.component';
 
+
 export const routes: Routes = [
 
   // 👤 CLIENT
@@ -50,6 +51,7 @@ export const routes: Routes = [
       { path: 'cart/pay', component: PayComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'comment', component: CommentComponentClient  },
+   
     ]
   },
 

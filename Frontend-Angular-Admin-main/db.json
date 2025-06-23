@@ -1251,6 +1251,34 @@
         "id": 2
       },
       "id": 8
+    },
+    {
+      "productId": 1,
+      "content": "dfdgh",
+      "user": {
+        "email": "123@gmail.com",
+        "password": "$2a$10$y5NwrZgVzcECM0eqWO3QcuZWtKGeHUEyFcUq8EQVVUDnyps2dacDy",
+        "fullName": "Nguyễn Trọng",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 1
+      },
+      "id": 9
+    },
+    {
+      "productId": 1,
+      "content": "dfg",
+      "user": {
+        "email": "123@gmail.com",
+        "password": "$2a$10$y5NwrZgVzcECM0eqWO3QcuZWtKGeHUEyFcUq8EQVVUDnyps2dacDy",
+        "fullName": "Nguyễn Trọng",
+        "phone": "0328819987",
+        "dob": "2025-06-12",
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "id": 1
+      },
+      "id": 10
     }
   ]
 }
