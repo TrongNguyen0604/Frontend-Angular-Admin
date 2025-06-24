@@ -56,7 +56,7 @@
 
 .header_content {
     text-align: center;
-   
+
     color: #111;
 }
 
@@ -98,39 +98,68 @@
 
 /* featured */
 .Featured {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f8f8f8;
+    width: 90%;
+    /* Adjust as needed, based on the overall page width */
+    margin: 20px auto;
+    /* Center the featured section */
+    font-family: Arial, sans-serif;
+    /* Or a font similar to the image */
+}
+
+.Main_title {
+    text-align: left;
+    /* Align the "Featured" title to the left */
+    margin-bottom: 20px;
+    /* Space below the title */
 }
 
 .Main_title h2 {
-    font-size: 2rem;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 2em;
+    /* Adjust font size as seen in the image */
+    font-weight: bold;
+    color: #333;
+    /* Dark color for the title */
 }
 
-.Main_Image {
+.Main_Image_Container {
     display: flex;
-    justify-content: center;
+    /* Use flexbox for side-by-side layout */
+    justify-content: space-between;
+    /* Distribute items with space between them */
     gap: 20px;
+    /* Space between the image items */
     flex-wrap: wrap;
+    /* Allow items to wrap to the next line on smaller screens */
 }
 
-.Main_Image img {
-    width: 300px;
+.Image_Item {
+    flex: 1;
+    /* Allow items to grow and shrink */
+    min-width: 280px;
+    /* Minimum width for each image item to prevent them from becoming too small */
+    text-align: left;
+    /* Align the text below the image to the left */
+}
+
+.Image_Item img {
+    max-width: 100%;
+    /* Ensure images don't overflow their containers */
     height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove extra space below image if any */
+    margin-bottom: 10px;
+    /* Space between image and text */
 }
 
-.Main_Image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.Image_Item p {
+    font-size: 1em;
+    /* Adjust font size for the description */
+    color: #555;
+    /* Color for the description text */
+    margin: 0;
+    /* Remove default paragraph margin */
 }
-
 
 
 .product1 {

@@ -52,7 +52,7 @@
       "categoryName": "Thời trang ",
       "brand": "ddgrd",
       "price": 2222342,
-      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image1": "https://i.pinimg.com/736x/7e/34/8b/7e348bc05d06634d3374b741d98bf509.jpg",
       "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
       "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
       "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
@@ -69,7 +69,7 @@
       "categoryName": "thể thao ",
       "brand": "ddgrd",
       "price": 2222342,
-      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image1": "https://i.pinimg.com/736x/90/49/90/9049907bac5324f5c316a29e8b835cef.jpg",
       "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
       "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
       "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
@@ -86,7 +86,7 @@
       "categoryName": "thể thao ",
       "brand": "ddgrd",
       "price": 2222342,
-      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image1": "https://i.pinimg.com/736x/85/2b/d6/852bd6c6063af7f233e8a0244af551a2.jpg",
       "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
       "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
       "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
@@ -103,7 +103,7 @@
       "categoryName": "thể thao ",
       "brand": "ddgrd",
       "price": 2222342,
-      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image1": "https://i.pinimg.com/736x/d4/6a/e0/d46ae0cb41d2d58a1b589da715beea0b.jpg",
       "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
       "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
       "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
@@ -112,6 +112,39 @@
       ],
       "status": "Hết hàng",
       "id": 6
+    },
+    {
+      "name": "Nike Air Force 1 Low fdg",
+      "description": "ss",
+      "categoryName": "Thời trang ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://i.pinimg.com/736x/4c/f8/6b/4cf86b0a2dc7ae1524a8630d8886d9e2.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "36"
+      ],
+      "status": "Hết hàng",
+      "id": 7
+    },
+    {
+      "name": "Nike Air Force 1 Low fdg",
+      "description": "ss",
+      "categoryName": "thể thao ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://i.pinimg.com/736x/4c/f8/6b/4cf86b0a2dc7ae1524a8630d8886d9e2.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "37",
+        "39"
+      ],
+      "status": "Đang bán",
+      "id": 8
     }
   ],
   "categories": [
