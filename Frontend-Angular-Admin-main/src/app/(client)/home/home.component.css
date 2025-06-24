@@ -44,17 +44,53 @@
 }
 
 .header_banner {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    padding: 0 5%;
+    /* bo trái và phải 5% */
 }
 
 .header_banner img {
-    width: 80%;
+    width: 100%;
+    height: 400px;
 
-    display: block;
-    object-fit: cover;
 }
+
+.header_content {
+    text-align: center;
+   
+    color: #111;
+}
+
+.header_title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header_title p {
+    font-size: 18px;
+    color: #666;
+    /* margin-bottom: 30px; */
+}
+
+.header_button button {
+    padding: 12px 30px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header_button button:hover {
+    background-color: #333;
+}
+
+
+
 
 /* and  */
 
@@ -136,34 +172,35 @@
     position: relative;
     padding-top: 40px;
 }
+
 .scroll-wrapper {
-  position: relative;
-  padding-top: 40px;
+    position: relative;
+    padding-top: 40px;
 }
 
 /* ✅ Nút điều hướng nằm góc phải, phía trên */
 .scroll-buttons {
-  position: absolute;
-  top: 0;
-  right: 5%;
-  display: flex;
-  gap: 10px;
-  z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
 }
 
 .scroll-buttons button {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .scroll-buttons button:hover {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 
