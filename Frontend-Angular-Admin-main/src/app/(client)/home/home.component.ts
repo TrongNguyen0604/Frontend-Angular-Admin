@@ -134,6 +134,13 @@ export class HomeComponent implements OnInit {
     }, 2000); // 2 giây
   }
 
+  scrollNext(container: HTMLElement) {
+    container.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+
+  scrollPrev(container: HTMLElement) {
+    container.scrollBy({ left: -300, behavior: 'smooth' });
+  }
 
 
 }

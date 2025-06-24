@@ -10,7 +10,7 @@
       "categoryName": "Thời trang ",
       "brand": "Thương hiệu",
       "price": 2222342,
-      "image1": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/7dda3955-963d-4904-b2c4-2cb7c17e3115/KD17.png",
+      "image1": "https://i.pinimg.com/736x/4c/f8/6b/4cf86b0a2dc7ae1524a8630d8886d9e2.jpg",
       "image2": "https://tse3.mm.bing.net/th/id/OIP.SlJ9GTAAAxeqoThk0IPkkAHaJQ?r=0&pid=ImgDet&w=60&h=60&c=7&dpr=1.3&rs=1",
       "image3": "https://tse4.mm.bing.net/th/id/OIP.mNYytCZ0vAV0hMVAkQEScQHaJQ?r=0&pid=ImgDet&w=60&h=60&c=7&dpr=1.3&rs=1",
       "image4": "https://tse4.mm.bing.net/th/id/OIP.hOeWUDhEReWns7O915dKRwAAAA?r=0&pid=ImgDet&w=60&h=60&c=7&dpr=1.3&rs=1",
@@ -31,7 +31,7 @@
       "categoryName": "thể thao ",
       "brand": "ddgrd",
       "price": 2222342,
-      "image1": "https://img.freepik.com/premium-photo/nike-shoe-vector-hd-8k-wallpaper-stock-photographic-image_973183-2112.jpg",
+      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
       "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
       "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
       "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
@@ -45,6 +45,73 @@
       ],
       "status": "Hết hàng",
       "id": 2
+    },
+    {
+      "name": "Nike Air Force 1 Low ",
+      "description": "sfrdgfh",
+      "categoryName": "Thời trang ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "34",
+        "35"
+      ],
+      "status": "Hết hàng",
+      "id": 3
+    },
+    {
+      "name": "Nike Air Force 1 Low ",
+      "description": "fgd",
+      "categoryName": "thể thao ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "35",
+        "36"
+      ],
+      "status": "Đang bán",
+      "id": 4
+    },
+    {
+      "name": "Nike Air Force 1 Low fdg",
+      "description": "sf",
+      "categoryName": "thể thao ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "35",
+        "36"
+      ],
+      "status": "Đang bán",
+      "id": 5
+    },
+    {
+      "name": "Nike Air Force 1 Low fdg",
+      "description": "df",
+      "categoryName": "thể thao ",
+      "brand": "ddgrd",
+      "price": 2222342,
+      "image1": "https://i.pinimg.com/736x/cd/ea/71/cdea713b8f12860021573fdea12fc633.jpg",
+      "image2": "https://myshoes.vn/image/cache/catalog/2024/nike/nk2/giay-nike-air-zoom-structure-25-nam-trang-xanh-do-01-1000x1000.jpg",
+      "image3": "https://th.bing.com/th/id/OIP.PdH8_cUuL9XUrTx4eosNXQHaHa?cb=iwp2&rs=1&pid=ImgDetMain",
+      "image4": "https://th.bing.com/th/id/OIP.1vEHQYa0zW0UDQdTw_yU2gAAAA?cb=iwp2&w=318&h=318&rs=1&pid=ImgDetMain",
+      "sizes": [
+        "34"
+      ],
+      "status": "Hết hàng",
+      "id": 6
     }
   ],
   "categories": [
