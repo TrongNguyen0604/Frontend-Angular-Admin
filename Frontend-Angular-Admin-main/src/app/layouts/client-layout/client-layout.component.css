@@ -15,6 +15,7 @@ nav {
     /* position: fixed; */
 }
 
+
 .Head {
     background-color: rgba(235, 235, 235, 1);
 }
@@ -38,6 +39,21 @@ nav {
 .Head_support ul li a:hover {
     color: #ff6600;
 }
+
+
+.Head1_LogoNike {
+    width: 120px;     /* chỉnh khung nhỏ hơn */
+    height: auto;
+    padding: 5px;
+}
+
+.Head1_LogoNike img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 
 
 
@@ -403,102 +419,164 @@ nav {
 
 }
 
+/* Tổng thể phần footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 60px 5%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-top: 80px;
+}
+
+/* --- PHẦN 1: ưu đãi & hỗ trợ --- */
+.footer_suports {
+    background-color: #d9d9d9;
+    padding: 40px 5%;
+    border-top: 1px solid #ccc;
+}
+
 .footer_suport {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 100px;
-    margin-top: 50px;
-
-
-}
-
-.footer_suports {
-    background-color: rgba(217, 217, 217, 1);
+    gap: 50px;
 }
 
 .footer_title h4 {
-    font-size: 20px;
-
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .footer_content p {
-    color: gray;
+    color: #666;
+    line-height: 1.6;
 }
 
-.footer_content p1 {
-    color: rgb(0, 0, 0);
+.footer_input {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .footer_input input {
-    color: gray;
-    margin-top: 20px;
     height: 47px;
-    width: 336px;
-}
-
-.footer_input input ::placeholder {
-    margin-left: 10px;
-    width: 16px;
+    width: 300px;
+    padding: 0 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .footer_input button {
-    color: gray;
-    height: 52px;
-    width: 117px;
+    height: 47px;
+    width: 120px;
+    font-size: 16px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.footer_content p {
-    margin-top: 10px;
+.footer_input button:hover {
+    background-color: #333;
+}
 
+.footer_icon {
+    margin-top: 30px;
 }
 
 .footer_icon i {
-    margin-right: 20px;
-    width: 15px;
-    height: 10px;
-    margin-top: 20px;
-    margin-left: 0;
-    margin-bottom: 30px;
+    font-size: 20px;
+    color: #333;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
+.footer_icon i:hover {
+    color: #000;
+}
+
+/* --- PHẦN 2: danh mục khách hàng --- */
 .footer_customers {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    margin-left: 100px;
-    margin-top: 50px;
+    gap: 40px;
+    margin-top: 60px;
+    padding: 0 5%;
+}
 
+.footer_customers_title h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .footer_customers_content p {
     font-size: 16px;
-    color: gray;
-    margin-top: 20px;
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.footer_customers_content p:hover {
+    text-decoration: underline;
 }
 
 .footer_customers_right img {
-    max-width: 100%;
-    width: 145px;
-    height: 154px;
-}
-
-.footer_customers_title {
-    font-size: 20px;
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .footer_customers_logo {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .footer_customers_logo p {
-    color: gray;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
 }
 
 .footer_customers_logo img {
-    width: 67px;
-    height: 39px;
-    margin-right: 20px;
+    width: 60px;
+    height: 36px;
+    margin-right: 10px;
+    border-radius: 5px;
+    object-fit: contain;
 }
 
-.footer {
-    margin-bottom: 50px;
+/* Responsive */
+@media (max-width: 768px) {
+
+    .footer_suport,
+    .footer_customers {
+        grid-template-columns: 1fr;
+    }
+
+    .footer_input {
+        flex-direction: column;
+    }
+
+    .footer_input input,
+    .footer_input button {
+        width: 100%;
+    }
+}
+
+.footer_customers_logo img {
+  width: 70px;
+  height: 45px;
+  object-fit: contain;
+  background-color: #fff;
+  margin-right: 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 5px;
 }
