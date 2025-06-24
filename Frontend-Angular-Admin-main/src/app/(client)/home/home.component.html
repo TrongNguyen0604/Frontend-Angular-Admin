@@ -64,7 +64,8 @@
                         (click)="toggleWishlist(s.id)"></i>
                 </div>
                 <div class="product_info">
-                    <p class="product_name">{{ s.name }}</p>
+                    <p class="product_name"><a [routerLink]="['/detail', s.id]">{{ s.name }}</a>
+                    </p>
                     <p class="product_price">{{ s.price | currency:'VND' }}</p>
                 </div>
             </div>
