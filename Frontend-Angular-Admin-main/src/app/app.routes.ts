@@ -32,6 +32,7 @@ import { CommentComponent } from './(admin)/comment/comment.component';
 import { CommentComponentClient } from './(client)/comment/comment.component';
 import { ProfileComponent } from './(client)/profile/profile.component';
 import { OrdersComponent } from './(admin)/orders/orders.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 export const routes: Routes = [
@@ -50,8 +51,8 @@ export const routes: Routes = [
       { path: 'heart', component: HeartComponent },
       { path: 'cart/pay', component: PayComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: 'comment', component: CommentComponentClient  },
-   
+      { path: 'comment', component: CommentComponentClient },
+
     ]
   },
 
@@ -60,31 +61,24 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
-    // canActivate: [AuthGuard], // nếu có
+    canActivate: [AuthGuard], // 👈 Gắn guard ở đây
     children: [
       { path: 'dashboard', component: DashboardComponent },
-
       { path: 'list', component: ListProjectsComponent },
       { path: 'create', component: CreateProductComponent },
       { path: 'edit/:id', component: EditProductComponent },
-
       { path: 'CateList', component: ListCateComponent },
       { path: 'CateCreate', component: CreateCateComponent },
       { path: 'Cateedit/:id', component: EditCateComponent },
       { path: 'CateDetail/:id', component: DetailCateComponent },
-
       { path: 'account', component: AccountComponent },
-
       { path: 'size', component: SizeComponent },
       { path: 'color', component: ColorComponent },
-
       { path: 'comment', component: CommentComponent },
-      { path: 'Order', component: OrdersComponent },
-
-
-
+      { path: 'Order', component: OrdersComponent }
     ]
   },
+
 
   // ❌ NOT FOUND
   { path: '**', component: NotFoundComponent }
