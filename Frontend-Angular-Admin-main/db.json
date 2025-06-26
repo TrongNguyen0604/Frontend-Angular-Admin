@@ -165,24 +165,6 @@
   ],
   "users": [
     {
-      "email": "123@gmail.com",
-      "password": "$2a$10$y5NwrZgVzcECM0eqWO3QcuZWtKGeHUEyFcUq8EQVVUDnyps2dacDy",
-      "fullName": "Nguyễn Trọng",
-      "phone": "0328819987",
-      "dob": "2025-06-12",
-      "avatar": "https://i.pravatar.cc/150?img=3",
-      "id": 1
-    },
-    {
-      "email": "1233@gmail.com",
-      "password": "$2a$10$jyY29IBGcmvpN1IdHQVMv.kiS3UezfjN3yhK94ZpuAQburE9R06N6",
-      "fullName": "Nguyễn A",
-      "phone": "0328819987",
-      "dob": "2025-06-12",
-      "avatar": "https://i.pravatar.cc/150?img=3",
-      "id": 2
-    },
-    {
       "email": "admin@gmail.com",
       "password": "$2a$10$6/EJ3XLI.yZRLnLIcxM6j.GXjkr8S0SvzuvQyOcDWq91rMaGscCO2",
       "fullName": "nguyễn trọng",

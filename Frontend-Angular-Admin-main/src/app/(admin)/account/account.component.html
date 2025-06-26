@@ -1,34 +1,34 @@
-<div class="container">
-  <h2>Quản lý tài khoản người dùng</h2>
+<div class="account-container">
+  <h2 class="title">Quản lý tài khoản người dùng</h2>
 
   <!-- Bộ lọc vai trò -->
-  <div style="margin-bottom: 16px;">
-    <label for="role">Lọc theo vai trò: </label>
+  <div class="filter-wrapper">
+    <label for="role" class="filter-label">Lọc theo vai trò:</label>
     <nz-select
       [(ngModel)]="selectedRole"
       (ngModelChange)="applyFilter()"
-      style="width: 200px;"
       nzPlaceHolder="Chọn vai trò"
+      style="width: 220px;"
     >
-      <nz-option [nzValue]="'all'" nzLabel="Tất cả"></nz-option>
-      <nz-option [nzValue]="'admin'" nzLabel="Quản trị viên"></nz-option>
-      <nz-option [nzValue]="'client'" nzLabel="Khách hàng"></nz-option>
+      <nz-option nzLabel="Tất cả" [nzValue]="'all'"></nz-option>
+      <nz-option nzLabel="Quản trị viên" [nzValue]="'admin'"></nz-option>
+      <nz-option nzLabel="Khách hàng" [nzValue]="'client'"></nz-option>
     </nz-select>
   </div>
 
-  <!-- Bảng tài khoản -->
+  <!-- Bảng danh sách -->
   <nz-table
     [nzData]="filteredUsers"
     [nzBordered]="true"
     [nzSize]="'middle'"
-    [nzScroll]="{ x: '900px' }"
+    [nzScroll]="{ x: '1000px' }"
     [nzFrontPagination]="false"
   >
     <thead>
       <tr>
         <th>ID</th>
         <th>Họ tên</th>
-        <th>Ảnh</th>
+        <th>Ảnh đại diện</th>
         <th>Email</th>
         <th>Số điện thoại</th>
         <th>Ngày sinh</th>
@@ -41,12 +41,27 @@
         <td>{{ user.id }}</td>
         <td>{{ user.fullName }}</td>
         <td>
-          <img [src]="user.avatar" alt="Avatar" width="80" height="80" />
+          <img
+            [src]="user.avatar"
+            alt="Avatar"
+            width="60"
+            height="60"
+            style="border-radius: 8px; object-fit: cover;"
+          />
         </td>
         <td>{{ user.email }}</td>
         <td>{{ user.phone }}</td>
         <td>{{ user.dob | date: 'dd/MM/yyyy' }}</td>
-        <td>{{ user.role || 'client' }}</td>
+        <td>
+          <span
+            [ngClass]="{
+              'tag-admin': user.role === 'admin',
+              'tag-client': !user.role || user.role === 'client'
+            }"
+          >
+            {{ user.role === 'admin' ? 'Quản trị viên' : 'Khách hàng' }}
+          </span>
+        </td>
         <td>
           <button
             nz-button
