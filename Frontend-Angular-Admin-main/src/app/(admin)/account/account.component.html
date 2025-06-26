@@ -1,32 +1,63 @@
-<nz-table [nzData]="users" [nzBordered]="true" [nzSize]="'middle'" [nzScroll]="{ x: '900px' }"
-  [nzFrontPagination]="false">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Họ tên</th>
-      <th>Ảnh</th>
-      <th>Email</th>
-      <th>Số điện thoại</th>
-      <th>Ngày sinh</th>
-      <th>Thao tác</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.fullName }}</td>
-      <td> 
-        <img [src]="user.avatar" alt="Avatar" width="150" height="150" />
-      </td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.phone }}</td>
-      <td>{{ user.dob | date: 'dd/MM/yyyy' }}</td>
+<div class="container">
+  <h2>Quản lý tài khoản người dùng</h2>
 
-      <td>
-        <button nz-button nzType="default" nzDanger (click)="deleteUser(user.id)">
-          Xóa
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</nz-table>
+  <!-- Bộ lọc vai trò -->
+  <div style="margin-bottom: 16px;">
+    <label for="role">Lọc theo vai trò: </label>
+    <nz-select
+      [(ngModel)]="selectedRole"
+      (ngModelChange)="applyFilter()"
+      style="width: 200px;"
+      nzPlaceHolder="Chọn vai trò"
+    >
+      <nz-option [nzValue]="'all'" nzLabel="Tất cả"></nz-option>
+      <nz-option [nzValue]="'admin'" nzLabel="Quản trị viên"></nz-option>
+      <nz-option [nzValue]="'client'" nzLabel="Khách hàng"></nz-option>
+    </nz-select>
+  </div>
+
+  <!-- Bảng tài khoản -->
+  <nz-table
+    [nzData]="filteredUsers"
+    [nzBordered]="true"
+    [nzSize]="'middle'"
+    [nzScroll]="{ x: '900px' }"
+    [nzFrontPagination]="false"
+  >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Họ tên</th>
+        <th>Ảnh</th>
+        <th>Email</th>
+        <th>Số điện thoại</th>
+        <th>Ngày sinh</th>
+        <th>Vai trò</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+        <td>{{ user.id }}</td>
+        <td>{{ user.fullName }}</td>
+        <td>
+          <img [src]="user.avatar" alt="Avatar" width="80" height="80" />
+        </td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.dob | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ user.role || 'client' }}</td>
+        <td>
+          <button
+            nz-button
+            nzType="default"
+            nzDanger
+            (click)="deleteUser(user.id)"
+          >
+            Xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

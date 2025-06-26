@@ -190,7 +190,17 @@
       "dob": "2025-06-12",
       "avatar": "https://i.pravatar.cc/150?img=3",
       "id": 3,
-       "role": "admin"
+      "role": "admin"
+    },
+    {
+      "email": "1@gmail.com",
+      "password": "$2a$10$HV1MfFhpGXU7DbLwSSXYE.lXR6CloIP7zuMHTSwMEIY4dTUF1uGwe",
+      "fullName": "nguyễn trọng",
+      "phone": "0328819987",
+      "dob": "2025-06-12",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "role": "client",
+      "id": 4
     }
   ],
   "size": [

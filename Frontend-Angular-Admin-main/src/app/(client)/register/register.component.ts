@@ -41,8 +41,11 @@ export class RegisterComponent {
 
 
   onRegister(formValue: any): void {
-    // Nếu không có previewUrl thì dùng ảnh mặc định
+    // Nếu không có ảnh thì dùng ảnh mặc định
     formValue.avatar = this.previewUrl || 'https://i.pravatar.cc/150?img=3';
+
+    // Gán vai trò mặc định là 'client'
+    formValue.role = 'client';
 
     this.http.post('http://localhost:3000/users', formValue)
       .subscribe({
@@ -55,5 +58,6 @@ export class RegisterComponent {
         }
       });
   }
+
 
 }
